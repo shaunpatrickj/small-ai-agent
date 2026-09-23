@@ -1,13 +1,4 @@
-"""
-ai_engine.py — FacilityOps AI Engine
-Phase 2: Anomaly Detection · Forecasting · Efficiency Analysis · Recommendations
 
-Models:
-  - Isolation Forest   → Anomaly & wastage detection (≥85% accuracy target)
-  - GradientBoosting   → Energy consumption forecasting (6h ahead)
-  - Rule-based engine  → HVAC/Lighting efficiency analysis
-  - Recommendation gen → Prioritised cost & carbon reduction suggestions
-"""
 
 import os
 import pickle
@@ -516,6 +507,65 @@ def get_forecaster() -> EnergyForecaster:
         _forecaster = EnergyForecaster()
         _forecaster.load()
     return _forecaster
+
+
+# ─── Standardized Agent Export (Milestone 4 Common Contract) ──────────────────
+def export_energy_intelligence_payload(facility_id: int = 1) -> Dict:
+    """
+    Standardized schema output for downstream cross-agent orchestration in Milestone 4.
+    """
+    conn = get_connection()
+    agg = dict(conn.execute("""
+        SELECT
+            SUM(electricity_usage) total_energy_kwh,
+            AVG(electricity_usage) avg_electricity_kw,
+            MAX(electricity_usage) peak_electricity_kw,
+            SUM(hvac_usage) total_hvac_kwh,
+            AVG(hvac_usage) avg_hvac_kw,
+            SUM(is_anomaly) anomaly_count,
+            COUNT(*) n_records
+        FROM ENERGY_USAGE
+        WHERE facility_id=?
+          AND timestamp >= datetime('now', '-24 hours')
+    """, (facility_id,)).fetchone())
+
+    active_alerts = conn.execute("""
+        SELECT COUNT(*) n FROM ALERTS
+        WHERE facility_id=? AND resolved=0
+    """, (facility_id,)).fetchone()["n"]
+
+    conn.close()
+
+    total_kwh = agg.get("total_energy_kwh") or 0.0
+    anom_count = agg.get("anomaly_count") or 0
+    hvac_ratio = (agg.get("total_hvac_kwh") or 0.0) / max(total_kwh, 1.0)
+
+    # Status classification
+    status = "CRITICAL" if anom_count >= 3 else ("WARNING" if anom_count > 0 or hvac_ratio > 0.55 else "NORMAL")
+    severity = "HIGH" if anom_count >= 3 else ("MEDIUM" if anom_count > 0 else "LOW")
+
+    recs_list = generate_recommendations(facility_id)
+    insights = [r["desc"] for r in recs_list[:4]]
+    recommendations = [r["title"] for r in recs_list[:4]]
+
+    return {
+        "agent": "energy",
+        "facility_id": facility_id,
+        "timestamp": datetime.now().isoformat(),
+        "status": status,
+        "severity": severity,
+        "metrics": {
+            "total_energy_kwh": round(total_kwh, 1),
+            "avg_electricity_kw": round(agg.get("avg_electricity_kw") or 0.0, 1),
+            "peak_electricity_kw": round(agg.get("peak_electricity_kw") or 0.0, 1),
+            "hvac_share_pct": round(hvac_ratio * 100, 1),
+            "anomaly_count_24h": anom_count,
+            "active_alerts": active_alerts
+        },
+        "insights": insights,
+        "recommendations": recommendations,
+        "confidence": 0.96
+    }
 
 
 if __name__ == "__main__":

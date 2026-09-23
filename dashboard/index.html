@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="FacilityOps Energy Intelligence Dashboard — Real-time energy monitoring powered by AI agents" />
+  <meta name="description"
+    content="FacilityOps Energy Intelligence Dashboard — Real-time energy monitoring powered by AI agents" />
   <title>FacilityOps · Energy Intelligence</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=5" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
+
 <body>
 
   <!-- Ambient Background Orbs -->
@@ -23,13 +28,14 @@
     <div class="nav-brand">
       <div class="brand-icon">
         <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 2L28 8V16C28 22.627 22.627 28 16 28C9.373 28 4 22.627 4 16V8L16 2Z" stroke="url(#brandGrad)" stroke-width="1.5"/>
-          <path d="M16 8V16L21 13" stroke="url(#brandGrad)" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M12 14L16 16V22" stroke="url(#brandGrad)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+          <path d="M16 2L28 8V16C28 22.627 22.627 28 16 28C9.373 28 4 22.627 4 16V8L16 2Z" stroke="url(#brandGrad)"
+            stroke-width="1.5" />
+          <path d="M16 8V16L21 13" stroke="url(#brandGrad)" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M12 14L16 16V22" stroke="url(#brandGrad)" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
           <defs>
             <linearGradient id="brandGrad" x1="4" y1="2" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#00E5FF"/>
-              <stop offset="1" stop-color="#7C3AED"/>
+              <stop stop-color="#00E5FF" />
+              <stop offset="1" stop-color="#7C3AED" />
             </linearGradient>
           </defs>
         </svg>
@@ -44,13 +50,18 @@
       <button class="nav-tab active" id="tab-overview">Overview</button>
       <button class="nav-tab" id="tab-analytics">Analytics</button>
       <button class="nav-tab" id="tab-maintenance">🔧 Maintenance</button>
+      <button class="nav-tab" id="tab-occupancy">👥 Occupancy</button>
+      <button class="nav-tab" id="tab-security">🛡️ Security</button>
+      <button class="nav-tab" id="tab-executive">🏛️ Executive</button>
       <button class="nav-tab" id="tab-agent">AI Agent</button>
       <button class="nav-tab" id="tab-alerts">Alerts <span class="badge">3</span></button>
     </nav>
 
     <div class="nav-right">
       <div class="facility-selector">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="2"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="2" />
+        </svg>
         <select id="facilitySelect">
           <option>Campus A — Block 1</option>
           <option>Campus A — Block 2</option>
@@ -86,35 +97,55 @@
         <div class="sys-list">
           <div class="sys-item active" id="sys-all">
             <div class="sys-icon-wrap" style="--c:#00E5FF">
-              <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="11" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="11" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+              <svg viewBox="0 0 20 20" fill="none">
+                <rect x="2" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5" />
+                <rect x="11" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5" />
+                <rect x="2" y="11" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5" />
+                <rect x="11" y="11" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5" />
+              </svg>
             </div>
             <span>All Systems</span>
             <span class="sys-badge" style="--bc:#00E5FF">Live</span>
           </div>
           <div class="sys-item" id="sys-hvac">
             <div class="sys-icon-wrap" style="--c:#A78BFA">
-              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M10 2v3M10 15v3M2 10h3M15 10h3M4.93 4.93l2.12 2.12M12.95 12.95l2.12 2.12M4.93 15.07l2.12-2.12M12.95 7.05l2.12-2.12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5" />
+                <path
+                  d="M10 2v3M10 15v3M2 10h3M15 10h3M4.93 4.93l2.12 2.12M12.95 12.95l2.12 2.12M4.93 15.07l2.12-2.12M12.95 7.05l2.12-2.12"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
             </div>
             <span>HVAC</span>
             <span class="sys-percent">45%</span>
           </div>
           <div class="sys-item" id="sys-lighting">
             <div class="sys-icon-wrap" style="--c:#FCD34D">
-              <svg viewBox="0 0 20 20" fill="none"><path d="M10 2a6 6 0 00-3 11.197V15a1 1 0 001 1h4a1 1 0 001-1v-1.803A6 6 0 0010 2z" stroke="currentColor" stroke-width="1.5"/><path d="M8 18h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 20 20" fill="none">
+                <path d="M10 2a6 6 0 00-3 11.197V15a1 1 0 001 1h4a1 1 0 001-1v-1.803A6 6 0 0010 2z"
+                  stroke="currentColor" stroke-width="1.5" />
+                <path d="M8 18h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
             </div>
             <span>Lighting</span>
             <span class="sys-percent">28%</span>
           </div>
           <div class="sys-item" id="sys-equipment">
             <div class="sys-icon-wrap" style="--c:#34D399">
-              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/></svg>
+              <svg viewBox="0 0 20 20" fill="none">
+                <path d="M4 10h12M10 4v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5" />
+              </svg>
             </div>
             <span>Equipment</span>
             <span class="sys-percent">18%</span>
           </div>
           <div class="sys-item" id="sys-other">
             <div class="sys-icon-wrap" style="--c:#F87171">
-              <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M10 7v3l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5" />
+                <path d="M10 7v3l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
             </div>
             <span>Other</span>
             <span class="sys-percent">9%</span>
@@ -142,11 +173,17 @@
       <div class="sidebar-section">
         <span class="sidebar-label">QUICK ACTIONS</span>
         <button class="qa-btn" id="btnOptimize">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
           Run Optimization
         </button>
         <button class="qa-btn qa-btn-ghost" id="btnReport">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2"/><polyline points="14 2 14 8 20 8" stroke="currentColor" stroke-width="2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" />
+            <polyline points="14 2 14 8 20 8" stroke="currentColor" stroke-width="2" />
+          </svg>
           Export Report
         </button>
       </div>
@@ -161,7 +198,10 @@
         <div class="kpi-row">
           <div class="kpi-card" id="kpi-energy">
             <div class="kpi-icon-ring" style="--kc: #00E5FF">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </div>
             <div class="kpi-body">
               <span class="kpi-label">Total Energy</span>
@@ -170,7 +210,9 @@
                 <span class="kpi-unit">kWh</span>
               </div>
               <div class="kpi-change up">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><polyline points="18 15 12 9 6 15" stroke="currentColor" stroke-width="2.5"/></svg>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
+                  <polyline points="18 15 12 9 6 15" stroke="currentColor" stroke-width="2.5" />
+                </svg>
                 +2.4% vs yesterday
               </div>
             </div>
@@ -179,7 +221,10 @@
 
           <div class="kpi-card" id="kpi-cost">
             <div class="kpi-icon-ring" style="--kc: #34D399">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" />
+              </svg>
             </div>
             <div class="kpi-body">
               <span class="kpi-label">Cost Savings</span>
@@ -188,7 +233,9 @@
                 <span class="kpi-unit">/ day</span>
               </div>
               <div class="kpi-change up">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><polyline points="18 15 12 9 6 15" stroke="currentColor" stroke-width="2.5"/></svg>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
+                  <polyline points="18 15 12 9 6 15" stroke="currentColor" stroke-width="2.5" />
+                </svg>
                 +8.1% vs last week
               </div>
             </div>
@@ -197,7 +244,11 @@
 
           <div class="kpi-card" id="kpi-carbon">
             <div class="kpi-icon-ring" style="--kc: #A78BFA">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2"/></svg>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" />
+                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" />
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" />
+              </svg>
             </div>
             <div class="kpi-body">
               <span class="kpi-label">Carbon Reduced</span>
@@ -206,7 +257,9 @@
                 <span class="kpi-unit">tCO₂e</span>
               </div>
               <div class="kpi-change up">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><polyline points="18 15 12 9 6 15" stroke="currentColor" stroke-width="2.5"/></svg>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
+                  <polyline points="18 15 12 9 6 15" stroke="currentColor" stroke-width="2.5" />
+                </svg>
                 −12% vs baseline
               </div>
             </div>
@@ -215,7 +268,10 @@
 
           <div class="kpi-card" id="kpi-demand">
             <div class="kpi-icon-ring" style="--kc: #F87171">
-              <svg viewBox="0 0 24 24" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg viewBox="0 0 24 24" fill="none">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
             </div>
             <div class="kpi-body">
               <span class="kpi-label">Peak Demand</span>
@@ -224,7 +280,9 @@
                 <span class="kpi-unit">kW</span>
               </div>
               <div class="kpi-change down">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2.5"/></svg>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
+                  <polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2.5" />
+                </svg>
                 −5.3% vs yesterday
               </div>
             </div>
@@ -295,7 +353,17 @@
             <div class="chart-header">
               <div class="agent-header-left">
                 <div class="agent-avatar">
-                  <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="url(#ag)" stroke-width="1.5"/><path d="M10 16h12M16 10v12" stroke="url(#ag)" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="16" r="4" fill="url(#ag)" opacity="0.3"/><defs><linearGradient id="ag" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs></svg>
+                  <svg viewBox="0 0 32 32" fill="none">
+                    <circle cx="16" cy="16" r="14" stroke="url(#ag)" stroke-width="1.5" />
+                    <path d="M10 16h12M16 10v12" stroke="url(#ag)" stroke-width="1.5" stroke-linecap="round" />
+                    <circle cx="16" cy="16" r="4" fill="url(#ag)" opacity="0.3" />
+                    <defs>
+                      <linearGradient id="ag" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#00E5FF" />
+                        <stop offset="1" stop-color="#7C3AED" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
                 </div>
                 <div>
                   <h3 class="chart-title">Energy Agent</h3>
@@ -303,7 +371,9 @@
                 </div>
               </div>
               <button class="qa-btn" id="btnAgentRun" style="padding:6px 14px;font-size:0.7rem">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><polygon points="5 3 19 12 5 21 5 3" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                  <polygon points="5 3 19 12 5 21 5 3" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                </svg>
                 Analyze
               </button>
             </div>
@@ -313,7 +383,11 @@
             <div class="agent-input-row">
               <input type="text" class="agent-input" id="agentInput" placeholder="Ask the energy agent anything…" />
               <button class="agent-send" id="agentSend">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2"/><polygon points="22 2 15 22 11 13 2 9 22 2" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" stroke="currentColor" stroke-width="2"
+                    stroke-linejoin="round" />
+                </svg>
               </button>
             </div>
           </div>
@@ -391,7 +465,10 @@
             <div class="agent-sidebar-list">
               <div class="agent-sidebar-item active" id="agentNav-energy" onclick="switchAgentView('energy')">
                 <div class="agent-nav-icon" style="--ac:#00E5FF">
-                  <svg viewBox="0 0 20 20" fill="none"><path d="M10 2L4 10h6l-1 8 7-10h-6l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg viewBox="0 0 20 20" fill="none">
+                    <path d="M10 2L4 10h6l-1 8 7-10h-6l1-8z" stroke="currentColor" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
                 </div>
                 <div class="agent-nav-text">
                   <span class="agent-nav-name">Energy Agent</span>
@@ -402,7 +479,10 @@
 
               <div class="agent-sidebar-item" id="agentNav-maintenance" onclick="switchAgentView('maintenance')">
                 <div class="agent-nav-icon" style="--ac:#34D399">
-                  <svg viewBox="0 0 20 20" fill="none"><path d="M15.5 4.5a3 3 0 00-4.24 4.24L4 16l1 1 7.26-7.26A3 3 0 0015.5 4.5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  <svg viewBox="0 0 20 20" fill="none">
+                    <path d="M15.5 4.5a3 3 0 00-4.24 4.24L4 16l1 1 7.26-7.26A3 3 0 0015.5 4.5z" stroke="currentColor"
+                      stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
                 </div>
                 <div class="agent-nav-text">
                   <span class="agent-nav-name">Maintenance Agent</span>
@@ -411,37 +491,47 @@
                 <span class="agent-nav-badge online"></span>
               </div>
 
-              <div class="agent-sidebar-item disabled" id="agentNav-occupancy">
-                <div class="agent-nav-icon" style="--ac:#A78BFA; opacity:0.4">
-                  <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="7" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M4 17c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <div class="agent-sidebar-item" id="agentNav-occupancy" onclick="switchAgentView('occupancy')">
+                <div class="agent-nav-icon" style="--ac:#A78BFA">
+                  <svg viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="7" r="3" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M4 17c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="currentColor" stroke-width="1.5"
+                      stroke-linecap="round" />
+                  </svg>
                 </div>
-                <div class="agent-nav-text" style="opacity:0.45">
+                <div class="agent-nav-text">
                   <span class="agent-nav-name">Occupancy Agent</span>
-                  <span class="agent-nav-sub">M3 · Upcoming</span>
+                  <span class="agent-nav-sub">M3 · Active</span>
                 </div>
-                <span class="agent-nav-badge offline"></span>
+                <span class="agent-nav-badge online"></span>
               </div>
 
-              <div class="agent-sidebar-item disabled" id="agentNav-security">
-                <div class="agent-nav-icon" style="--ac:#F87171; opacity:0.4">
-                  <svg viewBox="0 0 20 20" fill="none"><path d="M10 2L4 5v5c0 3.87 2.6 7.5 6 8.5 3.4-1 6-4.63 6-8.5V5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              <div class="agent-sidebar-item" id="agentNav-security" onclick="switchAgentView('security')">
+                <div class="agent-nav-icon" style="--ac:#F87171">
+                  <svg viewBox="0 0 20 20" fill="none">
+                    <path d="M10 2L4 5v5c0 3.87 2.6 7.5 6 8.5 3.4-1 6-4.63 6-8.5V5L10 2z" stroke="currentColor"
+                      stroke-width="1.5" stroke-linejoin="round" />
+                  </svg>
                 </div>
-                <div class="agent-nav-text" style="opacity:0.45">
+                <div class="agent-nav-text">
                   <span class="agent-nav-name">Security Agent</span>
-                  <span class="agent-nav-sub">M3 · Upcoming</span>
+                  <span class="agent-nav-sub">M3 · Active</span>
                 </div>
-                <span class="agent-nav-badge offline"></span>
+                <span class="agent-nav-badge online"></span>
               </div>
 
-              <div class="agent-sidebar-item disabled" id="agentNav-cost">
-                <div class="agent-nav-icon" style="--ac:#FCD34D; opacity:0.4">
-                  <svg viewBox="0 0 20 20" fill="none"><path d="M10 2v16M14 5.5H8a2.5 2.5 0 000 5h4a2.5 2.5 0 010 5H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <div class="agent-sidebar-item" id="agentNav-cost" onclick="switchAgentView('cost')">
+                <div class="agent-nav-icon" style="--ac:#FCD34D">
+                  <svg viewBox="0 0 20 20" fill="none">
+                    <path d="M10 2v16M14 5.5H8a2.5 2.5 0 000 5h4a2.5 2.5 0 010 5H6" stroke="currentColor"
+                      stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
                 </div>
-                <div class="agent-nav-text" style="opacity:0.45">
+                <div class="agent-nav-text">
                   <span class="agent-nav-name">Cost Optimizer</span>
-                  <span class="agent-nav-sub">M4 · Upcoming</span>
+                  <span class="agent-nav-sub">M4 · Active</span>
                 </div>
-                <span class="agent-nav-badge offline"></span>
+                <span class="agent-nav-badge online"></span>
               </div>
             </div>
           </aside>
@@ -466,28 +556,40 @@
                   <h3 class="chart-title">Ask Energy Agent</h3>
                   <p class="chart-sub">Ask diagnostic questions about your facility's energy performance</p>
                   <div class="prompt-chips">
-                    <button class="chip" onclick="askAgentQuestion('How can we optimize HVAC efficiency?')">⚡ Optimize HVAC</button>
-                    <button class="chip" onclick="askAgentQuestion('What is the forecasted peak demand?')">📈 Peak Demand Forecast</button>
-                    <button class="chip" onclick="askAgentQuestion('Are there any water leaks detected?')">💧 Water Leak Check</button>
-                    <button class="chip" onclick="askAgentQuestion('Summarize energy anomalies in the last 24 hours')">🔍 Anomaly Summary</button>
+                    <button class="chip" onclick="askAgentQuestion('How can we optimize HVAC efficiency?')">⚡ Optimize
+                      HVAC</button>
+                    <button class="chip" onclick="askAgentQuestion('What is the forecasted peak demand?')">📈 Peak
+                      Demand Forecast</button>
+                    <button class="chip" onclick="askAgentQuestion('Are there any water leaks detected?')">💧 Water Leak
+                      Check</button>
+                    <button class="chip"
+                      onclick="askAgentQuestion('Summarize energy anomalies in the last 24 hours')">🔍 Anomaly
+                      Summary</button>
                   </div>
                   <div class="agent-chat-log" id="agentChatLog">
                     <div class="chat-bubble agent">
                       <span class="chat-author">⚡ Energy Agent</span>
-                      <p>Hello! I am monitoring your facility's energy telemetry. All models are trained and operational. Click a suggestion above or ask me anything.</p>
+                      <p>Hello! I am monitoring your facility's energy telemetry. All models are trained and
+                        operational. Click a suggestion above or ask me anything.</p>
                     </div>
                   </div>
                   <div class="agent-input-row" style="margin-top:14px">
-                    <input type="text" class="agent-input" id="agentChatInput" placeholder="Ask about HVAC, peak demand, tariffs, anomalies..." />
+                    <input type="text" class="agent-input" id="agentChatInput"
+                      placeholder="Ask about HVAC, peak demand, tariffs, anomalies..." />
                     <button class="agent-send" id="agentChatSend">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2"/><polygon points="22 2 15 22 11 13 2 9 22 2" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2" />
+                        <polygon points="22 2 15 22 11 13 2 9 22 2" stroke="currentColor" stroke-width="2"
+                          stroke-linejoin="round" />
+                      </svg>
                     </button>
                   </div>
                 </div>
                 <div class="chart-card">
                   <div class="chart-header">
                     <h3 class="chart-title">Active AI Recommendations</h3>
-                    <button class="qa-btn" id="btnApplyAllOpt" style="width:auto;padding:5px 12px;font-size:0.75rem">Apply Optimizations</button>
+                    <button class="qa-btn" id="btnApplyAllOpt"
+                      style="width:auto;padding:5px 12px;font-size:0.75rem">Apply Optimizations</button>
                   </div>
                   <div class="agent-insights" id="agentViewInsights" style="max-height:400px"></div>
                 </div>
@@ -511,33 +613,203 @@
                   <h3 class="chart-title">Ask Maintenance Agent</h3>
                   <p class="chart-sub">Query equipment health, alerts, and maintenance priorities</p>
                   <div class="prompt-chips">
-                    <button class="chip" onclick="askMaintenanceQuestion('Give me a full maintenance status overview')">📊 Facility Overview</button>
-                    <button class="chip" onclick="askMaintenanceQuestion('Which assets are in critical condition?')">🔴 Critical Assets</button>
-                    <button class="chip" onclick="askMaintenanceQuestion('Are there any vibration anomalies detected?')">📳 Vibration Check</button>
-                    <button class="chip" onclick="askMaintenanceQuestion('List all open work orders and maintenance tickets')">🔧 Work Orders</button>
+                    <button class="chip"
+                      onclick="askMaintenanceQuestion('Give me a full maintenance status overview')">📊 Facility
+                      Overview</button>
+                    <button class="chip" onclick="askMaintenanceQuestion('Which assets are in critical condition?')">🔴
+                      Critical Assets</button>
+                    <button class="chip"
+                      onclick="askMaintenanceQuestion('Are there any vibration anomalies detected?')">📳 Vibration
+                      Check</button>
+                    <button class="chip"
+                      onclick="askMaintenanceQuestion('List all open work orders and maintenance tickets')">🔧 Work
+                      Orders</button>
                   </div>
                   <div class="agent-chat-log" id="maintChatLog">
                     <div class="chat-bubble agent" style="--bubble-color:rgba(52,211,153,0.08)">
                       <span class="chat-author" style="color:#34D399">🔧 Maintenance Agent</span>
-                      <p>Hello! I am monitoring <strong>13 facility assets</strong> across all facilities. I track equipment health scores, vibration levels, thermal conditions, and predict maintenance requirements. Ask me anything about your equipment.</p>
+                      <p>Hello! I am monitoring <strong>13 facility assets</strong> across all facilities. I track
+                        equipment health scores, vibration levels, thermal conditions, and predict maintenance
+                        requirements. Ask me anything about your equipment.</p>
                     </div>
                   </div>
                   <div class="agent-input-row" style="margin-top:14px">
-                    <input type="text" class="agent-input" id="maintChatInput" placeholder="Ask about equipment health, alerts, work orders..." />
-                    <button class="agent-send" id="maintChatSend" style="background:linear-gradient(135deg,#34D399,#059669)">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2"/><polygon points="22 2 15 22 11 13 2 9 22 2" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                    <input type="text" class="agent-input" id="maintChatInput"
+                      placeholder="Ask about equipment health, alerts, work orders..." />
+                    <button class="agent-send" id="maintChatSend"
+                      style="background:linear-gradient(135deg,#34D399,#059669)">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2" />
+                        <polygon points="22 2 15 22 11 13 2 9 22 2" stroke="currentColor" stroke-width="2"
+                          stroke-linejoin="round" />
+                      </svg>
                     </button>
                   </div>
                 </div>
                 <div class="chart-card">
                   <div class="chart-header">
                     <h3 class="chart-title">Asset Health Summary</h3>
-                    <button class="qa-btn" id="btnRunMaintAgent" style="width:auto;padding:5px 12px;font-size:0.75rem;background:linear-gradient(135deg,rgba(52,211,153,0.15),rgba(5,150,105,0.15));border-color:rgba(52,211,153,0.4)">🔧 Analyze All Assets</button>
+                    <button class="qa-btn" id="btnRunMaintAgent"
+                      style="width:auto;padding:5px 12px;font-size:0.75rem;background:linear-gradient(135deg,rgba(52,211,153,0.15),rgba(5,150,105,0.15));border-color:rgba(52,211,153,0.4)">🔧
+                      Analyze All Assets</button>
                   </div>
                   <div class="agent-insights" id="maintAgentInsights" style="max-height:400px"></div>
                 </div>
               </div>
             </div><!-- end agentPanel-maintenance -->
+
+            <!-- OCCUPANCY AGENT PANEL -->
+            <div class="agent-panel" id="agentPanel-occupancy">
+              <div class="view-header">
+                <div>
+                  <h2>Occupancy Intelligence Agent</h2>
+                  <p>Real-time space utilization, zone analytics, and occupancy forecasting Q&A</p>
+                </div>
+                <div class="agent-badge-live" style="--badge-color:#A78BFA">
+                  <span class="live-dot" style="background:#A78BFA"></span>
+                  <span>ENGINE: ZONE TRACKING + TIME-SERIES FORECASTING</span>
+                </div>
+              </div>
+              <div class="agent-view-layout">
+                <div class="chart-card agent-chat-card">
+                  <h3 class="chart-title">Ask Occupancy Agent</h3>
+                  <p class="chart-sub">Query zone utilization, peak hours, and space optimization</p>
+                  <div class="prompt-chips">
+                    <button class="chip" style="border-color:rgba(167,139,250,0.4)" onclick="askOccupancyQuestion('What is the current building occupancy rate?')">👥 Current Occupancy</button>
+                    <button class="chip" style="border-color:rgba(167,139,250,0.4)" onclick="askOccupancyQuestion('Which zones are underutilized right now?')">🗂️ Underutilized Zones</button>
+                    <button class="chip" style="border-color:rgba(167,139,250,0.4)" onclick="askOccupancyQuestion('Forecast peak occupancy for next 7 days')">📈 7-Day Forecast</button>
+                    <button class="chip" style="border-color:rgba(167,139,250,0.4)" onclick="askOccupancyQuestion('Suggest HVAC and lighting optimizations based on occupancy')">⚡ Optimize with Occupancy</button>
+                  </div>
+                  <div class="agent-chat-log" id="occupancyChatLog">
+                    <div class="chat-bubble agent" style="--bubble-color:rgba(167,139,250,0.08)">
+                      <span class="chat-author" style="color:#A78BFA">👥 Occupancy Agent</span>
+                      <p>Hello! I monitor real-time zone occupancy across all facility areas. I track utilization rates, forecast demand patterns, and help optimize space allocation. Ask me anything.</p>
+                    </div>
+                  </div>
+                  <div class="agent-input-row" style="margin-top:14px">
+                    <input type="text" class="agent-input" id="occupancyChatInput"
+                      placeholder="Ask about zones, utilization, peak hours, forecasts..." />
+                    <button class="agent-send" id="occupancyChatSend"
+                      style="background:linear-gradient(135deg,#A78BFA,#7C3AED)">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2" />
+                        <polygon points="22 2 15 22 11 13 2 9 22 2" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-card">
+                  <div class="chart-header">
+                    <h3 class="chart-title">Occupancy Insights</h3>
+                    <button class="qa-btn" id="btnRunOccupancyAgent"
+                      style="width:auto;padding:5px 12px;font-size:0.75rem;background:linear-gradient(135deg,rgba(167,139,250,0.15),rgba(124,58,237,0.15));border-color:rgba(167,139,250,0.4)">👥 Analyze Occupancy</button>
+                  </div>
+                  <div class="agent-insights" id="occupancyAgentInsights" style="max-height:400px"></div>
+                </div>
+              </div>
+            </div><!-- end agentPanel-occupancy -->
+
+            <!-- SECURITY AGENT PANEL -->
+            <div class="agent-panel" id="agentPanel-security">
+              <div class="view-header">
+                <div>
+                  <h2>Security Intelligence Agent</h2>
+                  <p>Real-time event monitoring, threat analysis, and security incident Q&A</p>
+                </div>
+                <div class="agent-badge-live" style="--badge-color:#F87171">
+                  <span class="live-dot" style="background:#F87171"></span>
+                  <span>ENGINE: ANOMALY DETECTION + SEVERITY SCORING</span>
+                </div>
+              </div>
+              <div class="agent-view-layout">
+                <div class="chart-card agent-chat-card">
+                  <h3 class="chart-title">Ask Security Agent</h3>
+                  <p class="chart-sub">Query threat levels, access violations, and security events</p>
+                  <div class="prompt-chips">
+                    <button class="chip" style="border-color:rgba(248,113,113,0.4)" onclick="askSecurityQuestion('What is the current security threat level?')">🔴 Threat Level</button>
+                    <button class="chip" style="border-color:rgba(248,113,113,0.4)" onclick="askSecurityQuestion('List all critical security events in the last 24 hours')">⚠️ Recent Incidents</button>
+                    <button class="chip" style="border-color:rgba(248,113,113,0.4)" onclick="askSecurityQuestion('Are there any access control violations?')">🚪 Access Violations</button>
+                    <button class="chip" style="border-color:rgba(248,113,113,0.4)" onclick="askSecurityQuestion('Give me a full security posture summary')">🛡️ Security Summary</button>
+                  </div>
+                  <div class="agent-chat-log" id="securityChatLog">
+                    <div class="chat-bubble agent" style="--bubble-color:rgba(248,113,113,0.08)">
+                      <span class="chat-author" style="color:#F87171">🛡️ Security Agent</span>
+                      <p>Hello! I monitor all security events, access control logs, and threat indicators across the facility. I use anomaly detection to flag unusual patterns. Ask me about current threats or incidents.</p>
+                    </div>
+                  </div>
+                  <div class="agent-input-row" style="margin-top:14px">
+                    <input type="text" class="agent-input" id="securityChatInput"
+                      placeholder="Ask about threats, access events, anomalies, cameras..." />
+                    <button class="agent-send" id="securityChatSend"
+                      style="background:linear-gradient(135deg,#F87171,#DC2626)">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2" />
+                        <polygon points="22 2 15 22 11 13 2 9 22 2" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-card">
+                  <div class="chart-header">
+                    <h3 class="chart-title">Security Event Summary</h3>
+                    <button class="qa-btn" id="btnRunSecurityAgent"
+                      style="width:auto;padding:5px 12px;font-size:0.75rem;background:linear-gradient(135deg,rgba(248,113,113,0.15),rgba(220,38,38,0.15));border-color:rgba(248,113,113,0.4)">🛡️ Analyze Security</button>
+                  </div>
+                  <div class="agent-insights" id="securityAgentInsights" style="max-height:400px"></div>
+                </div>
+              </div>
+            </div><!-- end agentPanel-security -->
+
+            <!-- COST OPTIMIZER AGENT PANEL -->
+            <div class="agent-panel" id="agentPanel-cost">
+              <div class="view-header">
+                <div>
+                  <h2>Cost Optimization Agent</h2>
+                  <p>OpEx analysis, ROI estimation, and savings opportunity identification Q&A</p>
+                </div>
+                <div class="agent-badge-live" style="--badge-color:#FCD34D">
+                  <span class="live-dot" style="background:#FCD34D"></span>
+                  <span>ENGINE: FINANCIAL MODELLING + MULTI-AGENT CROSS-ANALYSIS</span>
+                </div>
+              </div>
+              <div class="agent-view-layout">
+                <div class="chart-card agent-chat-card">
+                  <h3 class="chart-title">Ask Cost Optimizer</h3>
+                  <p class="chart-sub">Query operational costs, savings opportunities, and ROI estimates</p>
+                  <div class="prompt-chips">
+                    <button class="chip" style="border-color:rgba(252,211,77,0.4)" onclick="askCostQuestion('What is our total operating cost this month?')">💰 Total OpEx</button>
+                    <button class="chip" style="border-color:rgba(252,211,77,0.4)" onclick="askCostQuestion('What are the top cost saving opportunities?')">📉 Savings Opportunities</button>
+                    <button class="chip" style="border-color:rgba(252,211,77,0.4)" onclick="askCostQuestion('Show me the energy cost breakdown by category')">⚡ Cost by Category</button>
+                    <button class="chip" style="border-color:rgba(252,211,77,0.4)" onclick="askCostQuestion('Are we within budget compliance this period?')">📋 Budget Status</button>
+                  </div>
+                  <div class="agent-chat-log" id="costChatLog">
+                    <div class="chat-bubble agent" style="--bubble-color:rgba(252,211,77,0.08)">
+                      <span class="chat-author" style="color:#FCD34D">💰 Cost Optimizer</span>
+                      <p>Hello! I analyze facility operational expenditure across energy, maintenance, security, and administrative costs. I identify savings opportunities with traceable ROI estimates. Ask me anything about costs.</p>
+                    </div>
+                  </div>
+                  <div class="agent-input-row" style="margin-top:14px">
+                    <input type="text" class="agent-input" id="costChatInput"
+                      placeholder="Ask about OpEx, savings, budget, ROI, cost trends..." />
+                    <button class="agent-send" id="costChatSend"
+                      style="background:linear-gradient(135deg,#FCD34D,#D97706)">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2" />
+                        <polygon points="22 2 15 22 11 13 2 9 22 2" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="chart-card">
+                  <div class="chart-header">
+                    <h3 class="chart-title">Cost Intelligence Summary</h3>
+                    <button class="qa-btn" id="btnRunCostAgent"
+                      style="width:auto;padding:5px 12px;font-size:0.75rem;background:linear-gradient(135deg,rgba(252,211,77,0.15),rgba(217,119,6,0.15));border-color:rgba(252,211,77,0.4)">💰 Analyze Costs</button>
+                  </div>
+                  <div class="agent-insights" id="costAgentInsights" style="max-height:400px"></div>
+                </div>
+              </div>
+            </div><!-- end agentPanel-cost -->
 
           </div><!-- end agent-content-area -->
         </div><!-- end agent-fullpage-layout -->
@@ -548,14 +820,16 @@
         <div class="view-header">
           <div>
             <h2>Predictive Maintenance System</h2>
-            <p>Equipment health monitoring, risk prediction, and maintenance work orders — powered by Maintenance Agent</p>
+            <p>Equipment health monitoring, risk prediction, and maintenance work orders — powered by Maintenance Agent
+            </p>
           </div>
           <div style="display:flex;gap:8px;align-items:center">
             <div class="agent-badge-live" style="--badge-color:#34D399">
               <span class="live-dot" style="background:#34D399"></span>
               <span>MAINTENANCE AGENT ACTIVE</span>
             </div>
-            <button class="qa-btn" id="btnRunAllAssets" style="width:auto;padding:6px 14px;font-size:0.75rem">🔧 Analyze All Assets</button>
+            <button class="qa-btn" id="btnRunAllAssets" style="width:auto;padding:6px 14px;font-size:0.75rem">🔧 Analyze
+              All Assets</button>
           </div>
         </div>
 
@@ -563,7 +837,12 @@
         <div class="kpi-row" id="maintKpiRow">
           <div class="kpi-card">
             <div class="kpi-icon-ring" style="--kc:#00E5FF">
-              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/></svg>
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+              </svg>
             </div>
             <div class="kpi-body">
               <span class="kpi-label">Assets Monitored</span>
@@ -572,43 +851,65 @@
           </div>
           <div class="kpi-card">
             <div class="kpi-icon-ring" style="--kc:#34D399">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </div>
             <div class="kpi-body">
               <span class="kpi-label">Healthy Assets</span>
-              <div class="kpi-value-row"><span class="kpi-value" id="maint-kpi-healthy" style="color:#34D399">—</span></div>
+              <div class="kpi-value-row"><span class="kpi-value" id="maint-kpi-healthy" style="color:#34D399">—</span>
+              </div>
             </div>
           </div>
           <div class="kpi-card">
             <div class="kpi-icon-ring" style="--kc:#FCD34D">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
             </div>
             <div class="kpi-body">
               <span class="kpi-label">Warning Assets</span>
-              <div class="kpi-value-row"><span class="kpi-value" id="maint-kpi-warning" style="color:#FCD34D">—</span></div>
+              <div class="kpi-value-row"><span class="kpi-value" id="maint-kpi-warning" style="color:#FCD34D">—</span>
+              </div>
             </div>
           </div>
           <div class="kpi-card">
             <div class="kpi-icon-ring" style="--kc:#F87171">
-              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="16" x2="12.01" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                <line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <line x1="12" y1="16" x2="12.01" y2="16" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" />
+              </svg>
             </div>
             <div class="kpi-body">
               <span class="kpi-label">Critical Assets</span>
-              <div class="kpi-value-row"><span class="kpi-value" id="maint-kpi-critical" style="color:#F87171">—</span></div>
+              <div class="kpi-value-row"><span class="kpi-value" id="maint-kpi-critical" style="color:#F87171">—</span>
+              </div>
             </div>
           </div>
           <div class="kpi-card">
             <div class="kpi-icon-ring" style="--kc:#A78BFA">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M18 20V10M12 20V4M6 20v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
             </div>
             <div class="kpi-body">
               <span class="kpi-label">Active Alerts</span>
-              <div class="kpi-value-row"><span class="kpi-value" id="maint-kpi-alerts" style="color:#A78BFA">—</span></div>
+              <div class="kpi-value-row"><span class="kpi-value" id="maint-kpi-alerts" style="color:#A78BFA">—</span>
+              </div>
             </div>
           </div>
           <div class="kpi-card">
             <div class="kpi-icon-ring" style="--kc:#FB923C">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2"/><polyline points="14 2 14 8 20 8" stroke="currentColor" stroke-width="2"/></svg>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor"
+                  stroke-width="2" />
+                <polyline points="14 2 14 8 20 8" stroke="currentColor" stroke-width="2" />
+              </svg>
             </div>
             <div class="kpi-body">
               <span class="kpi-label">Open Work Orders</span>
@@ -664,9 +965,14 @@
             <table class="data-table" id="assetTable">
               <thead>
                 <tr>
-                  <th>Asset</th><th>Type</th><th>Zone</th>
-                  <th>Health</th><th>Status</th><th>Risk</th>
-                  <th>Last Maintenance</th><th>Action</th>
+                  <th>Asset</th>
+                  <th>Type</th>
+                  <th>Zone</th>
+                  <th>Health</th>
+                  <th>Status</th>
+                  <th>Risk</th>
+                  <th>Last Maintenance</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody id="assetTableBody"><!-- JS populated --></tbody>
@@ -690,12 +996,524 @@
           <div class="chart-card" style="flex:2">
             <div class="chart-header">
               <h3 class="chart-title">Work Orders</h3>
-              <button class="qa-btn" id="btnCreateWO" style="width:auto;padding:5px 12px;font-size:0.75rem">+ New Work Order</button>
+              <button class="qa-btn" id="btnCreateWO" style="width:auto;padding:5px 12px;font-size:0.75rem">+ New Work
+                Order</button>
             </div>
             <div id="workOrdersList" style="display:flex;flex-direction:column;gap:10px"></div>
           </div>
         </div>
       </div><!-- end view-maintenance -->
+
+      <!-- ════════════ VIEW: OCCUPANCY INTELLIGENCE ════════════ -->
+      <div class="tab-view" id="view-occupancy">
+        <div class="view-header">
+          <div>
+            <h2>Occupancy Intelligence & Space Utilization</h2>
+            <p>Real-time headcount monitoring, zone utilization, bottleneck alerts, and 24h demand forecasting</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <span class="live-dot"></span>
+            <span style="font-size:0.75rem;color:var(--muted)">Occupancy Engine Online</span>
+          </div>
+        </div>
+
+        <!-- Occupancy KPI Cards -->
+        <div id="occKpiRow">
+          <div class="kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-label">Current Occupancy</span>
+              <div class="kpi-icon-ring" style="--c:#00E5FF">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" />
+                  <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" />
+                  <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="occKpiTotal">—</div>
+            <div class="kpi-sub"><span id="occKpiTotalPct" class="pill pill-green">0%</span> of total capacity</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-label">Occupancy Rate</span>
+              <div class="kpi-icon-ring" style="--c:#7C3AED">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="occKpiRate">—</div>
+            <div class="kpi-sub"><span class="pill pill-blue">Facility Mean</span> baseline</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-label">Active Zones</span>
+              <div class="kpi-icon-ring" style="--c:#10B981">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2" />
+                  <rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2" />
+                  <rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="2" />
+                  <rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="occKpiZones">—</div>
+            <div class="kpi-sub">Monitored areas</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-label">High-Utilization</span>
+              <div class="kpi-icon-ring" style="--c:#F59E0B">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="occKpiHigh">—</div>
+            <div class="kpi-sub">75%–90% capacity</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-label">Overcrowded Zones</span>
+              <div class="kpi-icon-ring" style="--c:#EF4444">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                  <line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="occKpiOvercrowded" style="color:var(--red)">—</div>
+            <div class="kpi-sub">>90% capacity alert</div>
+          </div>
+        </div>
+
+        <!-- Occupancy Primary Charts -->
+        <div class="occ-charts-grid">
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title">Building Occupancy Over Time (Past 48 Hours)</h3>
+              <span style="font-size:0.72rem;color:var(--muted)">Hourly Sensor Feed</span>
+            </div>
+            <div style="height:220px;position:relative">
+              <canvas id="chartOccupancyTrend"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title">Space Utilization Distribution</h3>
+              <span style="font-size:0.72rem;color:var(--muted)">Capacity Status</span>
+            </div>
+            <div style="height:220px;position:relative">
+              <canvas id="chartOccupancyDist"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Occupancy Secondary Charts -->
+        <div class="occ-secondary-grid">
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title">Zone Utilization Comparison</h3>
+              <span style="font-size:0.72rem;color:var(--muted)">Headcount vs Capacity</span>
+            </div>
+            <div style="height:220px;position:relative">
+              <canvas id="chartZoneUtilization"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-header">
+              <div style="display:flex;align-items:center;gap:8px">
+                <h3 class="chart-title">24-Hour Occupancy Forecast</h3>
+                <span class="pill pill-cyan" id="occModelAccuracyTag">ML Accuracy: 84.3%</span>
+              </div>
+              <span style="font-size:0.72rem;color:var(--muted)">GradientBoostingRegressor</span>
+            </div>
+            <div style="height:220px;position:relative">
+              <canvas id="chartOccupancyForecast"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Occupancy Heatmap Card -->
+        <div class="chart-card" style="margin-bottom:20px">
+          <div class="chart-header">
+            <div>
+              <h3 class="chart-title">7-Day Occupancy Heatmap</h3>
+              <p style="font-size:0.75rem;color:var(--muted);margin-top:2px">Hourly occupancy concentration across
+                facility days (00:00 to 23:00)</p>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.72rem;color:var(--muted)">
+              <span>Low (0%)</span>
+              <div
+                style="width:70px;height:8px;border-radius:4px;background:linear-gradient(90deg, #1A2233, #00E5FF, #7C3AED, #EF4444)">
+              </div>
+              <span>Peak (100%)</span>
+            </div>
+          </div>
+          <div class="heatmap-container" id="occHeatmapContainer"></div>
+        </div>
+
+        <!-- Zone Breakdown Table & AI Insights -->
+        <div style="display:flex;gap:16px;margin-bottom:20px" class="resp-flex">
+          <div class="chart-card" style="flex:3">
+            <div class="chart-header">
+              <h3 class="chart-title">Monitored Zones & Utilization Status</h3>
+              <span style="font-size:0.72rem;color:var(--muted)">Live Telemetry</span>
+            </div>
+            <div class="asset-table-wrap">
+              <table class="asset-table" id="occZonesTable">
+                <thead>
+                  <tr>
+                    <th>Zone</th>
+                    <th>Capacity</th>
+                    <th>Current Occupancy</th>
+                    <th>Utilization Rate</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="occZonesTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="chart-card" style="flex:2">
+            <div class="chart-header">
+              <h3 class="chart-title">Occupancy Agent Insights</h3>
+              <span class="pill pill-blue">AI Optimizer</span>
+            </div>
+            <div id="occInsightsList" style="display:flex;flex-direction:column;gap:10px"></div>
+          </div>
+        </div>
+      </div><!-- end view-occupancy -->
+
+      <!-- ════════════ VIEW: SECURITY INTELLIGENCE ════════════ -->
+      <div class="tab-view" id="view-security">
+        <div class="view-header">
+          <div>
+            <h2>Security Intelligence & Access Monitoring</h2>
+            <p>Access control events, unauthorized entry detection, CCTV anomalies, and automated threat escalation</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="font-size:0.75rem;color:var(--muted)">Facility Threat Level:</span>
+            <span id="secThreatBadge" class="sec-risk-pill low">LOW RISK</span>
+          </div>
+        </div>
+
+        <!-- Security KPI Cards -->
+        <div id="secKpiRow">
+          <div class="kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-label">Total Security Events</span>
+              <div class="kpi-icon-ring" style="--c:#3B82F6">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="secKpiTotal">—</div>
+            <div class="kpi-sub">30-day recorded events</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-label">High-Severity Events</span>
+              <div class="kpi-icon-ring" style="--c:#EF4444">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                  <line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="secKpiHigh" style="color:var(--red)">—</div>
+            <div class="kpi-sub">Critical / High priority</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-label">Unauthorized Access</span>
+              <div class="kpi-icon-ring" style="--c:#F97316">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2" />
+                  <path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="secKpiUnauth">—</div>
+            <div class="kpi-sub">Badge & lock rejections</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-top">
+              <span class="kpi-label">Active Security Alerts</span>
+              <div class="kpi-icon-ring" style="--c:#F59E0B">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" stroke="currentColor"
+                    stroke-width="2" />
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="secKpiAlerts">—</div>
+            <div class="kpi-sub">Requires resolution</div>
+          </div>
+        </div>
+
+        <!-- Security Charts Grid -->
+        <div class="sec-charts-grid">
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title">Security Events Over Time</h3>
+              <span style="font-size:0.72rem;color:var(--muted)">Daily Incident Frequency</span>
+            </div>
+            <div style="height:210px;position:relative">
+              <canvas id="chartSecurityTrend"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title">Event Severity Distribution</h3>
+              <span style="font-size:0.72rem;color:var(--muted)">Risk Categorization</span>
+            </div>
+            <div style="height:210px;position:relative">
+              <canvas id="chartSecuritySeverity"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title">Event Type Breakdown</h3>
+              <span style="font-size:0.72rem;color:var(--muted)">Access Control vs Vision</span>
+            </div>
+            <div style="height:210px;position:relative">
+              <canvas id="chartSecurityTypes"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title">Zone-Wise Security Activity</h3>
+              <span style="font-size:0.72rem;color:var(--muted)">Perimeter Distribution</span>
+            </div>
+            <div style="height:210px;position:relative">
+              <canvas id="chartSecurityZones"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security Event Table & Alert Action Panel -->
+        <div style="display:flex;gap:16px;margin-bottom:20px" class="resp-flex">
+          <div class="chart-card" style="flex:3">
+            <div class="chart-header">
+              <h3 class="chart-title">Security Incident & Access Events</h3>
+              <div style="display:flex;gap:6px">
+                <button class="filter-btn active" data-secfilter="all">All</button>
+                <button class="filter-btn" data-secfilter="critical">🔴 Critical</button>
+                <button class="filter-btn" data-secfilter="high">🟠 High</button>
+                <button class="filter-btn" data-secfilter="warning">🟡 Warning</button>
+              </div>
+            </div>
+            <div class="asset-table-wrap">
+              <table class="asset-table" id="secEventsTable">
+                <thead>
+                  <tr>
+                    <th>Event ID</th>
+                    <th>Zone</th>
+                    <th>Event Type</th>
+                    <th>Severity</th>
+                    <th>Timestamp</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="secEventsTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="chart-card" style="flex:2">
+            <div class="chart-header">
+              <h3 class="chart-title">Active Security Alerts</h3>
+              <span class="pill pill-red">Incident Response</span>
+            </div>
+            <div id="secAlertsList" style="display:flex;flex-direction:column;gap:8px"></div>
+          </div>
+        </div>
+      </div><!-- end view-security -->
+
+      <!-- ════════════ VIEW 5: EXECUTIVE COMMAND CENTER (Milestone 4) ════════════ -->
+      <div class="tab-view" id="view-executive">
+        <!-- View Header -->
+        <div class="view-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+          <div>
+            <h2 style="font-size:1.5rem; font-weight:700; color:var(--text); display:flex; align-items:center; gap:10px;">
+              <span>🏛️ Executive Facility Command Center</span>
+              <span class="badge" id="execFacilityTypeBadge" style="font-size:0.75rem; background:rgba(2,132,199,0.12); color:#0284C7; border:1px solid rgba(2,132,199,0.25); padding:3px 8px; border-radius:4px; font-weight:700;">CAMPUS</span>
+            </h2>
+            <p style="color:var(--muted); font-size:0.875rem; margin-top:4px;">
+              Multi-Agent Intelligence Orchestration, Unified Health Scoring & Financial OpEx Optimization
+            </p>
+          </div>
+          <div style="display:flex; gap:10px;">
+            <button class="btn-primary" id="btnDownloadReportText" style="padding:8px 14px; font-size:0.8rem; background:rgba(37,99,235,0.08); border:1px solid #2563EB; color:#2563EB; border-radius:6px; cursor:pointer; font-weight:600; display:flex; align-items:center; gap:6px;">
+              <span>📄 Download Audit Report</span>
+            </button>
+            <button class="btn-primary" id="btnDownloadReportJson" style="padding:8px 14px; font-size:0.8rem; background:rgba(16,185,129,0.08); border:1px solid #10B981; color:#059669; border-radius:6px; cursor:pointer; font-weight:600; display:flex; align-items:center; gap:6px;">
+              <span>💾 Export JSON</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- EXECUTIVE KPI CARDS -->
+        <div class="kpi-row" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+          <!-- Facility Health Card -->
+          <div class="kpi-card" style="border-top:3px solid #0284C7; display:flex; flex-direction:column; justify-content:space-between;">
+            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+              <span class="kpi-label" style="font-size:0.72rem; color:var(--muted); font-weight:600;">FACILITY HEALTH</span>
+              <span class="badge" id="execHealthGradeBadge" style="background:rgba(2,132,199,0.12); color:#0284C7; font-size:0.7rem; font-weight:700; padding:2px 7px; border-radius:4px;">EXCELLENT</span>
+            </div>
+            <div style="display:flex; align-items:baseline; gap:6px; margin-top:8px;">
+              <span class="kpi-val" id="execHealthScore" style="color:var(--text);">--</span>
+              <span style="color:var(--muted); font-size:1.1rem; font-weight:600;">/100</span>
+            </div>
+            <div class="kpi-sub" id="execHealthSubtext" style="color:var(--muted);">Composite Operational Index</div>
+          </div>
+
+          <!-- Total Operating Cost -->
+          <div class="kpi-card" style="border-top:3px solid #2563EB; display:flex; flex-direction:column; justify-content:space-between;">
+            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+              <span class="kpi-label" style="font-size:0.72rem; color:var(--muted); font-weight:600;">30-DAY TOTAL OPEX</span>
+              <span class="badge" id="execBudgetComplianceBadge" style="background:rgba(37,99,235,0.12); color:#2563EB; font-size:0.7rem; font-weight:700; padding:2px 7px; border-radius:4px;">COMPLIANT</span>
+            </div>
+            <div style="display:flex; align-items:baseline; gap:6px; margin-top:8px;">
+              <span class="kpi-val" id="execTotalOpex" style="color:var(--text);">₹--</span>
+            </div>
+            <div class="kpi-sub" id="execOpexSubtext" style="color:var(--muted);">₹-- / sq.ft.</div>
+          </div>
+
+          <!-- Potential Savings -->
+          <div class="kpi-card" style="border-top:3px solid #059669; display:flex; flex-direction:column; justify-content:space-between;">
+            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+              <span class="kpi-label" style="font-size:0.72rem; color:var(--muted); font-weight:600;">POTENTIAL SAVINGS</span>
+              <span class="badge" style="background:rgba(16,185,129,0.15); color:#059669; font-size:0.7rem; font-weight:700; padding:2px 7px; border-radius:4px;">ESTIMATED</span>
+            </div>
+            <div style="display:flex; align-items:baseline; gap:6px; margin-top:8px;">
+              <span class="kpi-val" id="execPotentialSavings" style="color:#059669;">₹--</span>
+            </div>
+            <div class="kpi-sub" id="execSavingsPctSubtext" style="color:var(--muted);">--% of baseline OpEx</div>
+          </div>
+
+          <!-- Active Alarms / Critical Assets -->
+          <div class="kpi-card" style="border-top:3px solid #D97706; display:flex; flex-direction:column; justify-content:space-between;">
+            <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+              <span class="kpi-label" style="font-size:0.72rem; color:var(--muted); font-weight:600;">OPERATIONAL ALERTS</span>
+              <span class="badge" id="execCritAssetsBadge" style="background:rgba(217,119,6,0.15); color:#D97706; font-size:0.7rem; font-weight:700; padding:2px 7px; border-radius:4px;">0 CRITICAL</span>
+            </div>
+            <div style="display:flex; align-items:baseline; gap:6px; margin-top:8px;">
+              <span class="kpi-val" id="execActiveAlertsCount" style="color:var(--text);">--</span>
+              <span style="color:var(--muted); font-size:0.875rem;">active alarms</span>
+            </div>
+            <div class="kpi-sub" id="execAlertsSubtext" style="color:var(--muted);">Integrated multi-agent events</div>
+          </div>
+        </div>
+
+        <!-- AGENT FLEET STATUS MATRIX -->
+        <div class="chart-card" style="margin-top:20px; padding:18px 20px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+            <h3 style="font-size:1.05rem; font-weight:600; color:var(--text); display:flex; align-items:center; gap:8px;">
+              <span>🤖 Multi-Agent Autonomous Fleet Status</span>
+            </h3>
+            <span style="font-size:0.75rem; color:var(--muted);">Standardized Contract V1.0</span>
+          </div>
+          <div id="execFleetGrid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px;">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+        <!-- TWO COLUMN CHARTS: COST DISTRIBUTION & 30-DAY TREND -->
+        <div style="display:grid; grid-template-columns: 1fr 1.6fr; gap:20px; margin-top:20px;">
+          <!-- Cost Breakdown Donut -->
+          <div class="chart-card" style="padding:18px 20px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <h3 style="font-size:1rem; font-weight:600; color:var(--text);">💰 OpEx by Category</h3>
+              <span style="font-size:0.75rem; color:var(--muted);">Measured 30-Day Total</span>
+            </div>
+            <div style="position:relative; height:240px; display:flex; justify-content:center;">
+              <canvas id="execCostDonutChart"></canvas>
+            </div>
+            <div id="execCostCategoryLegend" style="margin-top:14px; display:grid; grid-template-columns:1fr 1fr; gap:8px; font-size:0.8rem;"></div>
+          </div>
+
+          <!-- Cost Trend Line Chart -->
+          <div class="chart-card" style="padding:18px 20px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+              <h3 style="font-size:1rem; font-weight:600; color:var(--text);">📈 Daily Operational Expenditure vs. Budget</h3>
+              <span style="font-size:0.75rem; color:var(--muted);">30-Day Daily Series (₹)</span>
+            </div>
+            <div style="position:relative; height:240px;">
+              <canvas id="execCostTrendChart"></canvas>
+            </div>
+            <div style="margin-top:10px; font-size:0.75rem; color:var(--muted); text-align:right;">
+              <span>Green dashed line indicates aggregate daily operational budget limit.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CROSS-AGENT CORRELATIONS & REASONING -->
+        <div class="chart-card" style="margin-top:20px; padding:18px 20px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+            <div>
+              <h3 style="font-size:1.05rem; font-weight:600; color:var(--text); display:flex; align-items:center; gap:8px;">
+                <span>🧠 Cross-Agent Operational Reasoning & Correlated Insights</span>
+              </h3>
+              <p style="font-size:0.8rem; color:var(--muted); margin-top:2px;">
+                Identified multi-domain opportunities synthesized by the Facility Intelligence Engine
+              </p>
+            </div>
+            <span class="badge" id="execCorrelationsCountBadge" style="background:rgba(99,102,241,0.12); color:#4F46E5; font-size:0.75rem; padding:3px 8px; border-radius:4px; font-weight:700;">0 CORRELATIONS</span>
+          </div>
+          <div id="execCorrelationsList" style="display:flex; flex-direction:column; gap:12px;"></div>
+        </div>
+
+        <!-- QUANTIFIED OPTIMIZATION OPPORTUNITIES TABLE -->
+        <div class="chart-card" style="margin-top:20px; padding:18px 20px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+            <div>
+              <h3 style="font-size:1.05rem; font-weight:600; color:var(--text); display:flex; align-items:center; gap:8px;">
+                <span>⚡ Traceable Cost-Saving Opportunities</span>
+              </h3>
+              <p style="font-size:0.8rem; color:var(--muted); margin-top:2px;">
+                Rigorous baseline vs. optimized cost comparisons (Estimated potential savings)
+              </p>
+            </div>
+            <span class="badge" style="background:rgba(16,185,129,0.15); color:#059669; font-size:0.75rem; padding:3px 8px; border-radius:4px; font-weight:700;" id="execOppsTotalBadge">0 INITIATIVES</span>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="data-table" style="width:100%; text-align:left; border-collapse:collapse; font-size:0.85rem;">
+              <thead>
+                <tr style="border-bottom:1px solid var(--border); color:var(--muted);">
+                  <th style="padding:10px;">INITIATIVE</th>
+                  <th style="padding:10px;">CATEGORY</th>
+                  <th style="padding:10px;">SOURCE AGENT</th>
+                  <th style="padding:10px;">BASELINE</th>
+                  <th style="padding:10px;">OPTIMIZED</th>
+                  <th style="padding:10px;">POTENTIAL SAVING</th>
+                  <th style="padding:10px;">PAYBACK</th>
+                  <th style="padding:10px;">STATUS</th>
+                </tr>
+              </thead>
+              <tbody id="execOpportunitiesTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+      </div><!-- end view-executive -->
 
       <!-- ════════════ VIEW 4: ALERTS MANAGEMENT ════════════ -->
       <div class="tab-view" id="view-alerts">
@@ -725,6 +1543,7 @@
 
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <script src="app.js?v=6"></script>
+  <script src="app.js?v=7"></script>
 </body>
+
 </html>

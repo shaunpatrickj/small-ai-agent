@@ -31,8 +31,9 @@ import sys
 import json
 from pathlib import Path
 from datetime import datetime
+from typing import Optional, List, Dict
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
@@ -50,12 +51,16 @@ from ai_engine import (
     train_all,
 )
 from maintenance_agent import get_maintenance_agent
+from occupancy_agent import get_occupancy_agent
+from security_agent import get_security_agent
+from cost_agent import get_cost_agent
+from facility_intelligence_engine import get_facility_intelligence_engine
 
 # ── App Setup ─────────────────────────────────────────────────────────────────
 app = FastAPI(
-    title="FacilityOps Energy Intelligence API",
-    description="Agentic AI Platform for energy monitoring, anomaly detection, and forecasting",
-    version="1.0.0",
+    title="FacilityOps AI Platform API",
+    description="Agentic AI Platform for Energy, Maintenance, Occupancy & Security Intelligence",
+    version="1.3.0",
 )
 
 app.add_middleware(
@@ -108,6 +113,39 @@ class WorkOrderCreateRequest(BaseModel):
 
 class WorkOrderUpdateRequest(BaseModel):
     status: str   # OPEN / IN_PROGRESS / COMPLETED
+
+class OccupancyAnalyzeRequest(BaseModel):
+    facility_id: int = 1
+    zone:        str = ""
+    question:    str = ""
+
+class OccupancyIngestRequest(BaseModel):
+    facility_id:     int = 1
+    zone:            str
+    occupancy_count: int
+    capacity:        int = 50
+    timestamp:       str = ""
+
+class SecurityAnalyzeRequest(BaseModel):
+    facility_id: int = 1
+    event_id:    str = ""
+    question:    str = ""
+
+class SecurityEventCreateRequest(BaseModel):
+    facility_id: int = 1
+    zone:        str
+    event_type:  str  # UNAUTHORIZED_ACCESS, TAILGATING, DOOR_FORCED, AFTER_HOURS_ENTRY, CCTV_ANOMALY, BADGE_MISUSE
+    severity:    str = "HIGH"
+    risk_level:  str = "HIGH"
+    source:      str = "Access Control System"
+    description: str
+    details:     dict = {}
+    timestamp:   str = ""
+
+
+class CostAnalyzeRequest(BaseModel):
+    facility_id: int = 1
+    question:    str = ""
 
 
 # ── Helper ────────────────────────────────────────────────────────────────────
@@ -843,6 +881,486 @@ async def update_work_order(work_order_id: str, req: WorkOrderUpdateRequest):
     return {"work_order_id": work_order_id, "status": req.status, "updated_at": datetime.now().isoformat()}
 
 
+# ═══════════════════════════════════════════════════════════════════════════════
+# MILESTONE 3 — OCCUPANCY INTELLIGENCE ENDPOINTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ── GET /api/occupancy/overview ───────────────────────────────────────────────
+@app.get("/api/occupancy/overview")
+async def occupancy_overview(facility_id: int = Query(1)):
+    """Overview KPI metrics for the Occupancy Intelligence dashboard."""
+    facility_or_404(facility_id)
+    agent = get_occupancy_agent()
+    summary = agent.analyze_facility_occupancy(facility_id)
+    return summary
+
+
+# ── GET /api/occupancy/zones ──────────────────────────────────────────────────
+@app.get("/api/occupancy/zones")
+async def list_occupancy_zones(facility_id: int = Query(1)):
+    """List all monitored zones with live count, capacity, rate, and status."""
+    facility_or_404(facility_id)
+    agent = get_occupancy_agent()
+    zones = agent.get_latest_zone_occupancy(facility_id)
+    return {
+        "facility_id": facility_id,
+        "zones": zones,
+        "total": len(zones)
+    }
+
+
+# ── GET /api/occupancy/analytics ──────────────────────────────────────────────
+@app.get("/api/occupancy/analytics")
+async def occupancy_analytics(facility_id: int = Query(1)):
+    """Comprehensive occupancy analytics including trends and space distribution."""
+    facility_or_404(facility_id)
+    agent = get_occupancy_agent()
+    ov = agent.analyze_facility_occupancy(facility_id)
+    trends = agent.get_occupancy_trends(facility_id, hours=48)
+    underutilized = agent.detect_underutilization_zones(facility_id)
+    overcrowded = agent.detect_overcrowding_events(facility_id, hours=48)
+    insights = agent.generate_occupancy_insights(facility_id)
+
+    # Space utilization category distribution
+    dist = [
+        {"status": "Overcrowded (>90%)", "count": ov["overcrowded_count"], "color": "#EF4444"},
+        {"status": "High (75-90%)",     "count": ov["high_utilization_count"], "color": "#F59E0B"},
+        {"status": "Optimal (25-75%)",   "count": ov["optimal_count"], "color": "#10B981"},
+        {"status": "Underutilized (<25%)","count": ov["underutilized_count"], "color": "#3B82F6"},
+    ]
+
+    return {
+        "facility_id": facility_id,
+        "overview": ov,
+        "distribution": dist,
+        "trends": trends,
+        "underutilized_zones": underutilized,
+        "overcrowded_events": overcrowded,
+        "insights": insights
+    }
+
+
+# ── GET /api/occupancy/forecast ───────────────────────────────────────────────
+@app.get("/api/occupancy/forecast")
+async def occupancy_forecast(facility_id: int = Query(1)):
+    """24-hour occupancy forecast with accuracy evaluation metrics."""
+    facility_or_404(facility_id)
+    agent = get_occupancy_agent()
+    try:
+        forecast_series = agent.forecast_24h(facility_id)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+    # Retrieve model evaluation metrics
+    eval_result = agent.train_and_evaluate_forecaster(facility_id)
+
+    return {
+        "facility_id": facility_id,
+        "forecast_series": forecast_series,
+        "evaluation": eval_result,
+        "generated_at": datetime.now().isoformat()
+    }
+
+
+# ── GET /api/occupancy/heatmap ────────────────────────────────────────────────
+@app.get("/api/occupancy/heatmap")
+async def occupancy_heatmap(facility_id: int = Query(1)):
+    """7-day hourly occupancy heatmap matrix."""
+    facility_or_404(facility_id)
+    agent = get_occupancy_agent()
+    matrix = agent.get_occupancy_heatmap(facility_id)
+    return matrix
+
+
+# ── POST /api/occupancy/records ───────────────────────────────────────────────
+@app.post("/api/occupancy/records")
+async def ingest_occupancy_record(req: OccupancyIngestRequest):
+    """Ingest a new zone occupancy measurement."""
+    agent = get_occupancy_agent()
+    ts = req.timestamp or datetime.now().isoformat()
+    record = {
+        "facility_id": req.facility_id,
+        "zone": req.zone,
+        "occupancy_count": req.occupancy_count,
+        "capacity": req.capacity,
+        "timestamp": ts
+    }
+    valid, errors = agent.validate_record(record)
+    if not valid:
+        raise HTTPException(status_code=400, detail=f"Invalid occupancy record: {'; '.join(errors)}")
+
+    rate = round(req.occupancy_count / max(1, req.capacity), 3)
+    if rate > 0.90:
+        status = "OVERCROWDED"
+    elif rate > 0.75:
+        status = "HIGH"
+    elif rate >= 0.25:
+        status = "OPTIMAL"
+    else:
+        status = "UNDERUTILIZED"
+
+    conn = get_connection()
+    cur = conn.cursor()
+    cur.execute("""
+        INSERT INTO OCCUPANCY_RECORDS
+        (facility_id, zone, occupancy_count, capacity, occupancy_rate, occupancy_status, timestamp)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+    """, (req.facility_id, req.zone, req.occupancy_count, req.capacity, rate, status, ts))
+    rec_id = cur.lastrowid
+    conn.commit()
+    conn.close()
+
+    return {
+        "occupancy_id": rec_id,
+        "zone": req.zone,
+        "occupancy_count": req.occupancy_count,
+        "capacity": req.capacity,
+        "occupancy_rate": rate,
+        "status": status,
+        "timestamp": ts
+    }
+
+
+# ── POST /api/occupancy/agent/analyze ─────────────────────────────────────────
+@app.post("/api/occupancy/agent/analyze")
+async def occupancy_agent_analyze(req: OccupancyAnalyzeRequest):
+    """Run Occupancy Agent — space analysis or natural language Q&A."""
+    facility_or_404(req.facility_id)
+    agent = get_occupancy_agent()
+
+    if req.question:
+        return agent.answer_occupancy_query(req.question, req.facility_id)
+    else:
+        ov = agent.analyze_facility_occupancy(req.facility_id)
+        insights = agent.generate_occupancy_insights(req.facility_id)
+        return {
+            "mode": "facility_analysis",
+            "facility_id": req.facility_id,
+            "overview": ov,
+            "insights": insights,
+            "timestamp": datetime.now().isoformat()
+        }
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MILESTONE 3 — SECURITY INTELLIGENCE ENDPOINTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ── GET /api/security/overview ────────────────────────────────────────────────
+@app.get("/api/security/overview")
+async def security_overview(facility_id: int = Query(1)):
+    """KPI summary for Security Intelligence dashboard."""
+    facility_or_404(facility_id)
+    agent = get_security_agent()
+    return agent.get_security_overview(facility_id)
+
+
+# ── GET /api/security/events ──────────────────────────────────────────────────
+@app.get("/api/security/events")
+async def list_security_events(
+    facility_id: int = 1,
+    severity: Optional[str] = None,
+    status: Optional[str] = None,
+    event_type: Optional[str] = None,
+    limit: int = 50
+):
+    """List security incident and access events with optional filtering."""
+    fac_id = facility_id if isinstance(facility_id, int) else getattr(facility_id, "default", 1)
+    lim_val = limit if isinstance(limit, int) else getattr(limit, "default", 50)
+    facility_or_404(fac_id)
+    agent = get_security_agent()
+    events = agent.get_security_events(fac_id, limit=lim_val)
+
+    if isinstance(severity, str) and severity:
+        events = [e for e in events if e.get("severity", "").upper() == severity.upper()]
+    if isinstance(status, str) and status:
+        events = [e for e in events if e.get("status", "").upper() == status.upper()]
+    if isinstance(event_type, str) and event_type:
+        events = [e for e in events if e.get("event_type", "").upper() == event_type.upper()]
+
+    return {
+        "facility_id": fac_id,
+        "events": events,
+        "total": len(events)
+    }
+
+
+# ── GET /api/security/events/{event_id} ───────────────────────────────────────
+@app.get("/api/security/events/{event_id}")
+async def get_security_event_detail(event_id: str):
+    """Incident detail showing forensic context, associated alerts, and related events."""
+    agent = get_security_agent()
+    try:
+        detail = agent.get_event_detail(event_id)
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    return detail
+
+
+# ── POST /api/security/events ─────────────────────────────────────────────────
+@app.post("/api/security/events")
+async def ingest_security_event(req: SecurityEventCreateRequest):
+    """Ingest a security event: runs validation, risk evaluation, and deduplicated alerts."""
+    agent = get_security_agent()
+    ts = req.timestamp or datetime.now().isoformat()
+    evt_data = {
+        "facility_id": req.facility_id,
+        "zone": req.zone,
+        "event_type": req.event_type,
+        "severity": req.severity,
+        "risk_level": req.risk_level,
+        "source": req.source,
+        "description": req.description,
+        "details": req.details,
+        "timestamp": ts
+    }
+    try:
+        res = agent.process_security_event(evt_data)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    return res
+
+
+# ── GET /api/security/alerts ──────────────────────────────────────────────────
+@app.get("/api/security/alerts")
+async def list_security_alerts(facility_id: int = Query(1)):
+    """List active security alerts from central ALERTS table."""
+    facility_or_404(facility_id)
+    conn = get_connection()
+    rows = [dict(r) for r in conn.execute("""
+        SELECT * FROM ALERTS
+        WHERE facility_id=? AND alert_type IN (
+            'unauthorized_access', 'door_forced', 'tailgating', 'after_hours_entry', 'cctv_anomaly', 'badge_misuse'
+        )
+        ORDER BY
+            CASE severity WHEN 'critical' THEN 0 WHEN 'warning' THEN 1 ELSE 2 END,
+            created_at DESC
+    """, (facility_id,)).fetchall()]
+    conn.close()
+
+    # Normalize alert status from resolved flag
+    for r in rows:
+        r["status"] = "RESOLVED" if r.get("resolved") == 1 else "NEW"
+
+    return {
+        "facility_id": facility_id,
+        "alerts": rows,
+        "total": len(rows),
+        "active": sum(1 for r in rows if r.get("resolved") == 0)
+    }
+
+
+# ── POST /api/security/alerts/{alert_id}/acknowledge ──────────────────────────
+@app.post("/api/security/alerts/{alert_id}/acknowledge")
+async def acknowledge_security_alert(alert_id: int):
+    """Acknowledge a security alert."""
+    agent = get_security_agent()
+    try:
+        return agent.acknowledge_alert(alert_id)
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+
+
+# ── POST /api/security/alerts/{alert_id}/resolve ──────────────────────────────
+@app.post("/api/security/alerts/{alert_id}/resolve")
+async def resolve_security_alert(alert_id: int):
+    """Resolve a security alert."""
+    agent = get_security_agent()
+    try:
+        return agent.resolve_alert(alert_id)
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+
+
+# ── GET /api/security/analytics ───────────────────────────────────────────────
+@app.get("/api/security/analytics")
+async def security_analytics(facility_id: int = Query(1)):
+    """Analytics distribution data for security charts."""
+    facility_or_404(facility_id)
+    agent = get_security_agent()
+    return agent.get_security_analytics(facility_id)
+
+
+# ── POST /api/security/agent/analyze ──────────────────────────────────────────
+@app.post("/api/security/agent/analyze")
+async def security_agent_analyze(req: SecurityAnalyzeRequest):
+    """Run Security Agent — risk analysis or natural language Q&A."""
+    facility_or_404(req.facility_id)
+    agent = get_security_agent()
+    if req.event_id:
+        try:
+            return agent.get_event_detail(req.event_id)
+        except ValueError as e:
+            raise HTTPException(status_code=404, detail=str(e))
+    elif req.question:
+        return agent.answer_security_query(req.question, req.facility_id)
+    else:
+        ov = agent.get_security_overview(req.facility_id)
+        analytics = agent.get_security_analytics(req.facility_id)
+        return {
+            "mode": "full_security_analysis",
+            "facility_id": req.facility_id,
+            "overview": ov,
+            "analytics": analytics,
+            "timestamp": datetime.now().isoformat()
+        }
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MILESTONE 4 — COST OPTIMIZATION & FACILITY INTELLIGENCE ENDPOINTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ── GET /api/cost/overview ────────────────────────────────────────────────────
+@app.get("/api/cost/overview")
+async def cost_overview(facility_id: int = Query(1)):
+    """Operational expenditure analysis, category distribution, and budget compliance."""
+    facility_or_404(facility_id)
+    agent = get_cost_agent()
+    try:
+        return agent.get_cost_overview(facility_id)
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+
+
+# ── GET /api/cost/trends ──────────────────────────────────────────────────────
+@app.get("/api/cost/trends")
+async def cost_trends(facility_id: int = Query(1)):
+    """Daily operational cost trends partitioned across all 4 categories."""
+    facility_or_404(facility_id)
+    agent = get_cost_agent()
+    return agent.get_cost_trends(facility_id)
+
+
+@app.get("/api/cost/opportunities")
+async def cost_opportunities(facility_id: int = Query(1), status: Optional[str] = None):
+    """Traceable, quantifiable cost-saving initiatives (baseline vs optimized cost)."""
+    facility_or_404(facility_id)
+    agent = get_cost_agent()
+    status_filter = status if isinstance(status, str) else None
+    return agent.get_optimization_opportunities(facility_id, status=status_filter)
+
+
+# ── POST /api/cost/agent/analyze ──────────────────────────────────────────────
+@app.post("/api/cost/agent/analyze")
+async def cost_agent_analyze(req: CostAnalyzeRequest):
+    """Run Cost Optimization Agent — financial analytics or natural language Q&A."""
+    facility_or_404(req.facility_id)
+    agent = get_cost_agent()
+    if req.question:
+        return agent.answer_cost_query(req.question, req.facility_id)
+    else:
+        ov = agent.get_cost_overview(req.facility_id)
+        util = agent.analyze_resource_utilization(req.facility_id)
+        return {
+            "mode": "full_cost_analysis",
+            "facility_id": req.facility_id,
+            "overview": ov,
+            "resource_utilization": util,
+            "timestamp": datetime.now().isoformat()
+        }
+
+
+# ── GET /api/facility/intelligence ────────────────────────────────────────────
+@app.get("/api/facility/intelligence")
+async def facility_intelligence(facility_id: int = Query(1)):
+    """Multi-agent aggregation, cross-agent reasoning correlations, and fleet status."""
+    facility_or_404(facility_id)
+    engine = get_facility_intelligence_engine()
+    return engine.get_facility_intelligence_overview(facility_id)
+
+
+# ── GET /api/facility/health ──────────────────────────────────────────────────
+@app.get("/api/facility/health")
+async def facility_health(facility_id: int = Query(1)):
+    """Unified Facility Health Score (0–100) with domain subscore breakdown."""
+    facility_or_404(facility_id)
+    engine = get_facility_intelligence_engine()
+    payloads = engine.collect_agent_payloads(facility_id)
+    return engine.compute_facility_health_score(payloads)
+
+
+# ── GET /api/executive/kpis ───────────────────────────────────────────────────
+@app.get("/api/executive/kpis")
+async def executive_kpis(facility_id: int = Query(1)):
+    """Executive Dashboard dynamic summary KPIs consolidating all 5 agent domains."""
+    facility_or_404(facility_id)
+    engine = get_facility_intelligence_engine()
+    intel = engine.get_facility_intelligence_overview(facility_id)
+    cost_agent = get_cost_agent()
+    cost_ov = cost_agent.get_cost_overview(facility_id)
+
+    conn = get_connection()
+    crit_assets = conn.execute("""
+        SELECT COUNT(*) n FROM ASSETS WHERE facility_id=? AND status='CRITICAL'
+    """, (facility_id,)).fetchone()["n"]
+    open_alerts = conn.execute("""
+        SELECT COUNT(*) n FROM ALERTS WHERE facility_id=? AND resolved=0
+    """, (facility_id,)).fetchone()["n"]
+    conn.close()
+
+    sec_p = intel["full_agent_payloads"].get("security", {}).get("metrics", {})
+    occ_p = intel["full_agent_payloads"].get("occupancy", {}).get("metrics", {})
+    eng_p = intel["full_agent_payloads"].get("energy", {}).get("metrics", {})
+
+    return {
+        "facility_id": facility_id,
+        "facility_name": intel["facility_name"],
+        "facility_health_score": intel["facility_health"]["facility_health_score"],
+        "health_grade": intel["facility_health"]["health_grade"],
+        "total_operating_cost": cost_ov["total_operating_cost"],
+        "potential_savings": cost_ov["opportunities_summary"]["potential_savings"],
+        "potential_savings_pct": cost_ov["opportunities_summary"]["potential_saving_pct"],
+        "total_opportunities": cost_ov["opportunities_summary"]["total_opportunities"],
+        "budget_status": cost_ov["budget_compliance_status"],
+        "active_alerts": open_alerts,
+        "critical_assets": crit_assets,
+        "total_occupancy": occ_p.get("total_occupancy", 0),
+        "occupancy_rate_pct": round(occ_p.get("occupancy_rate", 0) * 100, 1),
+        "security_risk_score": sec_p.get("facility_risk_score", 20.0),
+        "energy_consumption_kwh": eng_p.get("total_energy_kwh", 0),
+        "fleet_status": intel["agent_fleet_status"],
+        "top_correlations": intel["cross_agent_correlations"][:3],
+        "timestamp": datetime.now().isoformat()
+    }
+
+
+# ── GET /api/facility/reports ─────────────────────────────────────────────────
+@app.get("/api/facility/reports")
+async def facility_reports(facility_id: int = Query(1)):
+    """Generate and return the 12-section Comprehensive Facility Intelligence Report."""
+    facility_or_404(facility_id)
+    engine = get_facility_intelligence_engine()
+    return engine.generate_comprehensive_report(facility_id)
+
+
+# ── GET /api/facility/reports/download ────────────────────────────────────────
+@app.get("/api/facility/reports/download")
+async def download_facility_report(facility_id: int = Query(1), format: str = Query("txt")):
+    """Export and download the executive facility intelligence report as TXT or JSON."""
+    fac = facility_or_404(facility_id)
+    engine = get_facility_intelligence_engine()
+    rep = engine.generate_comprehensive_report(facility_id)
+
+    fac_name = fac.get("facility_name", f"Facility_{facility_id}").replace(" ", "_").replace("—", "_")
+
+    if format.lower() == "json":
+        filename = f"facilityops_{fac_name}_report.json"
+        return Response(
+            content=json.dumps(rep["sections"], indent=2),
+            media_type="application/json",
+            headers={"Content-Disposition": f'attachment; filename="{filename}"'}
+        )
+    else:
+        filename = f"facilityops_{fac_name}_audit_report.txt"
+        return Response(
+            content=rep["report_text"],
+            media_type="text/plain",
+            headers={"Content-Disposition": f'attachment; filename="{filename}"'}
+        )
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+
+

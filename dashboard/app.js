@@ -10,8 +10,8 @@ const API_BASE = '';   // same origin — FastAPI serves both
 
 // ─── STATE ───────────────────────────────────────────────────────────────────
 let currentFacilityId = 1;
-let consumptionChart  = null;
-let apiAvailable      = false;   // detected on first call
+let consumptionChart = null;
+let apiAvailable = false;   // detected on first call
 
 // ─── API HELPERS ──────────────────────────────────────────────────────────────
 async function apiFetch(path, options = {}) {
@@ -52,11 +52,11 @@ function showToast(msg) {
 function animateValue(elId, end, decimals = 0, prefix = '', suffix = '') {
   const el = document.getElementById(elId);
   if (!el) return;
-  const start    = 0;
+  const start = 0;
   const duration = 1400;
-  const t0       = performance.now();
+  const t0 = performance.now();
   function update(now) {
-    const p     = Math.min((now - t0) / duration, 1);
+    const p = Math.min((now - t0) / duration, 1);
     const eased = 1 - Math.pow(1 - p, 3);
     const value = start + (end - start) * eased;
     el.textContent = prefix + (decimals > 0
@@ -107,7 +107,7 @@ function drawEfficiencyRing(score) {
   const ctx = canvas.getContext('2d');
   const cx = 60, cy = 60, r = 48;
   const start = -Math.PI / 2;
-  const end   = start + (score / 100) * 2 * Math.PI;
+  const end = start + (score / 100) * 2 * Math.PI;
   ctx.clearRect(0, 0, 120, 120);
   ctx.beginPath(); ctx.arc(cx, cy, r, 0, 2 * Math.PI);
   ctx.strokeStyle = 'rgba(37,99,235,0.10)'; ctx.lineWidth = 10; ctx.stroke();
@@ -130,17 +130,17 @@ const Telemetry = (() => {
       return {
         hour: h,
         electricity: Math.max(60, base.electricity * m + noise(30)),
-        hvac:        Math.max(20, base.hvac        * m + noise(15)),
-        water:       Math.max(10, base.water       * m + noise(8)),
-        forecast:    h >= 18 ? Math.max(60, base.electricity * m * 1.05 + noise(10)) : null
+        hvac: Math.max(20, base.hvac * m + noise(15)),
+        water: Math.max(10, base.water * m + noise(8)),
+        forecast: h >= 18 ? Math.max(60, base.electricity * m * 1.05 + noise(10)) : null
       };
     });
   }
   function generateHeatmap() {
-    return ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(day => ({
+    return ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(day => ({
       day,
       hours: Array.from({ length: 24 }, (_, h) => {
-        const isWknd = ['Sat','Sun'].includes(day);
+        const isWknd = ['Sat', 'Sun'].includes(day);
         const base_v = isWknd ? 30 : (h >= 8 && h <= 18 ? 220 : 60);
         return Math.max(5, base_v + noise(40));
       })
@@ -155,12 +155,12 @@ async function loadOverview() {
 
   if (data) {
     animateValue('kpi-energy-val', data.total_energy_kwh, 0);
-    animateValue('kpi-cost-val',   data.cost_savings_inr, 0, '₹');
+    animateValue('kpi-cost-val', data.cost_savings_inr, 0, '₹');
     animateValue('kpi-carbon-val', data.carbon_reduced_tco2e, 1);
     animateValue('kpi-demand-val', data.peak_demand_kw, 0);
     // Update change badges
     updateChangeBadge('kpi-energy', data.total_energy_change_pct);
-    updateChangeBadge('kpi-cost',   data.cost_savings_change_pct);
+    updateChangeBadge('kpi-cost', data.cost_savings_change_pct);
     // Efficiency ring
     const eff = data.efficiency_score;
     document.getElementById('effValue').textContent = Math.round(eff);
@@ -171,24 +171,24 @@ async function loadOverview() {
   } else {
     // Fallback to simulated values
     animateValue('kpi-energy-val', 4827, 0);
-    animateValue('kpi-cost-val',   1284, 0, '₹');
-    animateValue('kpi-carbon-val', 3.2,  1);
-    animateValue('kpi-demand-val', 312,  0);
+    animateValue('kpi-cost-val', 1284, 0, '₹');
+    animateValue('kpi-carbon-val', 3.2, 1);
+    animateValue('kpi-demand-val', 312, 0);
     drawEfficiencyRing(87);
   }
 
   // Sparklines (use simulated data for visual flair)
-  const mk = (base, amp) => Array.from({ length: 12 }, () => base + (Math.random()-0.5)*amp);
-  drawSparkline('spark-energy', mk(4800,600), '#2563EB');
-  drawSparkline('spark-cost',   mk(1200,200), '#16A34A');
-  drawSparkline('spark-carbon', mk(3.2,0.8),  '#7C3AED');
-  drawSparkline('spark-demand', mk(310,60),   '#DC2626');
+  const mk = (base, amp) => Array.from({ length: 12 }, () => base + (Math.random() - 0.5) * amp);
+  drawSparkline('spark-energy', mk(4800, 600), '#2563EB');
+  drawSparkline('spark-cost', mk(1200, 200), '#16A34A');
+  drawSparkline('spark-carbon', mk(3.2, 0.8), '#7C3AED');
+  drawSparkline('spark-demand', mk(310, 60), '#DC2626');
 }
 
 function updateChangeBadge(cardId, pct) {
   const card = document.getElementById(cardId);
   if (!card || pct == null) return;
-  const el  = card.querySelector('.kpi-change');
+  const el = card.querySelector('.kpi-change');
   if (!el) return;
   const arrow = pct >= 0
     ? `<svg width="10" height="10" viewBox="0 0 24 24" fill="none"><polyline points="18 15 12 9 6 15" stroke="currentColor" stroke-width="2.5"/></svg>`
@@ -203,10 +203,10 @@ async function buildConsumptionChart() {
   let labels, elec, hvac, water, forecast;
 
   if (data && data.historical && data.historical.length > 0) {
-    labels   = data.historical.map(r => r.hour);
-    elec     = data.historical.map(r => r.electricity);
-    hvac     = data.historical.map(r => r.hvac);
-    water    = data.historical.map(r => r.water);
+    labels = data.historical.map(r => r.hour);
+    elec = data.historical.map(r => r.electricity);
+    hvac = data.historical.map(r => r.hvac);
+    water = data.historical.map(r => r.water);
     // Forecast overlay — nulls for past hours, values for future
     const fmap = {};
     (data.forecast_series || []).forEach(f => { if (f.is_forecast) fmap[f.hour] = f.forecast; });
@@ -214,10 +214,10 @@ async function buildConsumptionChart() {
   } else {
     // Fallback
     const raw = Telemetry.generate24h();
-    labels   = raw.map(d => `${String(d.hour).padStart(2,'0')}:00`);
-    elec     = raw.map(d => d.electricity.toFixed(1));
-    hvac     = raw.map(d => d.hvac.toFixed(1));
-    water    = raw.map(d => d.water.toFixed(1));
+    labels = raw.map(d => `${String(d.hour).padStart(2, '0')}:00`);
+    elec = raw.map(d => d.electricity.toFixed(1));
+    hvac = raw.map(d => d.hvac.toFixed(1));
+    water = raw.map(d => d.water.toFixed(1));
     forecast = raw.map(d => d.forecast ? d.forecast.toFixed(1) : null);
   }
 
@@ -254,7 +254,7 @@ async function buildConsumptionChart() {
           data: water,
           borderColor: '#34D399', borderWidth: 1.5,
           backgroundColor: 'transparent',
-          fill: false, tension: 0.4, pointRadius: 0, borderDash: [4,4]
+          fill: false, tension: 0.4, pointRadius: 0, borderDash: [4, 4]
         },
         {
           label: 'Forecast',
@@ -262,7 +262,7 @@ async function buildConsumptionChart() {
           borderColor: 'rgba(252,211,77,0.5)', borderWidth: 1.5,
           backgroundColor: 'transparent',
           fill: false, tension: 0.4, pointRadius: 0,
-          borderDash: [6,3], spanGaps: false
+          borderDash: [6, 3], spanGaps: false
         }
       ]
     },
@@ -276,7 +276,7 @@ async function buildConsumptionChart() {
           borderColor: 'rgba(37,99,235,0.2)', borderWidth: 1,
           titleColor: '#1A2233', bodyColor: '#7B8FAB',
           titleFont: { family: 'Space Grotesk', weight: '600', size: 12 },
-          bodyFont:  { family: 'JetBrains Mono', size: 11 },
+          bodyFont: { family: 'JetBrains Mono', size: 11 },
           padding: 12, cornerRadius: 8, displayColors: true
         }
       },
@@ -307,10 +307,10 @@ async function buildDonutChart() {
       (data.total_avg_kwh / 1000).toFixed(1);
   } else {
     donutData = [
-      { label: 'HVAC',      pct: 45, color: '#A78BFA' },
-      { label: 'Lighting',  pct: 28, color: '#FCD34D' },
+      { label: 'HVAC', pct: 45, color: '#A78BFA' },
+      { label: 'Lighting', pct: 28, color: '#FCD34D' },
       { label: 'Equipment', pct: 18, color: '#34D399' },
-      { label: 'Other',     pct: 9,  color: '#F87171' },
+      { label: 'Other', pct: 9, color: '#F87171' },
     ];
   }
 
@@ -322,7 +322,7 @@ async function buildDonutChart() {
       datasets: [{
         data: donutData.map(d => d.pct),
         backgroundColor: donutData.map(d => d.color + 'CC'),
-        borderColor:     donutData.map(d => d.color),
+        borderColor: donutData.map(d => d.color),
         borderWidth: 1.5,
         hoverOffset: 6
       }]
@@ -336,7 +336,7 @@ async function buildDonutChart() {
           borderColor: 'rgba(37,99,235,0.2)', borderWidth: 1,
           titleColor: '#1A2233', bodyColor: '#7B8FAB',
           titleFont: { family: 'Space Grotesk', size: 12 },
-          bodyFont:  { family: 'JetBrains Mono', size: 11 },
+          bodyFont: { family: 'JetBrains Mono', size: 11 },
           callbacks: { label: c => ` ${c.label}: ${c.parsed}%` }
         }
       },
@@ -375,7 +375,7 @@ async function buildHeatmap() {
 
   let heatData;
   if (data && data.grid) {
-    const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+    const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
     heatData = days.map(day => ({
       day,
       hours: Array.from({ length: 24 }, (_, h) => (data.grid[day] && data.grid[day][h]) || 0)
@@ -384,11 +384,11 @@ async function buildHeatmap() {
     heatData = Telemetry.generateHeatmap();
   }
 
-  const grid    = document.getElementById('heatmapGrid');
+  const grid = document.getElementById('heatmapGrid');
   const labelsX = document.getElementById('heatmapLabelsX');
   grid.innerHTML = ''; labelsX.innerHTML = '';
 
-  const allVals  = heatData.flatMap(d => d.hours);
+  const allVals = heatData.flatMap(d => d.hours);
   const globalMax = Math.max(...allVals);
   const globalMin = Math.min(...allVals);
 
@@ -396,7 +396,7 @@ async function buildHeatmap() {
   grid.appendChild(Object.assign(document.createElement('div'), { style: 'height:18px' }));
   for (let h = 0; h < 24; h++) {
     const el = document.createElement('div');
-    el.textContent = h % 4 === 0 ? String(h).padStart(2,'0') : '';
+    el.textContent = h % 4 === 0 ? String(h).padStart(2, '0') : '';
     el.style.cssText = 'text-align:center;font-size:0.55rem;color:#5A7898;height:18px;display:flex;align-items:center;justify-content:center;';
     grid.appendChild(el);
   }
@@ -406,12 +406,12 @@ async function buildHeatmap() {
     label.className = 'heatmap-row-label'; label.textContent = day;
     grid.appendChild(label);
     hours.forEach(val => {
-      const norm  = (val - globalMin) / Math.max(globalMax - globalMin, 1);
+      const norm = (val - globalMin) / Math.max(globalMax - globalMin, 1);
       const alpha = 0.08 + norm * 0.92;
-      const cell  = document.createElement('div');
-      cell.className   = 'heatmap-cell';
+      const cell = document.createElement('div');
+      cell.className = 'heatmap-cell';
       cell.style.background = `rgba(37, 99, 235, ${alpha.toFixed(2)})`;
-      cell.title       = `${val.toFixed(0)} kWh`;
+      cell.title = `${val.toFixed(0)} kWh`;
       grid.appendChild(cell);
     });
   });
@@ -431,7 +431,7 @@ async function runAgent(customMsg = null) {
   if (agentRunning) return;
   agentRunning = true;
 
-  const status    = document.getElementById('agentStatus');
+  const status = document.getElementById('agentStatus');
   const container = document.getElementById('agentInsights');
   status.style.color = 'var(--accent)';
 
@@ -465,12 +465,12 @@ async function runAgent(customMsg = null) {
   // Fallback insights if API unavailable
   if (!recs || recs.length === 0) {
     recs = [
-      { type: 'warn',   icon: '⚡', title: 'HVAC Overconsumption Detected', desc: 'Block 1 HVAC at 142% of baseline 14:00–16:00. Setpoint misconfiguration likely.', saving: 'Potential saving: ₹340/day' },
-      { type: 'good',   icon: '✅', title: 'Lighting Schedule Optimised',   desc: 'Smart scheduling reduced lighting by 18% in unoccupied zones.',                  saving: 'Saved: ₹127 today' },
-      { type: 'danger', icon: '🔴', title: 'Peak Demand Alert — 17:30',     desc: 'Forecasted spike 38 kW above contracted capacity. Pre-cool from 16:45.',         saving: 'Avoid penalty: ₹2,100' },
-      { type: '',       icon: '📊', title: 'Carbon Footprint on Track',      desc: 'tCO₂e trajectory meets monthly −12% target if HVAC adjustment applied.',        saving: '' },
-      { type: 'warn',   icon: '💧', title: 'Water Consumption Anomaly',      desc: 'Campus B water 23% above floor-area baseline. Plumbing inspection recommended.', saving: 'Est. leakage: ₹85/day' },
-      { type: 'good',   icon: '🌙', title: 'Off-Hours Efficiency: Excellent','desc': 'After 22:00 draw at 8.3% of peak — within <10% target. Automation OK.',       saving: '' },
+      { type: 'warn', icon: '⚡', title: 'HVAC Overconsumption Detected', desc: 'Block 1 HVAC at 142% of baseline 14:00–16:00. Setpoint misconfiguration likely.', saving: 'Potential saving: ₹340/day' },
+      { type: 'good', icon: '✅', title: 'Lighting Schedule Optimised', desc: 'Smart scheduling reduced lighting by 18% in unoccupied zones.', saving: 'Saved: ₹127 today' },
+      { type: 'danger', icon: '🔴', title: 'Peak Demand Alert — 17:30', desc: 'Forecasted spike 38 kW above contracted capacity. Pre-cool from 16:45.', saving: 'Avoid penalty: ₹2,100' },
+      { type: '', icon: '📊', title: 'Carbon Footprint on Track', desc: 'tCO₂e trajectory meets monthly −12% target if HVAC adjustment applied.', saving: '' },
+      { type: 'warn', icon: '💧', title: 'Water Consumption Anomaly', desc: 'Campus B water 23% above floor-area baseline. Plumbing inspection recommended.', saving: 'Est. leakage: ₹85/day' },
+      { type: 'good', icon: '🌙', title: 'Off-Hours Efficiency: Excellent', 'desc': 'After 22:00 draw at 8.3% of peak — within <10% target. Automation OK.', saving: '' },
     ];
   }
 
@@ -509,19 +509,19 @@ function startLiveTicker() {
         const energyEl = document.getElementById('kpi-energy-val');
         const demandEl = document.getElementById('kpi-demand-val');
         if (energyEl) energyEl.textContent = Math.round(data.total_energy_kwh).toLocaleString('en-IN');
-        if (demandEl) demandEl.textContent  = Math.round(data.peak_demand_kw);
+        if (demandEl) demandEl.textContent = Math.round(data.peak_demand_kw);
       }
     } else {
       // Simulated drift
       const energyEl = document.getElementById('kpi-energy-val');
       const demandEl = document.getElementById('kpi-demand-val');
       if (energyEl) {
-        const cur  = parseInt(energyEl.textContent.replace(/,/g, '')) || 4827;
-        energyEl.textContent = Math.max(0, cur + Math.round((Math.random()-0.4)*8)).toLocaleString('en-IN');
+        const cur = parseInt(energyEl.textContent.replace(/,/g, '')) || 4827;
+        energyEl.textContent = Math.max(0, cur + Math.round((Math.random() - 0.4) * 8)).toLocaleString('en-IN');
       }
       if (demandEl) {
-        const cur  = parseInt(demandEl.textContent) || 312;
-        demandEl.textContent = Math.max(200, Math.min(400, cur + Math.round((Math.random()-0.45)*5)));
+        const cur = parseInt(demandEl.textContent) || 312;
+        demandEl.textContent = Math.max(200, Math.min(400, cur + Math.round((Math.random() - 0.45) * 5)));
       }
     }
   }, 10000);
@@ -535,7 +535,7 @@ async function loadFacilities() {
   sel.innerHTML = '';
   data.facilities.forEach(f => {
     const opt = document.createElement('option');
-    opt.value       = f.facility_id;
+    opt.value = f.facility_id;
     opt.textContent = f.facility_name;
     sel.appendChild(opt);
   });
@@ -554,6 +554,16 @@ async function reloadAll() {
     buildHeatmap(),
     runAgent()
   ]);
+
+  const activeTab = document.querySelector('.nav-tab.active');
+  if (activeTab) {
+    if (activeTab.id === 'tab-executive') loadExecutiveView();
+    else if (activeTab.id === 'tab-maintenance') loadMaintenanceView();
+    else if (activeTab.id === 'tab-occupancy') loadOccupancyView();
+    else if (activeTab.id === 'tab-security') loadSecurityView();
+    else if (activeTab.id === 'tab-analytics') loadAnalyticsView();
+    else if (activeTab.id === 'tab-alerts') loadAlertsView();
+  }
 }
 
 
@@ -634,7 +644,7 @@ async function loadAgentView() {
   }
 }
 
-window.askAgentQuestion = function(question) {
+window.askAgentQuestion = function (question) {
   const input = document.getElementById('agentChatInput');
   if (input) {
     input.value = question;
@@ -728,7 +738,7 @@ function renderFilteredAlerts(filter) {
       <div style="display:flex;gap:12px;align-items:center">
         <span style="font-size:1.2rem">${icon}</span>
         <div>
-          <strong style="font-size:0.82rem;text-transform:uppercase">${al.alert_type.replace(/_/g,' ')}</strong>
+          <strong style="font-size:0.82rem;text-transform:uppercase">${al.alert_type.replace(/_/g, ' ')}</strong>
           <p style="font-size:0.75rem;color:var(--muted);margin-top:2px">${al.message}</p>
           <div style="font-size:0.68rem;color:var(--text);margin-top:4px">
             Breach: <strong>${al.value || 'N/A'}</strong> / Limit: <strong>${al.threshold || 'N/A'}</strong> · Time: ${al.created_at || 'Recent'}
@@ -741,7 +751,7 @@ function renderFilteredAlerts(filter) {
   });
 }
 
-window.resolveAlertUI = function(btn) {
+window.resolveAlertUI = function (btn) {
   btn.textContent = '✅ Acknowledged';
   btn.style.background = 'rgba(22, 163, 74, 0.1)';
   btn.style.borderColor = 'var(--green)';
@@ -777,14 +787,14 @@ function initChartControls() {
 // ─── AGENT INPUT (CHAT SETUP) ─────────────────────────────────────────────────
 function initAgentInput() {
   const input = document.getElementById('agentInput');
-  const btn   = document.getElementById('agentSend');
+  const btn = document.getElementById('agentSend');
   if (btn && input) {
     btn.addEventListener('click', () => runAgent(input.value.trim()));
     input.addEventListener('keydown', e => e.key === 'Enter' && runAgent(input.value.trim()));
   }
 
   const chatInput = document.getElementById('agentChatInput');
-  const chatSend  = document.getElementById('agentChatSend');
+  const chatSend = document.getElementById('agentChatSend');
   if (chatSend && chatInput) {
     chatSend.addEventListener('click', submitAgentChat);
     chatInput.addEventListener('keydown', e => e.key === 'Enter' && submitAgentChat());
@@ -792,10 +802,34 @@ function initAgentInput() {
 
   // Maintenance Agent chat
   const maintInput = document.getElementById('maintChatInput');
-  const maintSend  = document.getElementById('maintChatSend');
+  const maintSend = document.getElementById('maintChatSend');
   if (maintSend && maintInput) {
     maintSend.addEventListener('click', submitMaintenanceChat);
     maintInput.addEventListener('keydown', e => e.key === 'Enter' && submitMaintenanceChat());
+  }
+
+  // Occupancy Agent chat
+  const occInput = document.getElementById('occupancyChatInput');
+  const occSend = document.getElementById('occupancyChatSend');
+  if (occSend && occInput) {
+    occSend.addEventListener('click', submitOccupancyChat);
+    occInput.addEventListener('keydown', e => e.key === 'Enter' && submitOccupancyChat());
+  }
+
+  // Security Agent chat
+  const secInput = document.getElementById('securityChatInput');
+  const secSend = document.getElementById('securityChatSend');
+  if (secSend && secInput) {
+    secSend.addEventListener('click', submitSecurityChat);
+    secInput.addEventListener('keydown', e => e.key === 'Enter' && submitSecurityChat());
+  }
+
+  // Cost Agent chat
+  const costInput = document.getElementById('costChatInput');
+  const costSend = document.getElementById('costChatSend');
+  if (costSend && costInput) {
+    costSend.addEventListener('click', submitCostChat);
+    costInput.addEventListener('keydown', e => e.key === 'Enter' && submitCostChat());
   }
 }
 
@@ -810,7 +844,7 @@ function initQA() {
 
     setTimeout(() => {
       animateValue('kpi-energy-val', 4560, 0);
-      animateValue('kpi-demand-val', 287,  0);
+      animateValue('kpi-demand-val', 287, 0);
       const effVal = document.getElementById('effValue');
       if (effVal) effVal.textContent = '92';
       drawEfficiencyRing(92);
@@ -829,10 +863,10 @@ function initQA() {
 
 // ─── API STATUS UI ────────────────────────────────────────────────────────────
 function updateApiStatus(online) {
-  const el   = document.getElementById('apiStatus');
+  const el = document.getElementById('apiStatus');
   const text = document.getElementById('apiStatusText');
   if (!el) return;
-  el.classList.toggle('online',  online);
+  el.classList.toggle('online', online);
   el.classList.toggle('offline', !online);
   if (text) text.textContent = online ? 'API' : 'SIM';
 }
@@ -842,27 +876,360 @@ function updateApiStatus(online) {
    ════════════════════════════════════════════════════════════════════ */
 
 // ─── AGENT SIDEBAR SWITCHING ──────────────────────────────────────────────────
-window.switchAgentView = function(agentKey) {
+window.switchAgentView = function (agentKey) {
   document.querySelectorAll('.agent-sidebar-item').forEach(i => i.classList.remove('active'));
   document.querySelectorAll('.agent-panel').forEach(p => p.classList.remove('active'));
-  const navEl   = document.getElementById(`agentNav-${agentKey}`);
+  const navEl = document.getElementById(`agentNav-${agentKey}`);
   const panelEl = document.getElementById(`agentPanel-${agentKey}`);
-  if (navEl)   navEl.classList.add('active');
+  if (navEl) navEl.classList.add('active');
   if (panelEl) panelEl.classList.add('active');
 
   if (agentKey === 'maintenance') {
     loadMaintAgentPanel();
+  } else if (agentKey === 'occupancy') {
+    loadOccupancyAgentPanel();
+  } else if (agentKey === 'security') {
+    loadSecurityAgentPanel();
+  } else if (agentKey === 'cost') {
+    loadCostAgentPanel();
   }
 };
 
+// ─── OCCUPANCY AGENT CHAT ──────────────────────────────────────────────────────
+window.askOccupancyQuestion = function (q) {
+  const input = document.getElementById('occupancyChatInput');
+  if (input) { input.value = q; submitOccupancyChat(); }
+};
+
+async function submitOccupancyChat() {
+  const input = document.getElementById('occupancyChatInput');
+  const chatLog = document.getElementById('occupancyChatLog');
+  if (!input || !chatLog) return;
+  const q = input.value.trim();
+  if (!q) return;
+
+  const userBubble = document.createElement('div');
+  userBubble.className = 'chat-bubble user';
+  userBubble.innerHTML = `<p>${q}</p>`;
+  chatLog.appendChild(userBubble);
+  input.value = '';
+  chatLog.scrollTop = chatLog.scrollHeight;
+
+  const thinkBubble = document.createElement('div');
+  thinkBubble.className = 'chat-bubble agent';
+  thinkBubble.innerHTML = `<span class="chat-author" style="color:#A78BFA">👥 Occupancy Agent</span><p><em>Scanning zone telemetry and running occupancy models…</em></p>`;
+  chatLog.appendChild(thinkBubble);
+  chatLog.scrollTop = chatLog.scrollHeight;
+
+  const res = await apiFetch('/api/occupancy/agent/analyze', {
+    method: 'POST',
+    body: JSON.stringify({ facility_id: currentFacilityId, question: q })
+  });
+
+  const answer = res && res.answer
+    ? res.answer
+    : `Occupancy Agent scanned all zones. Current facility utilization is within normal range.`;
+
+  thinkBubble.innerHTML = `
+    <span class="chat-author" style="color:#A78BFA">👥 Occupancy Agent</span>
+    <p>${answer}</p>
+    ${res && res.current_occupancy !== undefined ? `<p style="margin-top:6px;color:#A78BFA;font-weight:600">👥 Current: ${res.current_occupancy}% occupied | Peak: ${res.peak_occupancy || '--'}%</p>` : ''}
+  `;
+  chatLog.scrollTop = chatLog.scrollHeight;
+}
+
+// ─── OCCUPANCY AGENT PANEL ────────────────────────────────────────────────────
+async function loadOccupancyAgentPanel() {
+  const container = document.getElementById('occupancyAgentInsights');
+  if (!container) return;
+  container.innerHTML = '<div style="padding:20px;color:var(--muted);font-size:0.8rem;text-align:center">Loading occupancy data…</div>';
+
+  const ov = await apiFetch(`/api/occupancy/overview?facility_id=${currentFacilityId}`);
+  const zones = await apiFetch(`/api/occupancy/zones?facility_id=${currentFacilityId}`);
+  container.innerHTML = '';
+
+  if (ov) {
+    const insights = [
+      { icon: '👥', title: 'Current Occupancy', desc: `${ov.current_occupancy || 0} / ${ov.total_capacity || '?'} people (${ov.occupancy_rate || 0}%)`, type: 'info' },
+      { icon: '📊', title: 'Peak Today', desc: `Peak occupancy: ${ov.peak_occupancy || '--'}% at ${ov.peak_hour || '--'}:00`, type: '' },
+      { icon: '🏢', title: 'Zone Count', desc: `${ov.total_zones || '--'} monitored zones across the facility`, type: '' },
+      { icon: '⚡', title: 'Utilization Efficiency', desc: `${ov.utilization_efficiency || '--'}% space efficiency — ${ov.underutilized_zones || 0} zones underutilized`, type: ov.underutilized_zones > 2 ? 'warning' : '' },
+    ];
+    insights.forEach((ins, idx) => {
+      const item = document.createElement('div');
+      item.className = `insight-item ${ins.type}`;
+      item.style.animationDelay = `${idx * 0.06}s`;
+      item.innerHTML = `
+        <span class="insight-icon">${ins.icon}</span>
+        <div class="insight-body">
+          <div class="insight-title">${ins.title}</div>
+          <div class="insight-desc">${ins.desc}</div>
+        </div>`;
+      container.appendChild(item);
+    });
+  }
+
+  if (zones && zones.zones) {
+    zones.zones.slice(0, 5).forEach((z, idx) => {
+      const utilPct = z.utilization_rate || 0;
+      const color = utilPct > 80 ? '#F87171' : (utilPct > 50 ? '#FCD34D' : '#A78BFA');
+      const item = document.createElement('div');
+      item.className = 'insight-item';
+      item.style.animationDelay = `${(idx + 4) * 0.06}s`;
+      item.innerHTML = `
+        <span class="insight-icon">🗂️</span>
+        <div class="insight-body" style="flex:1">
+          <div class="insight-title" style="display:flex;justify-content:space-between">
+            <span>${z.zone_name || z.zone_id}</span>
+            <span style="color:${color};font-weight:700">${utilPct}%</span>
+          </div>
+          <div class="health-bar-wrap" style="margin-top:6px">
+            <div class="health-bar"><div class="health-bar-fill" style="width:${utilPct}%;background:${color}"></div></div>
+          </div>
+          <div class="insight-desc" style="margin-top:4px">${z.zone_type || ''} · Capacity: ${z.capacity || '--'} · Current: ${z.current_count || 0}</div>
+        </div>`;
+      container.appendChild(item);
+    });
+  }
+
+  const btn = document.getElementById('btnRunOccupancyAgent');
+  if (btn) btn.onclick = async () => {
+    showToast('👥 Running Occupancy Agent analysis…');
+    const r = await apiFetch('/api/occupancy/agent/analyze', {
+      method: 'POST', body: JSON.stringify({ facility_id: currentFacilityId })
+    });
+    if (r) {
+      showToast(`✅ Occupancy analysis complete`);
+      loadOccupancyAgentPanel();
+    }
+  };
+}
+
+// ─── SECURITY AGENT CHAT ──────────────────────────────────────────────────────
+window.askSecurityQuestion = function (q) {
+  const input = document.getElementById('securityChatInput');
+  if (input) { input.value = q; submitSecurityChat(); }
+};
+
+async function submitSecurityChat() {
+  const input = document.getElementById('securityChatInput');
+  const chatLog = document.getElementById('securityChatLog');
+  if (!input || !chatLog) return;
+  const q = input.value.trim();
+  if (!q) return;
+
+  const userBubble = document.createElement('div');
+  userBubble.className = 'chat-bubble user';
+  userBubble.innerHTML = `<p>${q}</p>`;
+  chatLog.appendChild(userBubble);
+  input.value = '';
+  chatLog.scrollTop = chatLog.scrollHeight;
+
+  const thinkBubble = document.createElement('div');
+  thinkBubble.className = 'chat-bubble agent';
+  thinkBubble.innerHTML = `<span class="chat-author" style="color:#F87171">🛡️ Security Agent</span><p><em>Scanning security event logs and running anomaly detection models…</em></p>`;
+  chatLog.appendChild(thinkBubble);
+  chatLog.scrollTop = chatLog.scrollHeight;
+
+  const res = await apiFetch('/api/security/agent/analyze', {
+    method: 'POST',
+    body: JSON.stringify({ facility_id: currentFacilityId, question: q })
+  });
+
+  const answer = res && res.answer
+    ? res.answer
+    : `Security Agent scanned all event logs. No critical threats detected. Facility posture is stable.`;
+
+  thinkBubble.innerHTML = `
+    <span class="chat-author" style="color:#F87171">🛡️ Security Agent</span>
+    <p>${answer}</p>
+    ${res && res.critical_count > 0 ? `<p style="margin-top:6px;color:#F87171;font-weight:600">🔴 ${res.critical_count} CRITICAL security event(s) require immediate attention!</p>` : ''}
+    ${res && res.open_alerts > 0 ? `<p style="margin-top:4px;color:#FBBF24;font-weight:600">⚡ ${res.open_alerts} open security alert(s) pending resolution.</p>` : ''}
+  `;
+  chatLog.scrollTop = chatLog.scrollHeight;
+}
+
+// ─── SECURITY AGENT PANEL ─────────────────────────────────────────────────────
+async function loadSecurityAgentPanel() {
+  const container = document.getElementById('securityAgentInsights');
+  if (!container) return;
+  container.innerHTML = '<div style="padding:20px;color:var(--muted);font-size:0.8rem;text-align:center">Loading security data…</div>';
+
+  const ov = await apiFetch(`/api/security/overview?facility_id=${currentFacilityId}`);
+  const events = await apiFetch(`/api/security/events?facility_id=${currentFacilityId}&limit=5`);
+  container.innerHTML = '';
+
+  if (ov) {
+    const threatColor = ov.threat_level === 'HIGH' ? '#F87171' : (ov.threat_level === 'MEDIUM' ? '#FBBF24' : '#34D399');
+    const insights = [
+      { icon: '🛡️', title: 'Threat Level', desc: `Current facility threat level: ${ov.threat_level || 'LOW'}`, type: ov.threat_level === 'HIGH' ? 'critical' : '' },
+      { icon: '⚠️', title: 'Open Security Alerts', desc: `${ov.open_alerts || 0} alerts pending | ${ov.total_events_today || 0} events today`, type: ov.open_alerts > 0 ? 'warning' : '' },
+      { icon: '🚪', title: 'Access Control', desc: `${ov.access_violations || 0} unauthorized access attempts detected`, type: ov.access_violations > 0 ? 'warning' : '' },
+      { icon: '📹', title: 'Camera Coverage', desc: `${ov.cameras_online || '--'} cameras online | ${ov.cameras_offline || 0} offline`, type: ov.cameras_offline > 0 ? 'warning' : '' },
+    ];
+    insights.forEach((ins, idx) => {
+      const item = document.createElement('div');
+      item.className = `insight-item ${ins.type}`;
+      item.style.animationDelay = `${idx * 0.06}s`;
+      item.innerHTML = `
+        <span class="insight-icon">${ins.icon}</span>
+        <div class="insight-body">
+          <div class="insight-title">${ins.title}</div>
+          <div class="insight-desc">${ins.desc}</div>
+        </div>`;
+      container.appendChild(item);
+    });
+  }
+
+  if (events && events.events) {
+    events.events.slice(0, 5).forEach((ev, idx) => {
+      const sevColor = ev.severity === 'CRITICAL' ? '#F87171' : (ev.severity === 'HIGH' ? '#FB923C' : (ev.severity === 'MEDIUM' ? '#FBBF24' : '#94A3B8'));
+      const item = document.createElement('div');
+      item.className = `insight-item ${ev.severity === 'CRITICAL' ? 'critical' : ev.severity === 'HIGH' ? 'warning' : ''}`;
+      item.style.animationDelay = `${(idx + 4) * 0.06}s`;
+      item.innerHTML = `
+        <span class="insight-icon">${ev.severity === 'CRITICAL' ? '🔴' : ev.severity === 'HIGH' ? '🟠' : '🟡'}</span>
+        <div class="insight-body">
+          <div class="insight-title" style="display:flex;justify-content:space-between">
+            <span>${(ev.event_type || 'UNKNOWN').replace(/_/g,' ')}</span>
+            <span class="status-badge ${ev.severity === 'CRITICAL' ? 'critical' : 'warning'}" style="font-size:0.6rem;color:${sevColor}">${ev.severity}</span>
+          </div>
+          <div class="insight-desc">${ev.description || ev.location || '—'}</div>
+          <div style="font-size:0.68rem;color:#64748B;margin-top:2px">${ev.event_time || ev.created_at || 'Recent'} · Status: ${ev.status || 'OPEN'}</div>
+        </div>`;
+      container.appendChild(item);
+    });
+  }
+
+  const btn = document.getElementById('btnRunSecurityAgent');
+  if (btn) btn.onclick = async () => {
+    showToast('🛡️ Running Security Agent analysis…');
+    const r = await apiFetch('/api/security/agent/analyze', {
+      method: 'POST', body: JSON.stringify({ facility_id: currentFacilityId })
+    });
+    if (r) {
+      showToast(`✅ Security analysis: ${r.critical_count || 0} critical, ${r.open_alerts || 0} open alerts`);
+      loadSecurityAgentPanel();
+    }
+  };
+}
+
+// ─── COST AGENT CHAT ──────────────────────────────────────────────────────────
+window.askCostQuestion = function (q) {
+  const input = document.getElementById('costChatInput');
+  if (input) { input.value = q; submitCostChat(); }
+};
+
+async function submitCostChat() {
+  const input = document.getElementById('costChatInput');
+  const chatLog = document.getElementById('costChatLog');
+  if (!input || !chatLog) return;
+  const q = input.value.trim();
+  if (!q) return;
+
+  const userBubble = document.createElement('div');
+  userBubble.className = 'chat-bubble user';
+  userBubble.innerHTML = `<p>${q}</p>`;
+  chatLog.appendChild(userBubble);
+  input.value = '';
+  chatLog.scrollTop = chatLog.scrollHeight;
+
+  const thinkBubble = document.createElement('div');
+  thinkBubble.className = 'chat-bubble agent';
+  thinkBubble.innerHTML = `<span class="chat-author" style="color:#FCD34D">💰 Cost Optimizer</span><p><em>Running financial models and cross-agent cost analysis…</em></p>`;
+  chatLog.appendChild(thinkBubble);
+  chatLog.scrollTop = chatLog.scrollHeight;
+
+  const res = await apiFetch('/api/cost/agent/analyze', {
+    method: 'POST',
+    body: JSON.stringify({ facility_id: currentFacilityId, question: q })
+  });
+
+  const answer = res && res.answer
+    ? res.answer
+    : `Cost Optimizer analyzed OpEx data. Facility is operating within expected cost ranges. Review the Executive Dashboard for detailed savings opportunities.`;
+
+  thinkBubble.innerHTML = `
+    <span class="chat-author" style="color:#FCD34D">💰 Cost Optimizer</span>
+    <p>${answer}</p>
+    ${res && res.potential_savings > 0 ? `<p style="margin-top:6px;color:#34D399;font-weight:600">💰 Potential savings identified: ₹${Math.round(res.potential_savings).toLocaleString('en-IN')}</p>` : ''}
+  `;
+  chatLog.scrollTop = chatLog.scrollHeight;
+}
+
+// ─── COST AGENT PANEL ─────────────────────────────────────────────────────────
+async function loadCostAgentPanel() {
+  const container = document.getElementById('costAgentInsights');
+  if (!container) return;
+  container.innerHTML = '<div style="padding:20px;color:var(--muted);font-size:0.8rem;text-align:center">Loading cost data…</div>';
+
+  const ov = await apiFetch(`/api/cost/overview?facility_id=${currentFacilityId}`);
+  const opps = await apiFetch(`/api/cost/opportunities?facility_id=${currentFacilityId}`);
+  container.innerHTML = '';
+
+  if (ov) {
+    const compColor = ov.budget_compliance_status === 'COMPLIANT' ? '#34D399' : '#F87171';
+    const insights = [
+      { icon: '💰', title: '30-Day Total OpEx', desc: `₹${Math.round(ov.total_operating_cost || 0).toLocaleString('en-IN')} | ₹${ov.cost_per_sqft || '--'}/sq.ft.`, saving: ov.budget_compliance_status },
+      { icon: '📊', title: 'Cost by Category', desc: Object.entries(ov.cost_by_category || {}).map(([k,v]) => `${k}: ₹${Math.round(v.amount||0).toLocaleString('en-IN')}`).join(' · '), type: '' },
+      { icon: '📉', title: 'Savings Opportunities', desc: `${ov.opportunities_summary?.total_opportunities || 0} identified | ₹${Math.round(ov.opportunities_summary?.potential_savings || 0).toLocaleString('en-IN')} potential saving`, type: 'info' },
+      { icon: '✅', title: 'Budget Compliance', desc: `Status: ${ov.budget_compliance_status || '--'} | Per-occupant cost: ₹${ov.cost_per_occupant || '--'}`, type: '' },
+    ];
+    insights.forEach((ins, idx) => {
+      const item = document.createElement('div');
+      item.className = `insight-item ${ins.type || ''}`;
+      item.style.animationDelay = `${idx * 0.06}s`;
+      item.innerHTML = `
+        <span class="insight-icon">${ins.icon}</span>
+        <div class="insight-body">
+          <div class="insight-title">${ins.title}</div>
+          <div class="insight-desc">${ins.desc}</div>
+          ${ins.saving ? `<div class="insight-saving" style="color:${compColor}">${ins.saving}</div>` : ''}
+        </div>`;
+      container.appendChild(item);
+    });
+  }
+
+  if (opps && opps.length) {
+    opps.slice(0, 5).forEach((o, idx) => {
+      const item = document.createElement('div');
+      item.className = 'insight-item';
+      item.style.animationDelay = `${(idx + 4) * 0.06}s`;
+      item.innerHTML = `
+        <span class="insight-icon">⚡</span>
+        <div class="insight-body">
+          <div class="insight-title" style="display:flex;justify-content:space-between">
+            <span>${o.title}</span>
+            <span style="color:#34D399;font-weight:700">₹${Math.round(o.potential_saving || 0).toLocaleString('en-IN')}</span>
+          </div>
+          <div class="insight-desc">${o.category} · ${o.source_agent} · Payback: ${o.payback_period_days} days</div>
+        </div>`;
+      container.appendChild(item);
+    });
+  }
+
+  const btn = document.getElementById('btnRunCostAgent');
+  if (btn) btn.onclick = async () => {
+    showToast('💰 Running Cost Optimization analysis…');
+    const r = await apiFetch('/api/cost/agent/analyze', {
+      method: 'POST', body: JSON.stringify({ facility_id: currentFacilityId })
+    });
+    if (r) {
+      showToast(`✅ Cost analysis complete: ₹${Math.round(r.potential_savings || 0).toLocaleString('en-IN')} savings found`);
+      loadCostAgentPanel();
+    }
+  };
+}
+
+
 // ─── MAINTENANCE CHAT Q&A ─────────────────────────────────────────────────────
-window.askMaintenanceQuestion = function(q) {
+window.askMaintenanceQuestion = function (q) {
   const input = document.getElementById('maintChatInput');
   if (input) { input.value = q; submitMaintenanceChat(); }
 };
 
 async function submitMaintenanceChat() {
-  const input   = document.getElementById('maintChatInput');
+  const input = document.getElementById('maintChatInput');
   const chatLog = document.getElementById('maintChatLog');
   if (!input || !chatLog) return;
   const q = input.value.trim();
@@ -894,7 +1261,7 @@ async function submitMaintenanceChat() {
     <span class="chat-author" style="color:#34D399">🔧 Maintenance Agent</span>
     <p>${answer}</p>
     ${res && res.critical_count > 0 ? `<p style="margin-top:6px;color:var(--red);font-weight:600">🔴 ${res.critical_count} critical asset(s) require immediate attention.</p>` : ''}
-    ${res && res.warning_count > 0  ? `<p style="margin-top:4px;color:var(--yellow);font-weight:600">⚡ ${res.warning_count} asset(s) in warning state.</p>` : ''}
+    ${res && res.warning_count > 0 ? `<p style="margin-top:4px;color:var(--yellow);font-weight:600">⚡ ${res.warning_count} asset(s) in warning state.</p>` : ''}
   `;
   chatLog.scrollTop = chatLog.scrollHeight;
 }
@@ -914,7 +1281,7 @@ async function loadMaintAgentPanel() {
     item.className = 'insight-item';
     item.style.animationDelay = `${idx * 0.06}s`;
     item.innerHTML = `
-      <span class="insight-icon">${{ AHU:'🌀', Chiller:'❄️', Pump:'💧', Transformer:'⚡', Elevator:'🛗', Genset:'🔋' }[a.asset_type] || '🔧'}</span>
+      <span class="insight-icon">${{ AHU: '🌀', Chiller: '❄️', Pump: '💧', Transformer: '⚡', Elevator: '🛗', Genset: '🔋' }[a.asset_type] || '🔧'}</span>
       <div class="insight-body" style="flex:1">
         <div class="insight-title" style="display:flex;justify-content:space-between">
           <span>${a.asset_name}</span>
@@ -951,12 +1318,12 @@ async function loadMaintenanceView() {
   // KPI overview
   const ov = await apiFetch(`/api/maintenance/overview?facility_id=${currentFacilityId}`);
   if (ov) {
-    document.getElementById('maint-kpi-total').textContent   = ov.total_assets;
+    document.getElementById('maint-kpi-total').textContent = ov.total_assets;
     document.getElementById('maint-kpi-healthy').textContent = ov.operational;
     document.getElementById('maint-kpi-warning').textContent = ov.warning;
-    document.getElementById('maint-kpi-critical').textContent= ov.critical;
-    document.getElementById('maint-kpi-alerts').textContent  = ov.open_alerts;
-    document.getElementById('maint-kpi-wo').textContent      = ov.open_work_orders;
+    document.getElementById('maint-kpi-critical').textContent = ov.critical;
+    document.getElementById('maint-kpi-alerts').textContent = ov.open_alerts;
+    document.getElementById('maint-kpi-wo').textContent = ov.open_work_orders;
   }
 
   // Assets
@@ -1051,7 +1418,7 @@ function renderMaintAlerts(filter) {
       <div style="display:flex;gap:12px;align-items:flex-start;flex:1">
         <span style="font-size:1.1rem;margin-top:2px">${icon}</span>
         <div>
-          <div style="font-size:0.78rem;font-weight:700;color:var(--text)">${al.asset_name || al.asset_id} — ${al.alert_type.replace(/_/g,' ').toUpperCase()}</div>
+          <div style="font-size:0.78rem;font-weight:700;color:var(--text)">${al.asset_name || al.asset_id} — ${al.alert_type.replace(/_/g, ' ').toUpperCase()}</div>
           <div style="font-size:0.72rem;color:var(--muted);margin-top:3px">${al.description}</div>
           <div style="font-size:0.68rem;color:var(--text);margin-top:4px">Condition: <strong>${al.detected_condition}</strong></div>
           <div style="font-size:0.68rem;color:var(--accent);margin-top:2px">→ ${al.recommended_action}</div>
@@ -1065,7 +1432,7 @@ function renderMaintAlerts(filter) {
   });
 }
 
-window.acknowledgeAlert = async function(alertId, btn) {
+window.acknowledgeAlert = async function (alertId, btn) {
   const res = await apiFetch(`/api/maintenance/alerts/${alertId}/acknowledge`, { method: 'POST' });
   if (res) {
     btn.textContent = '✅ Done'; btn.disabled = true;
@@ -1087,7 +1454,7 @@ function renderWorkOrders(wos) {
   }
   wos.forEach(wo => {
     const priority = (wo.priority || 'MEDIUM').toLowerCase();
-    const status   = (wo.status || 'OPEN').toLowerCase().replace(' ', '_');
+    const status = (wo.status || 'OPEN').toLowerCase().replace(' ', '_');
     const div = document.createElement('div');
     div.className = 'work-order-card';
     div.innerHTML = `
@@ -1108,7 +1475,7 @@ function renderWorkOrders(wos) {
   });
 }
 
-window.updateWOStatus = async function(woId, status, btn) {
+window.updateWOStatus = async function (woId, status, btn) {
   const res = await apiFetch(`/api/maintenance/work-orders/${woId}`, {
     method: 'PATCH',
     body: JSON.stringify({ status })
@@ -1154,7 +1521,7 @@ function buildHealthDistChart(assets) {
       datasets: [{
         data: [counts.EXCELLENT, counts.GOOD, counts.WARNING, counts.CRITICAL],
         backgroundColor: ['#34D399CC', '#2563EBCC', '#FCD34DCC', '#F87171CC'],
-        borderColor:     ['#34D399',   '#2563EB',   '#FCD34D',   '#F87171'],
+        borderColor: ['#34D399', '#2563EB', '#FCD34D', '#F87171'],
         borderWidth: 1.5,
         hoverOffset: 6
       }]
@@ -1212,7 +1579,7 @@ function buildRiskDistChart(assets) {
         label: 'Assets',
         data: [riskCounts['Low'], riskCounts['Medium'], riskCounts['High'], riskCounts['Critical']],
         backgroundColor: ['#34D399CC', '#FCD34DCC', '#FB923CCC', '#F87171CC'],
-        borderColor:     ['#34D399',   '#FCD34D',   '#FB923C',   '#F87171'],
+        borderColor: ['#34D399', '#FCD34D', '#FB923C', '#F87171'],
         borderWidth: 1.5,
         borderRadius: 5,
         maxBarThickness: 34
@@ -1261,7 +1628,7 @@ function ensureModal() {
 async function openAssetModal(assetId) {
   ensureModal();
   const overlay = document.getElementById('assetModal');
-  const box     = document.getElementById('assetModalBox');
+  const box = document.getElementById('assetModalBox');
   box.innerHTML = `<div style="text-align:center;padding:40px;color:var(--muted)">Loading asset data…</div>`;
   overlay.classList.add('open');
 
@@ -1275,8 +1642,10 @@ async function openAssetModal(assetId) {
   const hs = (data.health_history && data.health_history[0]) ? data.health_history[0].health_score : 85;
   const factors = (data.health_history && data.health_history[0] && data.health_history[0].contributing_factors)
     ? JSON.parse(data.health_history[0].contributing_factors || '[]') : [];
-  const barColor = { excellent: '#34D399', good: '#2563EB', warning: '#FCD34D', critical: '#F87171',
-    operational: '#2563EB', maintenance: '#A78BFA' }[hStatus] || '#A78BFA';
+  const barColor = {
+    excellent: '#34D399', good: '#2563EB', warning: '#FCD34D', critical: '#F87171',
+    operational: '#2563EB', maintenance: '#A78BFA'
+  }[hStatus] || '#A78BFA';
 
   box.innerHTML = `
     <div class="modal-header">
@@ -1303,7 +1672,7 @@ async function openAssetModal(assetId) {
           <span style="font-weight:600">/100</span>
         </div>
         <div class="health-bar" style="height:10px"><div class="health-bar-fill" style="width:${hs}%;background:${barColor}"></div></div>
-        ${factors.length ? `<div style="margin-top:8px;font-size:0.7rem;color:var(--muted)">${factors.slice(0,2).join(' · ')}</div>` : ''}
+        ${factors.length ? `<div style="margin-top:8px;font-size:0.7rem;color:var(--muted)">${factors.slice(0, 2).join(' · ')}</div>` : ''}
         ${pred ? `<div style="margin-top:6px;padding:8px;background:var(--surface);border-radius:6px;border:1px solid var(--border)"><span style="font-size:0.68rem;font-weight:700;color:var(--text)">${pred.priority}</span> <span style="font-size:0.68rem;color:var(--muted)">— ${pred.recommended_action}</span></div>` : ''}
       </div>
     </div>
@@ -1344,9 +1713,9 @@ async function openAssetModal(assetId) {
     ${data.alerts && data.alerts.length ? `
     <div style="margin-bottom:16px">
       <div style="font-size:0.78rem;font-weight:600;margin-bottom:8px;color:var(--text)">Active Alerts (${data.alerts.length})</div>
-      ${data.alerts.slice(0,3).map(al => `
+      ${data.alerts.slice(0, 3).map(al => `
         <div class="maint-alert-item ${al.severity}" style="margin-bottom:6px">
-          <div style="font-size:0.72rem"><strong>${al.alert_type.replace(/_/g,' ').toUpperCase()}</strong>
+          <div style="font-size:0.72rem"><strong>${al.alert_type.replace(/_/g, ' ').toUpperCase()}</strong>
           <p style="color:var(--muted);margin-top:2px">${al.description}</p></div>
           <span class="status-badge ${al.status.toLowerCase()}">${al.status}</span>
         </div>`).join('')}
@@ -1370,7 +1739,7 @@ async function openAssetModal(assetId) {
   `;
 }
 
-window.closeAssetModal = function() {
+window.closeAssetModal = function () {
   const overlay = document.getElementById('assetModal');
   if (overlay) overlay.classList.remove('open');
 };
@@ -1379,7 +1748,1041 @@ function showCreateWOModal() {
   showToast('ℹ️ Select an asset from the table and click Inspect to create a work order');
 }
 
-// ─── UPDATED NAV TABS (includes maintenance tab) ──────────────────────────────
+// ═══════════════════════════════════════════════════════════════════════════════
+// MILESTONE 3 — OCCUPANCY INTELLIGENCE FRONTEND CONTROLLER
+// ═══════════════════════════════════════════════════════════════════════════════
+
+let occTrendChart = null, occDistChart = null, occZoneChart = null, occForecastChart = null;
+let cachedZones = [];
+
+async function loadOccupancyView() {
+  showToast('👥 Loading Occupancy & Space Intelligence…');
+
+  // 1. Overview KPIs
+  const ov = await apiFetch(`/api/occupancy/overview?facility_id=${currentFacilityId}`);
+  if (ov) {
+    const elTotal = document.getElementById('occKpiTotal');
+    const elPct = document.getElementById('occKpiTotalPct');
+    const elRate = document.getElementById('occKpiRate');
+    const elZones = document.getElementById('occKpiZones');
+    const elHigh = document.getElementById('occKpiHigh');
+    const elOver = document.getElementById('occKpiOvercrowded');
+
+    if (elTotal) elTotal.textContent = `${ov.total_occupancy} / ${ov.total_capacity}`;
+    if (elPct) elPct.textContent = `${ov.occupancy_pct}%`;
+    if (elRate) elRate.textContent = `${(ov.occupancy_rate * 100).toFixed(1)}%`;
+    if (elZones) elZones.textContent = `${ov.occupied_zones_count} / ${ov.total_zones}`;
+    if (elHigh) elHigh.textContent = ov.high_utilization_count;
+    if (elOver) elOver.textContent = ov.overcrowded_count;
+  }
+
+  // 2. Analytics & Trends
+  const analytics = await apiFetch(`/api/occupancy/analytics?facility_id=${currentFacilityId}`);
+  if (analytics) {
+    buildOccupancyTrendChart(analytics.trends || []);
+    buildOccupancyDistChart(analytics.distribution || []);
+    renderOccupancyInsights(analytics.insights || []);
+  }
+
+  // 3. Zones Table & Zone Utilization Chart
+  const zonesData = await apiFetch(`/api/occupancy/zones?facility_id=${currentFacilityId}`);
+  if (zonesData && zonesData.zones) {
+    cachedZones = zonesData.zones;
+    renderOccupancyZonesTable(cachedZones);
+    buildZoneUtilizationChart(cachedZones);
+  }
+
+  // 4. Forecast Chart
+  const forecastData = await apiFetch(`/api/occupancy/forecast?facility_id=${currentFacilityId}`);
+  if (forecastData) {
+    buildOccupancyForecastChart(forecastData.forecast_series || []);
+    const tag = document.getElementById('occModelAccuracyTag');
+    if (tag && forecastData.evaluation) {
+      tag.textContent = `ML Accuracy: ${forecastData.evaluation.accuracy_pct}%`;
+    }
+  }
+
+  // 5. 7-Day Heatmap
+  const heatmapData = await apiFetch(`/api/occupancy/heatmap?facility_id=${currentFacilityId}`);
+  if (heatmapData) {
+    renderOccupancyHeatmap(heatmapData);
+  }
+}
+
+function buildOccupancyTrendChart(trends) {
+  const ctx = document.getElementById('chartOccupancyTrend');
+  if (!ctx) return;
+  if (occTrendChart) occTrendChart.destroy();
+
+  const labels = trends.map(t => {
+    try {
+      const dt = new Date(t.timestamp);
+      return `${String(dt.getHours()).padStart(2, '0')}:00`;
+    } catch (e) { return t.timestamp; }
+  });
+  const data = trends.map(t => t.total_occupancy);
+
+  occTrendChart = new Chart(ctx.getContext('2d'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        label: 'Total Headcount',
+        data,
+        borderColor: '#00E5FF',
+        backgroundColor: 'rgba(0, 229, 255, 0.08)',
+        borderWidth: 2,
+        fill: true,
+        tension: 0.35,
+        pointRadius: 2,
+        pointHoverRadius: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: 'rgba(255,255,255,0.97)',
+          titleColor: '#1A2233',
+          bodyColor: '#7B8FAB',
+          bodyFont: { family: 'JetBrains Mono', size: 11 }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { color: '#7B8FAB', font: { size: 10 } } },
+        y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { color: '#7B8FAB', font: { family: 'JetBrains Mono', size: 10 } } }
+      }
+    }
+  });
+}
+
+function buildOccupancyDistChart(dist) {
+  const ctx = document.getElementById('chartOccupancyDist');
+  if (!ctx) return;
+  if (occDistChart) occDistChart.destroy();
+
+  occDistChart = new Chart(ctx.getContext('2d'), {
+    type: 'doughnut',
+    data: {
+      labels: dist.map(d => d.status),
+      datasets: [{
+        data: dist.map(d => d.count),
+        backgroundColor: dist.map(d => d.color),
+        borderColor: 'var(--surface)',
+        borderWidth: 2,
+        hoverOffset: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: '68%',
+      plugins: {
+        legend: {
+          position: 'right',
+          labels: { boxWidth: 8, font: { family: 'Space Grotesk', size: 10 }, color: '#1A2233' }
+        }
+      }
+    }
+  });
+}
+
+function buildZoneUtilizationChart(zones) {
+  const ctx = document.getElementById('chartZoneUtilization');
+  if (!ctx) return;
+  if (occZoneChart) occZoneChart.destroy();
+
+  occZoneChart = new Chart(ctx.getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: zones.map(z => z.zone),
+      datasets: [
+        {
+          label: 'Current Occupancy',
+          data: zones.map(z => z.occupancy_count),
+          backgroundColor: '#00E5FFCC',
+          borderColor: '#00E5FF',
+          borderWidth: 1.5,
+          borderRadius: 4
+        },
+        {
+          label: 'Capacity Limit',
+          data: zones.map(z => z.capacity),
+          backgroundColor: 'rgba(255,255,255,0.1)',
+          borderColor: 'rgba(255,255,255,0.2)',
+          borderWidth: 1,
+          borderRadius: 4
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { labels: { color: '#7B8FAB', font: { size: 10 }, boxWidth: 10 } }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { color: '#7B8FAB', font: { size: 10 } } },
+        y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { color: '#7B8FAB', font: { family: 'JetBrains Mono', size: 10 } } }
+      }
+    }
+  });
+}
+
+function buildOccupancyForecastChart(forecastSeries) {
+  const ctx = document.getElementById('chartOccupancyForecast');
+  if (!ctx) return;
+  if (occForecastChart) occForecastChart.destroy();
+
+  const labels = forecastSeries.map(f => `${f.day} ${f.hour}`);
+  const data = forecastSeries.map(f => f.predicted_occupancy);
+
+  occForecastChart = new Chart(ctx.getContext('2d'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        label: 'Predicted Occupancy',
+        data,
+        borderColor: '#7C3AED',
+        backgroundColor: 'rgba(124, 58, 237, 0.08)',
+        borderWidth: 2,
+        borderDash: [4, 4],
+        fill: true,
+        tension: 0.3,
+        pointRadius: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: 'rgba(255,255,255,0.97)',
+          titleColor: '#1A2233',
+          bodyColor: '#7B8FAB',
+          bodyFont: { family: 'JetBrains Mono', size: 11 }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { color: '#7B8FAB', font: { size: 9 }, maxTicksLimit: 12 } },
+        y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { color: '#7B8FAB', font: { family: 'JetBrains Mono', size: 10 } } }
+      }
+    }
+  });
+}
+
+function renderOccupancyHeatmap(data) {
+  const container = document.getElementById('occHeatmapContainer');
+  if (!container) return;
+
+  const days = data.days || ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const hours = data.hours || Array.from({ length: 24 }, (_, i) => i);
+  const grid = data.day_grid || {};
+
+  let html = '<table class="heatmap-table"><thead><tr><th>Day</th>';
+  hours.forEach(h => {
+    html += `<th>${String(h).padStart(2, '0')}</th>`;
+  });
+  html += '</tr></thead><tbody>';
+
+  days.forEach(d => {
+    html += `<tr><td style="font-weight:600;color:var(--text)">${d}</td>`;
+    hours.forEach(h => {
+      const val = (grid[d] && grid[d][h] !== undefined) ? grid[d][h] : 0;
+      // Calculate background color intensity based on value 0 - 100%
+      let bg = 'rgba(26,34,51,0.6)';
+      let textCol = 'rgba(255,255,255,0.4)';
+      if (val > 85) {
+        bg = 'rgba(239, 68, 68, 0.75)';
+        textCol = '#fff';
+      } else if (val > 65) {
+        bg = 'rgba(245, 158, 11, 0.65)';
+        textCol = '#fff';
+      } else if (val > 35) {
+        bg = 'rgba(0, 229, 255, 0.45)';
+        textCol = '#fff';
+      } else if (val > 10) {
+        bg = 'rgba(124, 58, 237, 0.3)';
+        textCol = '#ccc';
+      }
+      html += `<td style="background:${bg};color:${textCol}" title="${d} ${h}:00 — ${val}% utilization">${Math.round(val)}%</td>`;
+    });
+    html += '</tr>';
+  });
+  html += '</tbody></table>';
+  container.innerHTML = html;
+}
+
+function renderOccupancyZonesTable(zones) {
+  const tbody = document.getElementById('occZonesTableBody');
+  if (!tbody) return;
+  tbody.innerHTML = '';
+
+  zones.forEach(z => {
+    const ratePct = Math.round(z.occupancy_rate * 100);
+    const statusClass = (z.occupancy_status || 'OPTIMAL').toLowerCase();
+    const tr = document.createElement('tr');
+    tr.className = 'asset-row-clickable';
+    tr.innerHTML = `
+      <td><strong>${z.zone}</strong></td>
+      <td style="font-family:var(--font-mono)">${z.capacity}</td>
+      <td style="font-family:var(--font-mono);font-weight:600">${z.occupancy_count}</td>
+      <td>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div class="health-bar" style="height:6px;width:80px">
+            <div class="health-bar-fill" style="width:${Math.min(100, ratePct)}%;background:${ratePct > 90 ? 'var(--red)' : (ratePct > 75 ? 'var(--yellow)' : 'var(--accent)')}"></div>
+          </div>
+          <span style="font-family:var(--font-mono);font-size:0.7rem">${ratePct}%</span>
+        </div>
+      </td>
+      <td><span class="occ-badge ${statusClass}">${z.occupancy_status}</span></td>
+      <td><button class="qa-btn" style="width:auto;padding:3px 8px;font-size:0.68rem" onclick="openZoneDetailModal('${z.zone}')">Inspect</button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderOccupancyInsights(insights) {
+  const container = document.getElementById('occInsightsList');
+  if (!container) return;
+  container.innerHTML = '';
+
+  if (!insights.length) {
+    container.innerHTML = '<div style="color:var(--muted);font-size:0.78rem">No immediate space anomalies detected. Operations nominal.</div>';
+    return;
+  }
+
+  insights.forEach(ins => {
+    const div = document.createElement('div');
+    div.className = 'maint-alert-item';
+    div.innerHTML = `
+      <div style="flex:1">
+        <div style="font-size:0.78rem;font-weight:700;color:var(--text)">${ins.title}</div>
+        <p style="color:var(--muted);font-size:0.72rem;margin:4px 0">${ins.detail}</p>
+        <div style="font-size:0.7rem;color:var(--accent);margin-top:4px">💡 <strong>Action:</strong> ${ins.action}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+window.openZoneDetailModal = function (zoneName) {
+  const zone = cachedZones.find(z => z.zone === zoneName);
+  if (!zone) return;
+
+  ensureModal();
+  const overlay = document.getElementById('assetModal');
+  const box = document.getElementById('assetModalBox');
+
+  const ratePct = Math.round(zone.occupancy_rate * 100);
+  const statusClass = (zone.occupancy_status || 'OPTIMAL').toLowerCase();
+
+  box.innerHTML = `
+    <div class="modal-header">
+      <div>
+        <h3 style="font-size:1.1rem;margin-bottom:4px">Zone Analysis: ${zone.zone}</h3>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span class="occ-badge ${statusClass}">${zone.occupancy_status}</span>
+          <span style="font-size:0.72rem;color:var(--muted)">Capacity: ${zone.capacity} occupants</span>
+        </div>
+      </div>
+      <button class="modal-close" onclick="closeAssetModal()">✕</button>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;padding:16px;background:var(--surface2);border-radius:var(--radius-sm)">
+      <div style="text-align:center;min-width:80px">
+        <div style="font-family:var(--font-mono);font-size:2rem;font-weight:700;color:${ratePct > 90 ? 'var(--red)' : 'var(--accent)'}">${ratePct}%</div>
+        <div style="font-size:0.65rem;color:var(--muted)">UTILIZATION</div>
+      </div>
+      <div style="flex:1">
+        <div style="display:flex;justify-content:space-between;font-size:0.72rem;margin-bottom:6px">
+          <span style="color:var(--muted)">Occupancy Headcount</span>
+          <span style="font-weight:600">${zone.occupancy_count} / ${zone.capacity}</span>
+        </div>
+        <div class="health-bar" style="height:10px">
+          <div class="health-bar-fill" style="width:${Math.min(100, ratePct)}%;background:${ratePct > 90 ? 'var(--red)' : 'var(--accent)'}"></div>
+        </div>
+        <div style="margin-top:10px;font-size:0.75rem;color:var(--text)">
+          ${zone.recommendation}
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-sensor-grid">
+      <div class="sensor-tile">
+        <div class="sensor-tile-label">Headcount</div>
+        <div class="sensor-tile-value">${zone.occupancy_count}</div>
+        <div class="sensor-tile-unit">Occupants</div>
+      </div>
+      <div class="sensor-tile">
+        <div class="sensor-tile-label">Capacity</div>
+        <div class="sensor-tile-value">${zone.capacity}</div>
+        <div class="sensor-tile-unit">Seats Max</div>
+      </div>
+      <div class="sensor-tile">
+        <div class="sensor-tile-label">Available</div>
+        <div class="sensor-tile-value">${Math.max(0, zone.capacity - zone.occupancy_count)}</div>
+        <div class="sensor-tile-unit">Open Spaces</div>
+      </div>
+      <div class="sensor-tile">
+        <div class="sensor-tile-label">Status</div>
+        <div class="sensor-tile-value" style="font-size:0.9rem">${zone.occupancy_status}</div>
+        <div class="sensor-tile-unit">State</div>
+      </div>
+    </div>
+
+    <div style="font-size:0.65rem;color:var(--muted);border-top:1px solid var(--border);padding-top:10px;margin-top:16px">
+      ℹ️ DEMO / SIMULATION DATA — Generated from facility synthetic telemetry matrix. Interfaces are fully swappable with live camera/PIR sensor feeds.
+    </div>
+  `;
+
+  overlay.classList.add('open');
+};
+
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// MILESTONE 3 — SECURITY INTELLIGENCE FRONTEND CONTROLLER
+// ═══════════════════════════════════════════════════════════════════════════════
+
+let secTrendChart = null, secSeverityChart = null, secTypeChart = null, secZoneChart = null;
+let cachedSecEvents = [], cachedSecAlerts = [];
+
+async function loadSecurityView() {
+  showToast('🛡️ Loading Security Intelligence & Events…');
+
+  // 1. Overview KPIs
+  const ov = await apiFetch(`/api/security/overview?facility_id=${currentFacilityId}`);
+  if (ov) {
+    const elTot = document.getElementById('secKpiTotal');
+    const elHigh = document.getElementById('secKpiHigh');
+    const elUnauth = document.getElementById('secKpiUnauth');
+    const elAlerts = document.getElementById('secKpiAlerts');
+    const elThreat = document.getElementById('secThreatBadge');
+
+    if (elTot) elTot.textContent = ov.total_security_events;
+    if (elHigh) elHigh.textContent = ov.high_severity_events;
+    if (elUnauth) elUnauth.textContent = ov.unauthorized_access_events;
+    if (elAlerts) elAlerts.textContent = ov.active_security_alerts;
+    if (elThreat) {
+      elThreat.textContent = `${ov.facility_risk_grade} RISK (${ov.facility_risk_score}/100)`;
+      elThreat.className = `sec-risk-pill ${ov.facility_risk_grade.toLowerCase()}`;
+    }
+  }
+
+  // 2. Analytics Charts
+  const analytics = await apiFetch(`/api/security/analytics?facility_id=${currentFacilityId}`);
+  if (analytics) {
+    buildSecurityTrendChart(analytics.daily_trend || []);
+    buildSecuritySeverityChart(analytics.severity_distribution || []);
+    buildSecurityTypeChart(analytics.type_distribution || []);
+    buildSecurityZoneChart(analytics.zone_distribution || []);
+  }
+
+  // 3. Security Events Table
+  const eventsData = await apiFetch(`/api/security/events?facility_id=${currentFacilityId}`);
+  if (eventsData && eventsData.events) {
+    cachedSecEvents = eventsData.events;
+    renderSecurityEventsTable(cachedSecEvents);
+  }
+
+  // 4. Security Alerts Action Panel
+  const alertsData = await apiFetch(`/api/security/alerts?facility_id=${currentFacilityId}`);
+  if (alertsData && alertsData.alerts) {
+    cachedSecAlerts = alertsData.alerts;
+    renderSecurityAlerts(cachedSecAlerts);
+  }
+
+  initSecurityFilters();
+}
+
+function buildSecurityTrendChart(trend) {
+  const ctx = document.getElementById('chartSecurityTrend');
+  if (!ctx) return;
+  if (secTrendChart) secTrendChart.destroy();
+
+  secTrendChart = new Chart(ctx.getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: trend.map(t => t.event_date || 'Day'),
+      datasets: [{
+        label: 'Security Incidents',
+        data: trend.map(t => t.cnt),
+        backgroundColor: '#3B82F6CC',
+        borderColor: '#3B82F6',
+        borderWidth: 1.5,
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { display: false }, ticks: { color: '#7B8FAB', font: { size: 10 } } },
+        y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { color: '#7B8FAB', font: { family: 'JetBrains Mono', size: 10 }, stepSize: 1 } }
+      }
+    }
+  });
+}
+
+function buildSecuritySeverityChart(dist) {
+  const ctx = document.getElementById('chartSecuritySeverity');
+  if (!ctx) return;
+  if (secSeverityChart) secSeverityChart.destroy();
+
+  secSeverityChart = new Chart(ctx.getContext('2d'), {
+    type: 'doughnut',
+    data: {
+      labels: dist.map(d => d.label),
+      datasets: [{
+        data: dist.map(d => d.count),
+        backgroundColor: dist.map(d => d.color),
+        borderColor: 'var(--surface)',
+        borderWidth: 2,
+        hoverOffset: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: '68%',
+      plugins: {
+        legend: {
+          position: 'right',
+          labels: { boxWidth: 8, font: { family: 'Space Grotesk', size: 10 }, color: '#1A2233' }
+        }
+      }
+    }
+  });
+}
+
+function buildSecurityTypeChart(dist) {
+  const ctx = document.getElementById('chartSecurityTypes');
+  if (!ctx) return;
+  if (secTypeChart) secTypeChart.destroy();
+
+  secTypeChart = new Chart(ctx.getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: dist.map(d => d.type.replace(/_/g, ' ')),
+      datasets: [{
+        label: 'Occurrences',
+        data: dist.map(d => d.count),
+        backgroundColor: '#F97316CC',
+        borderColor: '#F97316',
+        borderWidth: 1.5,
+        borderRadius: 4
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { stepSize: 1 } },
+        y: { grid: { display: false }, ticks: { font: { size: 9 } } }
+      }
+    }
+  });
+}
+
+function buildSecurityZoneChart(dist) {
+  const ctx = document.getElementById('chartSecurityZones');
+  if (!ctx) return;
+  if (secZoneChart) secZoneChart.destroy();
+
+  secZoneChart = new Chart(ctx.getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: dist.map(d => d.zone),
+      datasets: [{
+        label: 'Incidents by Zone',
+        data: dist.map(d => d.count),
+        backgroundColor: '#7C3AEDCC',
+        borderColor: '#7C3AED',
+        borderWidth: 1.5,
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 9 } } },
+        y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { stepSize: 1 } }
+      }
+    }
+  });
+}
+
+function renderSecurityEventsTable(events) {
+  const tbody = document.getElementById('secEventsTableBody');
+  if (!tbody) return;
+  tbody.innerHTML = '';
+
+  if (!events.length) {
+    tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:20px;color:var(--muted)">No security events match criteria.</td></tr>';
+    return;
+  }
+
+  events.forEach(evt => {
+    const sevClass = (evt.severity || 'INFO').toLowerCase();
+    const dt = new Date(evt.timestamp);
+    const tsStr = dt.toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' });
+
+    const tr = document.createElement('tr');
+    tr.className = 'asset-row-clickable';
+    tr.innerHTML = `
+      <td style="font-family:var(--font-mono);font-size:0.75rem;color:var(--accent)"><strong>${evt.event_id}</strong></td>
+      <td>${evt.zone}</td>
+      <td><span style="font-size:0.72rem;font-weight:600">${evt.event_type.replace(/_/g, ' ')}</span></td>
+      <td><span class="sec-badge ${sevClass}">${evt.severity}</span></td>
+      <td style="font-family:var(--font-mono);font-size:0.7rem;color:var(--muted)">${tsStr}</td>
+      <td><span class="status-badge ${evt.status.toLowerCase()}">${evt.status}</span></td>
+      <td><button class="qa-btn" style="width:auto;padding:3px 8px;font-size:0.68rem" onclick="openIncidentModal('${evt.event_id}')">Investigate</button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderSecurityAlerts(alerts) {
+  const container = document.getElementById('secAlertsList');
+  if (!container) return;
+  container.innerHTML = '';
+
+  const active = alerts.filter(a => a.status !== 'RESOLVED');
+  if (!active.length) {
+    container.innerHTML = '<div style="color:var(--muted);font-size:0.78rem;padding:12px;background:var(--surface2);border-radius:6px">No active security alerts. All perimeters secure.</div>';
+    return;
+  }
+
+  active.forEach(al => {
+    const sevClass = (al.severity || 'WARNING').toLowerCase();
+    const div = document.createElement('div');
+    div.className = `sec-alert-item ${sevClass}`;
+    div.innerHTML = `
+      <div style="flex:1;padding-right:10px">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+          <span class="sec-badge ${sevClass}">${al.severity.toUpperCase()}</span>
+          <span style="font-size:0.72rem;font-family:var(--font-mono);color:var(--muted)">${al.created_at}</span>
+        </div>
+        <div style="font-size:0.75rem;color:var(--text);font-weight:500">${al.message}</div>
+      </div>
+      <div style="display:flex;gap:6px;flex-shrink:0">
+        <button class="qa-btn" style="width:auto;padding:4px 8px;font-size:0.68rem" onclick="acknowledgeSecurityAlert(${al.alert_id}, this)">Ack</button>
+        <button class="qa-btn" style="width:auto;padding:4px 8px;font-size:0.68rem;background:rgba(52,211,153,0.1);border-color:var(--green);color:var(--green)" onclick="resolveSecurityAlert(${al.alert_id}, this)">Resolve ✓</button>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+window.acknowledgeSecurityAlert = async function (alertId, btn) {
+  const res = await apiFetch(`/api/security/alerts/${alertId}/acknowledge`, { method: 'POST' });
+  if (res) {
+    showToast(`✅ Alert #${alertId} Acknowledged`);
+    if (btn) btn.disabled = true;
+  }
+};
+
+window.resolveSecurityAlert = async function (alertId, btn) {
+  const res = await apiFetch(`/api/security/alerts/${alertId}/resolve`, { method: 'POST' });
+  if (res) {
+    showToast(`✅ Alert #${alertId} Resolved`);
+    const alertsData = await apiFetch(`/api/security/alerts?facility_id=${currentFacilityId}`);
+    if (alertsData && alertsData.alerts) renderSecurityAlerts(alertsData.alerts);
+  }
+};
+
+function initSecurityFilters() {
+  document.querySelectorAll('[data-secfilter]').forEach(btn => {
+    btn.onclick = () => {
+      document.querySelectorAll('[data-secfilter]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.secfilter;
+      if (filter === 'all') {
+        renderSecurityEventsTable(cachedSecEvents);
+      } else {
+        renderSecurityEventsTable(cachedSecEvents.filter(e => e.severity.toLowerCase() === filter));
+      }
+    };
+  });
+}
+
+window.openIncidentModal = async function (eventId) {
+  ensureModal();
+  const overlay = document.getElementById('assetModal');
+  const box = document.getElementById('assetModalBox');
+
+  box.innerHTML = `<div style="text-align:center;padding:40px;color:var(--muted)">Loading incident forensics…</div>`;
+  overlay.classList.add('open');
+
+  const data = await apiFetch(`/api/security/events/${eventId}`);
+  if (!data || !data.event) {
+    box.innerHTML = '<div style="padding:20px;color:var(--red)">Failed to load incident detail.</div>';
+    return;
+  }
+
+  const evt = data.event;
+  const ctx = data.investigation_context || {};
+  const sevClass = (evt.severity || 'INFO').toLowerCase();
+
+  box.innerHTML = `
+    <div class="modal-header">
+      <div>
+        <h3 style="font-size:1.1rem;margin-bottom:4px">Incident Investigation: ${evt.event_id}</h3>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span class="sec-badge ${sevClass}">${evt.severity}</span>
+          <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--muted)">${evt.event_type}</span>
+          <span style="font-size:0.75rem;color:var(--muted)">· ${evt.zone}</span>
+        </div>
+      </div>
+      <button class="modal-close" onclick="closeAssetModal()">✕</button>
+    </div>
+
+    <div style="margin-bottom:16px;padding:14px;background:var(--surface2);border-radius:var(--radius-sm);border-left:4px solid var(--accent)">
+      <div style="font-size:0.75rem;font-weight:700;color:var(--text);margin-bottom:4px">Incident Description</div>
+      <p style="font-size:0.75rem;color:var(--muted);line-height:1.4">${evt.description}</p>
+    </div>
+
+    <!-- Forensic Metadata Tiles -->
+    <div class="modal-sensor-grid">
+      <div class="sensor-tile">
+        <div class="sensor-tile-label">Source</div>
+        <div class="sensor-tile-value" style="font-size:0.85rem">${evt.source}</div>
+        <div class="sensor-tile-unit">Device Sensor</div>
+      </div>
+      <div class="sensor-tile">
+        <div class="sensor-tile-label">Risk Level</div>
+        <div class="sensor-tile-value" style="font-size:0.9rem">${evt.risk_level}</div>
+        <div class="sensor-tile-unit">Threat Assessment</div>
+      </div>
+      <div class="sensor-tile">
+        <div class="sensor-tile-label">Status</div>
+        <div class="sensor-tile-value" style="font-size:0.85rem">${evt.status}</div>
+        <div class="sensor-tile-unit">Workflow State</div>
+      </div>
+      <div class="sensor-tile">
+        <div class="sensor-tile-label">Recorded At</div>
+        <div class="sensor-tile-value" style="font-size:0.75rem">${evt.timestamp.split('T')[1] || evt.timestamp}</div>
+        <div class="sensor-tile-unit">${evt.timestamp.split('T')[0] || ''}</div>
+      </div>
+    </div>
+
+    <!-- Payload Details -->
+    ${evt.details ? `
+    <div style="margin-bottom:16px">
+      <div style="font-size:0.75rem;font-weight:600;margin-bottom:6px;color:var(--text)">Sensor Context & Forensic Telemetry</div>
+      <pre style="background:var(--surface2);padding:12px;border-radius:6px;font-family:var(--font-mono);font-size:0.7rem;overflow-x:auto;color:var(--accent)">${JSON.stringify(evt.details, null, 2)}</pre>
+    </div>` : ''}
+
+    <!-- Recommended Protocol -->
+    <div style="margin-bottom:16px;padding:12px;background:rgba(239,68,68,0.05);border-radius:6px;border:1px solid rgba(239,68,68,0.2)">
+      <div style="font-size:0.75rem;font-weight:700;color:var(--red);margin-bottom:4px">Standard Operating Procedure</div>
+      <p style="font-size:0.72rem;color:var(--text)">${ctx.recommended_protocols || 'Dispatch security officer and verify badge integrity.'}</p>
+    </div>
+
+    <!-- Related Zone Events -->
+    ${ctx.zone_related_events && ctx.zone_related_events.length ? `
+    <div style="margin-bottom:16px">
+      <div style="font-size:0.75rem;font-weight:600;margin-bottom:6px;color:var(--text)">Related Zone Activity</div>
+      ${ctx.zone_related_events.map(re => `
+        <div style="display:flex;justify-content:space-between;padding:6px 10px;background:var(--surface2);border-radius:4px;margin-bottom:4px;font-size:0.7rem">
+          <div><span style="color:var(--accent);font-family:var(--font-mono)">${re.event_id}</span> — ${re.description}</div>
+          <span style="color:var(--muted)">${re.timestamp.split('T')[1] || ''}</span>
+        </div>
+      `).join('')}
+    </div>` : ''}
+
+    <div style="font-size:0.65rem;color:var(--muted);border-top:1px solid var(--border);padding-top:10px;margin-top:16px">
+      🔒 ${ctx.retention_policy || 'Full forensic audit logs active'}.
+    </div>
+  `;
+};
+
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// VIEW 0: EXECUTIVE COMMAND CENTER LOGIC (Milestone 4)
+// ═══════════════════════════════════════════════════════════════════════════════
+let execCostDonutChartInstance = null;
+let execCostTrendChartInstance = null;
+
+async function loadExecutiveView() {
+  const kpiData = await apiFetch(`/api/executive/kpis?facility_id=${currentFacilityId}`);
+  const costOv = await apiFetch(`/api/cost/overview?facility_id=${currentFacilityId}`);
+  const costTrends = await apiFetch(`/api/cost/trends?facility_id=${currentFacilityId}`);
+  const opps = await apiFetch(`/api/cost/opportunities?facility_id=${currentFacilityId}`);
+  const intel = await apiFetch(`/api/facility/intelligence?facility_id=${currentFacilityId}`);
+
+  if (!kpiData || !costOv) return;
+
+  // 1. KPI Cards
+  const healthEl = document.getElementById('execHealthScore');
+  if (healthEl) animateValue('execHealthScore', kpiData.facility_health_score, 1);
+
+  const gradeBadge = document.getElementById('execHealthGradeBadge');
+  if (gradeBadge) {
+    gradeBadge.textContent = kpiData.health_grade;
+    gradeBadge.style.color = kpiData.health_grade === 'EXCELLENT' ? '#059669' : (kpiData.health_grade === 'GOOD' ? '#0284C7' : '#D97706');
+    gradeBadge.style.background = kpiData.health_grade === 'EXCELLENT' ? 'rgba(16,185,129,0.12)' : (kpiData.health_grade === 'GOOD' ? 'rgba(2,132,199,0.12)' : 'rgba(217,119,6,0.12)');
+  }
+
+  const opexEl = document.getElementById('execTotalOpex');
+  if (opexEl) opexEl.textContent = `₹${Math.round(costOv.total_operating_cost).toLocaleString('en-IN')}`;
+
+  const opexSub = document.getElementById('execOpexSubtext');
+  if (opexSub) opexSub.textContent = `₹${costOv.cost_per_sqft} / sq.ft. (₹${costOv.cost_per_occupant}/occ)`;
+
+  const budgetBadge = document.getElementById('execBudgetComplianceBadge');
+  if (budgetBadge) {
+    budgetBadge.textContent = costOv.budget_compliance_status;
+    budgetBadge.style.color = costOv.budget_compliance_status === 'COMPLIANT' ? '#059669' : '#DC2626';
+    budgetBadge.style.background = costOv.budget_compliance_status === 'COMPLIANT' ? 'rgba(16,185,129,0.12)' : 'rgba(220,38,38,0.12)';
+  }
+
+  const savEl = document.getElementById('execPotentialSavings');
+  if (savEl) savEl.textContent = `₹${Math.round(costOv.opportunities_summary.potential_savings).toLocaleString('en-IN')}`;
+
+  const savSub = document.getElementById('execSavingsPctSubtext');
+  if (savSub) savSub.textContent = `${costOv.opportunities_summary.potential_saving_pct}% of baseline OpEx`;
+
+  const alertsCount = document.getElementById('execActiveAlertsCount');
+  if (alertsCount) alertsCount.textContent = kpiData.active_alerts;
+
+  const critBadge = document.getElementById('execCritAssetsBadge');
+  if (critBadge) {
+    critBadge.textContent = `${kpiData.critical_assets} CRITICAL ASSETS`;
+    critBadge.style.color = kpiData.critical_assets > 0 ? '#DC2626' : '#059669';
+    critBadge.style.background = kpiData.critical_assets > 0 ? 'rgba(220,38,38,0.12)' : 'rgba(16,185,129,0.12)';
+  }
+
+  // 2. Multi-Agent Fleet Status Grid
+  const fleetGrid = document.getElementById('execFleetGrid');
+  if (fleetGrid && intel && intel.agent_fleet_status) {
+    fleetGrid.innerHTML = '';
+    const agentIcons = {
+      energy: '⚡',
+      maintenance: '🔧',
+      occupancy: '👥',
+      security: '🛡️',
+      cost: '💰'
+    };
+    const agentLabels = {
+      energy: 'Energy Agent',
+      maintenance: 'Maintenance Agent',
+      occupancy: 'Occupancy Agent',
+      security: 'Security Agent',
+      cost: 'Cost Optimizer'
+    };
+
+    Object.entries(intel.agent_fleet_status).forEach(([agentKey, info]) => {
+      const card = document.createElement('div');
+      card.style.cssText = 'background:var(--surface2); border:1px solid var(--border); border-radius:8px; padding:12px; display:flex; flex-direction:column; justify-content:space-between;';
+      
+      const statusColor = info.status === 'CRITICAL' ? '#DC2626' : (info.status === 'WARNING' ? '#D97706' : '#059669');
+      const statusBg = info.status === 'CRITICAL' ? 'rgba(220,38,38,0.12)' : (info.status === 'WARNING' ? 'rgba(217,119,6,0.12)' : 'rgba(16,185,129,0.12)');
+
+      card.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <span style="font-weight:600; font-size:0.875rem; color:var(--text); display:flex; align-items:center; gap:6px;">
+            <span>${agentIcons[agentKey] || '🤖'}</span>
+            <span>${agentLabels[agentKey] || agentKey}</span>
+          </span>
+          <span class="badge" style="background:${statusBg}; color:${statusColor}; font-size:0.7rem; font-weight:700; padding:2px 6px; border-radius:4px;">${info.status}</span>
+        </div>
+        <div style="font-size:0.75rem; color:var(--muted); margin-top:4px;">
+          Confidence: <strong style="color:var(--text);">${Math.round(info.confidence * 100)}%</strong> | Severity: <strong style="color:${statusColor}; font-weight:600;">${info.severity}</strong>
+        </div>
+      `;
+      fleetGrid.appendChild(card);
+    });
+  }
+
+  // 3. Render OpEx Donut Chart
+  renderExecutiveCostDonut(costOv);
+
+  // 4. Render 30-Day Cost Trend Chart
+  if (costTrends) renderExecutiveCostTrend(costTrends);
+
+  // 5. Cross-Agent Correlations
+  const corrContainer = document.getElementById('execCorrelationsList');
+  const corrBadge = document.getElementById('execCorrelationsCountBadge');
+  if (corrContainer && intel && intel.cross_agent_correlations) {
+    corrContainer.innerHTML = '';
+    corrBadge.textContent = `${intel.cross_agent_correlations.length} CORRELATIONS`;
+
+    intel.cross_agent_correlations.forEach(c => {
+      const item = document.createElement('div');
+      item.style.cssText = 'background:var(--surface2); border:1px solid var(--border); border-radius:8px; padding:12px 14px;';
+      const sevColor = c.severity === 'CRITICAL' ? '#DC2626' : (c.severity === 'HIGH' ? '#EA580C' : (c.severity === 'MEDIUM' ? '#D97706' : '#059669'));
+      const sevBg = c.severity === 'CRITICAL' ? 'rgba(220,38,38,0.1)' : (c.severity === 'HIGH' ? 'rgba(234,88,12,0.1)' : (c.severity === 'MEDIUM' ? 'rgba(217,119,6,0.1)' : 'rgba(16,185,129,0.1)'));
+
+      item.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+          <span style="font-weight:600; font-size:0.9rem; color:var(--text);">${c.title}</span>
+          <div style="display:flex; gap:6px; align-items:center;">
+            <span style="font-size:0.7rem; color:var(--muted);">Agents: [${c.participating_agents.join(', ')}]</span>
+            <span class="badge" style="background:${sevBg}; color:${sevColor}; font-size:0.7rem; font-weight:700; padding:2px 6px; border-radius:4px;">${c.severity}</span>
+          </div>
+        </div>
+        <div style="font-size:0.8rem; color:var(--text); margin-bottom:4px; opacity:0.9;">${c.finding}</div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px; font-size:0.75rem;">
+          <span style="color:#0284C7; font-weight:600;">⚡ Action: ${c.recommendation}</span>
+          <span style="color:#059669; font-weight:700;">${c.financial_impact}</span>
+        </div>
+      `;
+      corrContainer.appendChild(item);
+    });
+  }
+
+  // 6. Opportunities Table
+  const tbody = document.getElementById('execOpportunitiesTableBody');
+  const oppsBadge = document.getElementById('execOppsTotalBadge');
+  if (tbody && opps) {
+    tbody.innerHTML = '';
+    oppsBadge.textContent = `${opps.length} INITIATIVES`;
+
+    opps.forEach(o => {
+      const tr = document.createElement('tr');
+      tr.style.cssText = 'border-bottom:1px solid var(--border);';
+      tr.innerHTML = `
+        <td style="padding:10px; font-weight:600; color:var(--text);">
+          <div>${o.title}</div>
+          <div style="font-size:0.7rem; color:var(--muted); font-weight:normal;">${o.description.substring(0, 70)}…</div>
+        </td>
+        <td style="padding:10px;"><span class="badge" style="font-size:0.7rem; background:rgba(37,99,235,0.12); color:#2563EB; font-weight:600; padding:2px 6px; border-radius:4px;">${o.category}</span></td>
+        <td style="padding:10px; color:var(--text); font-weight:500;">${o.source_agent}</td>
+        <td style="padding:10px; color:var(--muted);">₹${Math.round(o.baseline_cost).toLocaleString('en-IN')}</td>
+        <td style="padding:10px; color:var(--muted);">₹${Math.round(o.estimated_optimized_cost).toLocaleString('en-IN')}</td>
+        <td style="padding:10px; font-weight:600; color:#059669;">₹${Math.round(o.potential_saving).toLocaleString('en-IN')} (${o.saving_pct}%)</td>
+        <td style="padding:10px; color:var(--text);">${o.payback_period_days} days</td>
+        <td style="padding:10px;"><span class="badge" style="font-size:0.7rem; background:rgba(16,185,129,0.15); color:#059669; font-weight:600; padding:2px 6px; border-radius:4px;">${o.status}</span></td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+}
+
+function renderExecutiveCostDonut(costOv) {
+  const canvas = document.getElementById('execCostDonutChart');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const categories = Object.keys(costOv.cost_by_category);
+  const amounts = categories.map(k => costOv.cost_by_category[k].amount);
+  const colors = ['#0284C7', '#2563EB', '#059669', '#D97706'];
+
+  if (execCostDonutChartInstance) execCostDonutChartInstance.destroy();
+
+  execCostDonutChartInstance = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: categories,
+      datasets: [{
+        data: amounts,
+        backgroundColor: colors,
+        borderWidth: 0,
+        hoverOffset: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false }
+      },
+      cutout: '72%'
+    }
+  });
+
+  const legend = document.getElementById('execCostCategoryLegend');
+  if (legend) {
+    legend.innerHTML = '';
+    categories.forEach((cat, idx) => {
+      const el = document.createElement('div');
+      el.style.cssText = 'display:flex; align-items:center; gap:6px; color:var(--text); font-size:0.8rem;';
+      el.innerHTML = `
+        <span style="width:10px; height:10px; border-radius:50%; background:${colors[idx]}; flex-shrink:0;"></span>
+        <span>${cat}: <strong style="color:var(--text);">₹${Math.round(costOv.cost_by_category[cat].amount).toLocaleString('en-IN')}</strong></span>
+      `;
+      legend.appendChild(el);
+    });
+  }
+}
+
+function renderExecutiveCostTrend(trends) {
+  const canvas = document.getElementById('execCostTrendChart');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const labels = trends.map(t => t.date.substring(5)); // MM-DD
+  const energyData = trends.map(t => t.ENERGY);
+  const maintData = trends.map(t => t.MAINTENANCE);
+  const secData = trends.map(t => t.SECURITY);
+  const totalData = trends.map(t => t.TOTAL);
+  const budgetData = trends.map(t => t.BUDGET);
+
+  if (execCostTrendChartInstance) execCostTrendChartInstance.destroy();
+
+  execCostTrendChartInstance = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: 'Total Daily Cost',
+          data: totalData,
+          borderColor: '#0284C7',
+          backgroundColor: 'rgba(2,132,199,0.08)',
+          borderWidth: 2,
+          fill: true,
+          tension: 0.3,
+          pointRadius: 0
+        },
+        {
+          label: 'Budget Target',
+          data: budgetData,
+          borderColor: '#059669',
+          borderDash: [5, 5],
+          borderWidth: 1.5,
+          fill: false,
+          pointRadius: 0
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          labels: { color: '#7B8FAB', boxWidth: 12, font: { size: 10 } }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          ticks: { color: '#7B8FAB', font: { size: 9 }, maxTicksLimit: 10 }
+        },
+        y: {
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          ticks: {
+            color: '#7B8FAB',
+            font: { size: 9 },
+            callback: v => `₹${(v / 1000).toFixed(0)}k`
+          }
+        }
+      }
+    }
+  });
+}
+
+// ─── UPDATED NAV TABS (includes Executive, Maintenance, Occupancy, Security) ──
 function initNavTabs() {
   document.querySelectorAll('.nav-tab').forEach(tab => {
     tab.addEventListener('click', () => {
@@ -1391,13 +2794,20 @@ function initNavTabs() {
       const viewEl = document.getElementById(targetView);
       if (viewEl) viewEl.classList.add('active');
 
-      if (tab.id === 'tab-overview') {
-        showToast('📊 Viewing Executive Overview');
+      if (tab.id === 'tab-executive') {
+        showToast('🏛️ Viewing Executive Command Center');
+        loadExecutiveView();
+      } else if (tab.id === 'tab-overview') {
+        showToast('📊 Viewing Energy Overview');
       } else if (tab.id === 'tab-analytics') {
         showToast('📈 Loading Subsystem Analytics…');
         loadAnalyticsView();
       } else if (tab.id === 'tab-maintenance') {
         loadMaintenanceView();
+      } else if (tab.id === 'tab-occupancy') {
+        loadOccupancyView();
+      } else if (tab.id === 'tab-security') {
+        loadSecurityView();
       } else if (tab.id === 'tab-agent') {
         showToast('🤖 AI Agent Command Center');
         loadAgentView();
@@ -1407,6 +2817,23 @@ function initNavTabs() {
       }
     });
   });
+
+  // Wire Download Buttons
+  const btnTxt = document.getElementById('btnDownloadReportText');
+  if (btnTxt) {
+    btnTxt.addEventListener('click', () => {
+      window.open(`/api/facility/reports/download?facility_id=${currentFacilityId}&format=txt`, '_blank');
+      showToast('📄 Downloading Executive Audit Report (TXT)');
+    });
+  }
+
+  const btnJson = document.getElementById('btnDownloadReportJson');
+  if (btnJson) {
+    btnJson.addEventListener('click', () => {
+      window.open(`/api/facility/reports/download?facility_id=${currentFacilityId}&format=json`, '_blank');
+      showToast('💾 Exporting Structured Facility Intelligence (JSON)');
+    });
+  }
 }
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
@@ -1430,6 +2857,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   await loadFacilities();
 
   await Promise.all([
+    loadExecutiveView(),
     loadOverview(),
     buildConsumptionChart(),
     buildDonutChart(),

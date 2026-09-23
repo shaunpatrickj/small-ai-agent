@@ -181,6 +181,130 @@ def init_db():
         )
     """)
 
+    # ── OCCUPANCY_RECORDS ──────────────────────────────────────────────────
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS OCCUPANCY_RECORDS (
+            occupancy_id     INTEGER PRIMARY KEY AUTOINCREMENT,
+            facility_id      INTEGER NOT NULL REFERENCES FACILITIES(facility_id),
+            zone             TEXT    NOT NULL,
+            occupancy_count  INTEGER NOT NULL DEFAULT 0,
+            capacity         INTEGER NOT NULL DEFAULT 50,
+            occupancy_rate   REAL    DEFAULT 0.0,
+            occupancy_status TEXT    DEFAULT 'NORMAL', -- 'UNDERUTILIZED', 'OPTIMAL', 'HIGH', 'OVERCROWDED'
+            timestamp        TEXT    NOT NULL,
+            created_at       TEXT    DEFAULT (datetime('now'))
+        )
+    """)
+
+    cur.execute("""
+        CREATE INDEX IF NOT EXISTS idx_occ_facility_ts
+        ON OCCUPANCY_RECORDS (facility_id, timestamp)
+    """)
+
+    cur.execute("""
+        CREATE INDEX IF NOT EXISTS idx_occ_zone_ts
+        ON OCCUPANCY_RECORDS (zone, timestamp)
+    """)
+
+    # ── SECURITY_EVENTS ────────────────────────────────────────────────────
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS SECURITY_EVENTS (
+            event_id       TEXT PRIMARY KEY,
+            facility_id    INTEGER NOT NULL REFERENCES FACILITIES(facility_id),
+            zone           TEXT    NOT NULL,
+            event_type     TEXT    NOT NULL,  -- 'UNAUTHORIZED_ACCESS', 'TAILGATING', 'DOOR_FORCED', 'AFTER_HOURS_ENTRY', 'CCTV_ANOMALY', 'BADGE_MISUSE'
+            severity       TEXT    NOT NULL,  -- 'INFO', 'WARNING', 'HIGH', 'CRITICAL'
+            risk_level     TEXT    DEFAULT 'LOW', -- 'LOW', 'MEDIUM', 'HIGH', 'CRITICAL'
+            source         TEXT    DEFAULT 'Access Control System',
+            status         TEXT    DEFAULT 'NEW', -- 'NEW', 'ACKNOWLEDGED', 'RESOLVED', 'INVESTIGATING'
+            description    TEXT    NOT NULL,
+            details        TEXT,              -- JSON blob with contextual info
+            timestamp      TEXT    NOT NULL,
+            created_at     TEXT    DEFAULT (datetime('now'))
+        )
+    """)
+
+    cur.execute("""
+        CREATE INDEX IF NOT EXISTS idx_sec_facility_ts
+        ON SECURITY_EVENTS (facility_id, timestamp)
+    """)
+
+    cur.execute("""
+        CREATE INDEX IF NOT EXISTS idx_sec_severity
+        ON SECURITY_EVENTS (severity, status)
+    """)
+
+    # ── COST_RECORDS (Milestone 4) ─────────────────────────────────────────
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS COST_RECORDS (
+            cost_id          INTEGER PRIMARY KEY AUTOINCREMENT,
+            facility_id      INTEGER NOT NULL REFERENCES FACILITIES(facility_id),
+            category         TEXT    NOT NULL,  -- 'ENERGY', 'MAINTENANCE', 'SECURITY', 'ADMINISTRATIVE'
+            amount           REAL    NOT NULL,  -- INR
+            budget_allocated REAL    DEFAULT 0.0,
+            currency         TEXT    DEFAULT 'INR',
+            period_start     TEXT    NOT NULL,
+            period_end       TEXT    NOT NULL,
+            description      TEXT    NOT NULL,
+            created_at       TEXT    DEFAULT (datetime('now'))
+        )
+    """)
+
+    cur.execute("""
+        CREATE INDEX IF NOT EXISTS idx_cost_facility_cat
+        ON COST_RECORDS (facility_id, category)
+    """)
+
+    cur.execute("""
+        CREATE INDEX IF NOT EXISTS idx_cost_period
+        ON COST_RECORDS (facility_id, period_start, period_end)
+    """)
+
+    # ── OPTIMIZATION_OPPORTUNITIES (Milestone 4) ───────────────────────────
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS OPTIMIZATION_OPPORTUNITIES (
+            opportunity_id           TEXT PRIMARY KEY,
+            facility_id              INTEGER NOT NULL REFERENCES FACILITIES(facility_id),
+            category                 TEXT NOT NULL, -- 'ENERGY', 'MAINTENANCE', 'SECURITY', 'SPACE_OPERATIONS'
+            title                    TEXT NOT NULL,
+            description              TEXT NOT NULL,
+            baseline_cost            REAL NOT NULL,
+            estimated_optimized_cost REAL NOT NULL,
+            potential_saving         REAL NOT NULL,
+            confidence               REAL DEFAULT 0.85,
+            payback_period_days      INTEGER DEFAULT 0,
+            status                   TEXT DEFAULT 'IDENTIFIED', -- 'IDENTIFIED', 'IN_REVIEW', 'APPROVED', 'IMPLEMENTED'
+            source_agent             TEXT NOT NULL, -- 'cost', 'energy', 'maintenance', 'occupancy', 'cross_agent'
+            created_at               TEXT DEFAULT (datetime('now'))
+        )
+    """)
+
+    cur.execute("""
+        CREATE INDEX IF NOT EXISTS idx_opt_facility_status
+        ON OPTIMIZATION_OPPORTUNITIES (facility_id, status)
+    """)
+
+    # ── FACILITY_INTELLIGENCE_REPORTS (Milestone 4) ────────────────────────
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS FACILITY_INTELLIGENCE_REPORTS (
+            report_id        TEXT PRIMARY KEY,
+            facility_id      INTEGER NOT NULL REFERENCES FACILITIES(facility_id),
+            report_title     TEXT NOT NULL,
+            health_score     REAL NOT NULL,
+            total_opex       REAL NOT NULL,
+            potential_saving REAL NOT NULL,
+            summary          TEXT NOT NULL,
+            report_json      TEXT NOT NULL, -- Full structured 12-section JSON
+            report_text      TEXT NOT NULL, -- Human-readable executive audit text
+            generated_at     TEXT DEFAULT (datetime('now'))
+        )
+    """)
+
+    cur.execute("""
+        CREATE INDEX IF NOT EXISTS idx_rep_facility_date
+        ON FACILITY_INTELLIGENCE_REPORTS (facility_id, generated_at)
+    """)
+
     conn.commit()
     conn.close()
     print("✅ Database initialised →", DB_PATH)
