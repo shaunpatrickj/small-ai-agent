@@ -1,14 +1,14 @@
 prediction_id,asset_id,risk_level,priority,prediction_text,recommended_action,confidence,predicted_at
-1,HVAC-AHU-001,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 09:01:45
-2,CHILLER-001,MEDIUM,RECOMMENDED,Accelerated component degradation detected; close monitoring advised.,Schedule preventive maintenance within the next maintenance cycle.,0.85,2026-09-23 09:01:45
-3,PUMP-001,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 09:01:45
-4,XFRM-001,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 09:01:45
-5,ELEV-001,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 09:01:45
-6,HVAC-AHU-002,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 09:01:45
-7,PUMP-002,HIGH,URGENT,High probability of functional breakdown under peak load.,Urgent maintenance required within 24–48 hours to prevent forced outage.,0.92,2026-09-23 09:01:45
-8,GENSET-001,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 09:01:45
-9,HVAC-AHU-003,MEDIUM,RECOMMENDED,Accelerated component degradation detected; close monitoring advised.,Schedule preventive maintenance within the next maintenance cycle.,0.85,2026-09-23 09:01:45
-10,PUMP-003,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 09:01:45
-11,CRAC-001,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 09:01:45
-12,CRAC-002,MEDIUM,RECOMMENDED,Accelerated component degradation detected; close monitoring advised.,Schedule preventive maintenance within the next maintenance cycle.,0.85,2026-09-23 09:01:45
-13,UPS-001,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 09:01:45
+1,HVAC-AHU-001,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 13:21:55
+2,CHILLER-001,MEDIUM,RECOMMENDED,Accelerated component degradation detected; close monitoring advised.,Schedule preventive maintenance within the next maintenance cycle.,0.85,2026-09-23 13:21:55
+3,PUMP-001,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 13:21:55
+4,XFRM-001,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 13:21:55
+5,ELEV-001,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 13:21:55
+6,HVAC-AHU-002,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 13:21:55
+7,PUMP-002,HIGH,URGENT,High probability of functional breakdown under peak load.,Urgent maintenance required within 24–48 hours to prevent forced outage.,0.92,2026-09-23 13:21:55
+8,GENSET-001,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 13:21:55
+9,HVAC-AHU-003,MEDIUM,RECOMMENDED,Accelerated component degradation detected; close monitoring advised.,Schedule preventive maintenance within the next maintenance cycle.,0.85,2026-09-23 13:21:55
+10,PUMP-003,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 13:21:55
+11,CRAC-001,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 13:21:55
+12,CRAC-002,MEDIUM,RECOMMENDED,Accelerated component degradation detected; close monitoring advised.,Schedule preventive maintenance within the next maintenance cycle.,0.85,2026-09-23 13:21:55
+13,UPS-001,LOW,NORMAL,Equipment operating at peak health index.,No immediate maintenance required. Maintain standard PM schedule.,0.95,2026-09-23 13:21:55

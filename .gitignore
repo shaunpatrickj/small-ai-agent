@@ -36,7 +36,7 @@ Thumbs.db
 *.swo
 
 # ── Internal Documentation & Notes ──
-explanation.md
-how_to_start.md
-todo.md
+*.md
+!README.md
 scripts/
+

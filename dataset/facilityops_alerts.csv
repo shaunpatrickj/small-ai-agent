@@ -1,8 +1,8 @@
 alert_id,facility_id,alert_type,severity,message,metric,value,threshold,resolved,created_at
-1,1,hvac_inefficiency,warning,HVAC running at 142% baseline between 14:00–16:00. Likely setpoint misconfiguration.,hvac_usage,141.0,100.0,0,2026-09-23 09:01:44
-2,1,peak_demand,critical,Forecasted demand spike of 38 kW above contracted capacity at 17:30–18:30.,electricity_usage,338.0,300.0,0,2026-09-23 09:01:44
-3,3,anomaly,warning,Water consumption 23% above expected floor-area baseline. Check for leaks.,water_usage,55.0,45.0,0,2026-09-23 09:01:44
-4,1,unauthorized_access,critical,Unregistered RFID card badge-scan attempt at East Wing executive turnstile (Floor 1 Offices),access_control,1.0,0.0,0,2026-09-23 09:01:45
-5,4,door_forced,critical,Critical door held open alarm breached beyond 45s threshold at Server Hall 1,door_sensor,78.0,45.0,0,2026-09-23 09:01:45
-6,1,tailgating,warning,Optical camera detected 2 individuals entering through Cafeteria access gate on single badge swipe,optical_sensor,2.0,1.0,0,2026-09-23 09:01:45
-7,4,cctv_anomaly,critical,Unidentified person loitering in restricted datacenter server staging perimeter without escort,ai_vision,7.5,3.0,0,2026-09-23 09:01:45
+1,1,hvac_inefficiency,warning,HVAC running at 142% baseline between 14:00–16:00. Likely setpoint misconfiguration.,hvac_usage,141.0,100.0,0,2026-09-23 13:21:54
+2,1,peak_demand,critical,Forecasted demand spike of 38 kW above contracted capacity at 17:30–18:30.,electricity_usage,338.0,300.0,0,2026-09-23 13:21:54
+3,3,anomaly,warning,Water consumption 23% above expected floor-area baseline. Check for leaks.,water_usage,55.0,45.0,0,2026-09-23 13:21:54
+4,1,unauthorized_access,critical,Unregistered RFID card badge-scan attempt at East Wing executive turnstile (Floor 1 Offices),access_control,1.0,0.0,0,2026-09-23 13:21:55
+5,4,door_forced,critical,Critical door held open alarm breached beyond 45s threshold at Server Hall 1,door_sensor,78.0,45.0,0,2026-09-23 13:21:55
+6,1,tailgating,warning,Optical camera detected 2 individuals entering through Cafeteria access gate on single badge swipe,optical_sensor,2.0,1.0,0,2026-09-23 13:21:55
+7,4,cctv_anomaly,critical,Unidentified person loitering in restricted datacenter server staging perimeter without escort,ai_vision,7.5,3.0,0,2026-09-23 13:21:55
