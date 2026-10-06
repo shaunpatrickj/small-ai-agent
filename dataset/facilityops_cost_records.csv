@@ -1,497 +1,497 @@
 cost_id,facility_id,category,amount,budget_allocated,currency,period_start,period_end,description,created_at
-1,1,ENERGY,10137.06,48000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,Grid electricity consumption (1126.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-2,1,MAINTENANCE,16133.36,18000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-3,1,SECURITY,12338.46,12000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-4,1,ADMINISTRATIVE,8832.02,9000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-5,1,ENERGY,29604.33,48000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,Grid electricity consumption (3289.4 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-6,1,MAINTENANCE,18888.37,18000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-7,1,SECURITY,11915.25,12000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-8,1,ADMINISTRATIVE,8651.2,9000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-9,1,ENERGY,29599.2,48000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,Grid electricity consumption (3288.8 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-10,1,MAINTENANCE,17916.66,18000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-11,1,SECURITY,12111.58,12000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-12,1,ADMINISTRATIVE,9536.27,9000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-13,1,ENERGY,30596.58,48000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,Grid electricity consumption (3399.6 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-14,1,MAINTENANCE,23234.94,18000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-15,1,SECURITY,12469.15,12000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-16,1,ADMINISTRATIVE,8822.09,9000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-17,1,ENERGY,28172.61,48000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,Grid electricity consumption (3130.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-18,1,MAINTENANCE,16303.34,18000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-19,1,SECURITY,11420.61,12000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-20,1,ADMINISTRATIVE,9498.41,9000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-21,1,ENERGY,31170.69,48000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,Grid electricity consumption (3463.4 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-22,1,MAINTENANCE,16547.51,18000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-23,1,SECURITY,12194.35,12000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-24,1,ADMINISTRATIVE,8889.31,9000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-25,1,ENERGY,10172.43,48000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,Grid electricity consumption (1130.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-26,1,MAINTENANCE,16248.87,18000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-27,1,SECURITY,12512.02,12000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-28,1,ADMINISTRATIVE,9178.75,9000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-29,1,ENERGY,10108.17,48000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,Grid electricity consumption (1123.1 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-30,1,MAINTENANCE,16084.79,18000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-31,1,SECURITY,12033.29,12000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-32,1,ADMINISTRATIVE,9717.78,9000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-33,1,ENERGY,29781.45,48000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,Grid electricity consumption (3309.0 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-34,1,MAINTENANCE,15341.83,18000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-35,1,SECURITY,12388.99,12000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-36,1,ADMINISTRATIVE,9205.16,9000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-37,1,ENERGY,28048.68,48000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,Grid electricity consumption (3116.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-38,1,MAINTENANCE,15548.08,18000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-39,1,SECURITY,12329.96,12000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-40,1,ADMINISTRATIVE,9364.08,9000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-41,1,ENERGY,26382.42,48000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,Grid electricity consumption (2931.4 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-42,1,MAINTENANCE,25087.42,18000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-43,1,SECURITY,11892.1,12000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-44,1,ADMINISTRATIVE,9178.75,9000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-45,1,ENERGY,31404.24,48000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,Grid electricity consumption (3489.4 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-46,1,MAINTENANCE,19700.74,18000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-47,1,SECURITY,12463.24,12000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-48,1,ADMINISTRATIVE,9266.97,9000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-49,1,ENERGY,27567.99,48000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,Grid electricity consumption (3063.1 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-50,1,MAINTENANCE,15620.97,18000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-51,1,SECURITY,11479.63,12000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-52,1,ADMINISTRATIVE,9243.79,9000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-53,1,ENERGY,10630.98,48000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,Grid electricity consumption (1181.2 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-54,1,MAINTENANCE,18406.64,18000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-55,1,SECURITY,11698.7,12000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-56,1,ADMINISTRATIVE,8442.08,9000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-57,1,ENERGY,10092.33,48000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,Grid electricity consumption (1121.4 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-58,1,MAINTENANCE,16354.03,18000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-59,1,SECURITY,11661.07,12000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-60,1,ADMINISTRATIVE,9068.28,9000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-61,1,ENERGY,27790.11,48000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,Grid electricity consumption (3087.8 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-62,1,MAINTENANCE,17765.93,18000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-63,1,SECURITY,11708.31,12000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-64,1,ADMINISTRATIVE,9716.49,9000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-65,1,ENERGY,28011.6,48000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,Grid electricity consumption (3112.4 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-66,1,MAINTENANCE,16558.58,18000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-67,1,SECURITY,12184.48,12000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-68,1,ADMINISTRATIVE,9119.67,9000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-69,1,ENERGY,27866.07,48000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,Grid electricity consumption (3096.2 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-70,1,MAINTENANCE,23338.45,18000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-71,1,SECURITY,12383.83,12000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-72,1,ADMINISTRATIVE,9271.14,9000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-73,1,ENERGY,28143.72,48000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,Grid electricity consumption (3127.1 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-74,1,MAINTENANCE,18367.24,18000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-75,1,SECURITY,11803.91,12000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-76,1,ADMINISTRATIVE,8627.34,9000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-77,1,ENERGY,27148.23,48000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,Grid electricity consumption (3016.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-78,1,MAINTENANCE,17685.13,18000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-79,1,SECURITY,11809.6,12000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-80,1,ADMINISTRATIVE,9107.91,9000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-81,1,ENERGY,9932.22,48000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,Grid electricity consumption (1103.6 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-82,1,MAINTENANCE,15979.37,18000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-83,1,SECURITY,11425.27,12000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-84,1,ADMINISTRATIVE,9419.73,9000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-85,1,ENERGY,10320.12,48000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,Grid electricity consumption (1146.7 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-86,1,MAINTENANCE,19306.64,18000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-87,1,SECURITY,11948.41,12000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-88,1,ADMINISTRATIVE,8389.11,9000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-89,1,ENERGY,27347.04,48000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,Grid electricity consumption (3038.6 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-90,1,MAINTENANCE,15937.71,18000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-91,1,SECURITY,12440.46,12000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-92,1,ADMINISTRATIVE,9374.04,9000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-93,1,ENERGY,27255.15,48000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,Grid electricity consumption (3028.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-94,1,MAINTENANCE,17327.05,18000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-95,1,SECURITY,12512.14,12000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-96,1,ADMINISTRATIVE,9349.91,9000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-97,1,ENERGY,29390.13,48000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,Grid electricity consumption (3265.6 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-98,1,MAINTENANCE,20752.83,18000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-99,1,SECURITY,11419.38,12000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-100,1,ADMINISTRATIVE,8623.03,9000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-101,1,ENERGY,27395.46,48000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,Grid electricity consumption (3043.9 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-102,1,MAINTENANCE,16379.2,18000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-103,1,SECURITY,12514.72,12000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-104,1,ADMINISTRATIVE,8729.72,9000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-105,1,ENERGY,26890.47,48000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,Grid electricity consumption (2987.8 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-106,1,MAINTENANCE,19414.83,18000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-107,1,SECURITY,12124.35,12000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-108,1,ADMINISTRATIVE,9291.6,9000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-109,1,ENERGY,10336.68,48000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,Grid electricity consumption (1148.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-110,1,MAINTENANCE,16780.63,18000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-111,1,SECURITY,12420.45,12000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-112,1,ADMINISTRATIVE,8599.05,9000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-113,1,ENERGY,10140.57,48000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,Grid electricity consumption (1126.7 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-114,1,MAINTENANCE,19318.35,18000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-115,1,SECURITY,12072.61,12000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-116,1,ADMINISTRATIVE,9488.64,9000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-117,1,ENERGY,26572.59,48000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,Grid electricity consumption (2952.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-118,1,MAINTENANCE,19507.95,18000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-119,1,SECURITY,12230.63,12000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-120,1,ADMINISTRATIVE,9450.99,9000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-121,1,ENERGY,27679.41,48000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,Grid electricity consumption (3075.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-122,1,MAINTENANCE,17206.17,18000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-123,1,SECURITY,11446.96,12000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-124,1,ADMINISTRATIVE,9163.21,9000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-125,2,ENERGY,10570.32,40000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,Grid electricity consumption (1174.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-126,2,MAINTENANCE,13192.93,15000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-127,2,SECURITY,11549.62,11000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-128,2,ADMINISTRATIVE,7450.34,8000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-129,2,ENERGY,28518.57,40000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,Grid electricity consumption (3168.7 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-130,2,MAINTENANCE,13906.26,15000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-131,2,SECURITY,11314.92,11000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-132,2,ADMINISTRATIVE,8144.04,8000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-133,2,ENERGY,28561.5,40000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,Grid electricity consumption (3173.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-134,2,MAINTENANCE,15136.67,15000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-135,2,SECURITY,10779.62,11000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-136,2,ADMINISTRATIVE,8128.96,8000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-137,2,ENERGY,27843.21,40000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,Grid electricity consumption (3093.7 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-138,2,MAINTENANCE,21302.45,15000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-139,2,SECURITY,10721.56,11000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-140,2,ADMINISTRATIVE,8450.23,8000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-141,2,ENERGY,26550.99,40000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,Grid electricity consumption (2950.1 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-142,2,MAINTENANCE,12945.73,15000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-143,2,SECURITY,10512.96,11000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-144,2,ADMINISTRATIVE,7956.16,8000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-145,2,ENERGY,26856.0,40000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,Grid electricity consumption (2984.0 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-146,2,MAINTENANCE,16174.8,15000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-147,2,SECURITY,11309.47,11000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-148,2,ADMINISTRATIVE,8118.5,8000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-149,2,ENERGY,10086.57,40000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,Grid electricity consumption (1120.7 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-150,2,MAINTENANCE,15196.89,15000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-151,2,SECURITY,11417.17,11000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-152,2,ADMINISTRATIVE,7723.54,8000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-153,2,ENERGY,10151.1,40000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,Grid electricity consumption (1127.9 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-154,2,MAINTENANCE,14846.03,15000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-155,2,SECURITY,10493.4,11000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-156,2,ADMINISTRATIVE,8163.71,8000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-157,2,ENERGY,27669.15,40000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,Grid electricity consumption (3074.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-158,2,MAINTENANCE,12853.26,15000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-159,2,SECURITY,10831.46,11000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-160,2,ADMINISTRATIVE,7442.66,8000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-161,2,ENERGY,27722.97,40000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,Grid electricity consumption (3080.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-162,2,MAINTENANCE,13170.8,15000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-163,2,SECURITY,11451.63,11000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-164,2,ADMINISTRATIVE,8437.21,8000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-165,2,ENERGY,27300.15,40000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,Grid electricity consumption (3033.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-166,2,MAINTENANCE,19601.7,15000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-167,2,SECURITY,11547.72,11000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-168,2,ADMINISTRATIVE,7980.81,8000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-169,2,ENERGY,29932.47,40000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,Grid electricity consumption (3325.8 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-170,2,MAINTENANCE,13544.27,15000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-171,2,SECURITY,11383.96,11000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-172,2,ADMINISTRATIVE,8616.34,8000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-173,2,ENERGY,28658.25,40000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,Grid electricity consumption (3184.2 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-174,2,MAINTENANCE,14772.89,15000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-175,2,SECURITY,11460.43,11000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-176,2,ADMINISTRATIVE,7922.93,8000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-177,2,ENERGY,10859.31,40000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,Grid electricity consumption (1206.6 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-178,2,MAINTENANCE,13309.25,15000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-179,2,SECURITY,11302.34,11000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-180,2,ADMINISTRATIVE,7793.21,8000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-181,2,ENERGY,10109.52,40000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,Grid electricity consumption (1123.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-182,2,MAINTENANCE,16455.06,15000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-183,2,SECURITY,10668.3,11000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-184,2,ADMINISTRATIVE,7894.63,8000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-185,2,ENERGY,27990.36,40000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,Grid electricity consumption (3110.0 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-186,2,MAINTENANCE,14810.21,15000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-187,2,SECURITY,11208.63,11000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-188,2,ADMINISTRATIVE,8265.62,8000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-189,2,ENERGY,27994.95,40000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,Grid electricity consumption (3110.6 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-190,2,MAINTENANCE,16449.37,15000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-191,2,SECURITY,10678.97,11000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-192,2,ADMINISTRATIVE,8292.69,8000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-193,2,ENERGY,28919.97,40000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,Grid electricity consumption (3213.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-194,2,MAINTENANCE,20486.75,15000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-195,2,SECURITY,10587.65,11000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-196,2,ADMINISTRATIVE,8047.89,8000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-197,2,ENERGY,30190.95,40000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,Grid electricity consumption (3354.6 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-198,2,MAINTENANCE,16481.75,15000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-199,2,SECURITY,11250.0,11000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-200,2,ADMINISTRATIVE,8013.3,8000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-201,2,ENERGY,28745.01,40000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,Grid electricity consumption (3193.9 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-202,2,MAINTENANCE,15298.36,15000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-203,2,SECURITY,10674.67,11000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-204,2,ADMINISTRATIVE,7868.68,8000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-205,2,ENERGY,10643.22,40000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,Grid electricity consumption (1182.6 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-206,2,MAINTENANCE,16202.15,15000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-207,2,SECURITY,11005.59,11000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-208,2,ADMINISTRATIVE,8491.32,8000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-209,2,ENERGY,11613.24,40000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,Grid electricity consumption (1290.4 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-210,2,MAINTENANCE,15956.26,15000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-211,2,SECURITY,10669.39,11000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-212,2,ADMINISTRATIVE,7997.95,8000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-213,2,ENERGY,27258.48,40000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,Grid electricity consumption (3028.7 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-214,2,MAINTENANCE,16298.42,15000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-215,2,SECURITY,11101.62,11000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-216,2,ADMINISTRATIVE,7835.79,8000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-217,2,ENERGY,33392.07,40000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,Grid electricity consumption (3710.2 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-218,2,MAINTENANCE,16383.46,15000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-219,2,SECURITY,10781.56,11000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-220,2,ADMINISTRATIVE,8230.24,8000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-221,2,ENERGY,27599.85,40000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,Grid electricity consumption (3066.7 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-222,2,MAINTENANCE,21878.8,15000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-223,2,SECURITY,10812.41,11000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-224,2,ADMINISTRATIVE,7879.9,8000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-225,2,ENERGY,27010.89,40000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,Grid electricity consumption (3001.2 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-226,2,MAINTENANCE,12836.18,15000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-227,2,SECURITY,10952.07,11000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-228,2,ADMINISTRATIVE,8528.2,8000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-229,2,ENERGY,28405.98,40000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,Grid electricity consumption (3156.2 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-230,2,MAINTENANCE,15794.48,15000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-231,2,SECURITY,10639.04,11000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-232,2,ADMINISTRATIVE,7936.58,8000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-233,2,ENERGY,10151.1,40000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,Grid electricity consumption (1127.9 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-234,2,MAINTENANCE,16354.51,15000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-235,2,SECURITY,10837.8,11000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-236,2,ADMINISTRATIVE,7585.87,8000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-237,2,ENERGY,10128.96,40000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,Grid electricity consumption (1125.4 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-238,2,MAINTENANCE,16129.64,15000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-239,2,SECURITY,11383.95,11000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-240,2,ADMINISTRATIVE,8227.63,8000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-241,2,ENERGY,27285.84,40000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,Grid electricity consumption (3031.8 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-242,2,MAINTENANCE,14771.64,15000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-243,2,SECURITY,10458.26,11000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-244,2,ADMINISTRATIVE,7670.84,8000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-245,2,ENERGY,27814.68,40000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,Grid electricity consumption (3090.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-246,2,MAINTENANCE,16414.62,15000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-247,2,SECURITY,10492.18,11000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-248,2,ADMINISTRATIVE,7609.01,8000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-249,3,ENERGY,6763.77,25000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,Grid electricity consumption (751.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-250,3,MAINTENANCE,8796.15,10000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-251,3,SECURITY,8250.61,8000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-252,3,ADMINISTRATIVE,6376.56,6000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-253,3,ENERGY,17600.4,25000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,Grid electricity consumption (1955.6 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-254,3,MAINTENANCE,10067.27,10000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-255,3,SECURITY,8351.37,8000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-256,3,ADMINISTRATIVE,6414.5,6000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-257,3,ENERGY,18796.86,25000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,Grid electricity consumption (2088.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-258,3,MAINTENANCE,10564.55,10000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-259,3,SECURITY,7865.84,8000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-260,3,ADMINISTRATIVE,5522.08,6000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-261,3,ENERGY,19827.9,25000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,Grid electricity consumption (2203.1 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-262,3,MAINTENANCE,11552.58,10000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-263,3,SECURITY,8319.08,8000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-264,3,ADMINISTRATIVE,6209.78,6000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-265,3,ENERGY,17612.46,25000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,Grid electricity consumption (1956.9 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-266,3,MAINTENANCE,9353.9,10000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-267,3,SECURITY,7637.18,8000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-268,3,ADMINISTRATIVE,6291.77,6000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-269,3,ENERGY,17437.77,25000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,Grid electricity consumption (1937.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-270,3,MAINTENANCE,9894.15,10000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-271,3,SECURITY,7975.48,8000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-272,3,ADMINISTRATIVE,5899.46,6000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-273,3,ENERGY,6496.38,25000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,Grid electricity consumption (721.8 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-274,3,MAINTENANCE,10679.86,10000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-275,3,SECURITY,7714.71,8000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-276,3,ADMINISTRATIVE,5617.72,6000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-277,3,ENERGY,7144.83,25000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,Grid electricity consumption (793.9 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-278,3,MAINTENANCE,10757.47,10000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-279,3,SECURITY,7880.81,8000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-280,3,ADMINISTRATIVE,5644.71,6000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-281,3,ENERGY,17650.08,25000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,Grid electricity consumption (1961.1 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-282,3,MAINTENANCE,8523.66,10000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-283,3,SECURITY,8058.88,8000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-284,3,ADMINISTRATIVE,6405.43,6000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-285,3,ENERGY,16971.93,25000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,Grid electricity consumption (1885.8 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-286,3,MAINTENANCE,10996.02,10000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-287,3,SECURITY,8270.33,8000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-288,3,ADMINISTRATIVE,5840.01,6000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-289,3,ENERGY,17976.87,25000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,Grid electricity consumption (1997.4 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-290,3,MAINTENANCE,12361.95,10000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-291,3,SECURITY,7895.38,8000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-292,3,ADMINISTRATIVE,5997.45,6000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-293,3,ENERGY,17150.76,25000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,Grid electricity consumption (1905.6 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-294,3,MAINTENANCE,8893.74,10000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-295,3,SECURITY,8063.3,8000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-296,3,ADMINISTRATIVE,5769.51,6000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-297,3,ENERGY,17381.97,25000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,Grid electricity consumption (1931.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-298,3,MAINTENANCE,9129.44,10000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-299,3,SECURITY,7970.68,8000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-300,3,ADMINISTRATIVE,5791.75,6000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-301,3,ENERGY,6862.68,25000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,Grid electricity consumption (762.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-302,3,MAINTENANCE,10125.17,10000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-303,3,SECURITY,8032.66,8000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-304,3,ADMINISTRATIVE,5612.08,6000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-305,3,ENERGY,7491.15,25000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,Grid electricity consumption (832.4 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-306,3,MAINTENANCE,10644.16,10000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-307,3,SECURITY,8166.36,8000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-308,3,ADMINISTRATIVE,6109.96,6000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-309,3,ENERGY,17460.09,25000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,Grid electricity consumption (1940.0 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-310,3,MAINTENANCE,10704.68,10000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-311,3,SECURITY,8203.32,8000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-312,3,ADMINISTRATIVE,5931.44,6000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-313,3,ENERGY,17815.86,25000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,Grid electricity consumption (1979.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-314,3,MAINTENANCE,9314.98,10000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-315,3,SECURITY,8059.47,8000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-316,3,ADMINISTRATIVE,5804.58,6000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-317,3,ENERGY,16952.49,25000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,Grid electricity consumption (1883.6 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-318,3,MAINTENANCE,13774.28,10000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-319,3,SECURITY,7899.46,8000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-320,3,ADMINISTRATIVE,5722.8,6000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-321,3,ENERGY,17286.66,25000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,Grid electricity consumption (1920.7 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-322,3,MAINTENANCE,10360.15,10000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-323,3,SECURITY,8229.24,8000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-324,3,ADMINISTRATIVE,5548.41,6000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-325,3,ENERGY,17469.0,25000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,Grid electricity consumption (1941.0 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-326,3,MAINTENANCE,9009.28,10000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-327,3,SECURITY,8114.36,8000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-328,3,ADMINISTRATIVE,6155.18,6000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-329,3,ENERGY,6771.87,25000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,Grid electricity consumption (752.4 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-330,3,MAINTENANCE,9778.6,10000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-331,3,SECURITY,8320.86,8000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-332,3,ADMINISTRATIVE,6164.18,6000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-333,3,ENERGY,6652.08,25000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,Grid electricity consumption (739.1 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-334,3,MAINTENANCE,10897.75,10000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-335,3,SECURITY,7986.79,8000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-336,3,ADMINISTRATIVE,6315.07,6000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-337,3,ENERGY,17888.94,25000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,Grid electricity consumption (1987.7 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-338,3,MAINTENANCE,10029.19,10000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-339,3,SECURITY,7684.09,8000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-340,3,ADMINISTRATIVE,6358.25,6000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-341,3,ENERGY,18965.52,25000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,Grid electricity consumption (2107.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-342,3,MAINTENANCE,9734.61,10000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-343,3,SECURITY,7944.44,8000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-344,3,ADMINISTRATIVE,5737.49,6000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-345,3,ENERGY,17624.07,25000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,Grid electricity consumption (1958.2 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-346,3,MAINTENANCE,13856.18,10000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-347,3,SECURITY,7706.85,8000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-348,3,ADMINISTRATIVE,6048.76,6000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-349,3,ENERGY,16911.63,25000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,Grid electricity consumption (1879.1 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-350,3,MAINTENANCE,10690.8,10000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-351,3,SECURITY,8001.72,8000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-352,3,ADMINISTRATIVE,6171.88,6000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-353,3,ENERGY,17348.13,25000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,Grid electricity consumption (1927.6 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-354,3,MAINTENANCE,9823.26,10000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-355,3,SECURITY,8288.32,8000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-356,3,ADMINISTRATIVE,5613.51,6000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-357,3,ENERGY,6794.46,25000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,Grid electricity consumption (754.9 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-358,3,MAINTENANCE,8981.46,10000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-359,3,SECURITY,8129.73,8000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-360,3,ADMINISTRATIVE,6206.7,6000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-361,3,ENERGY,6308.01,25000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,Grid electricity consumption (700.9 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-362,3,MAINTENANCE,10157.31,10000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-363,3,SECURITY,7721.67,8000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-364,3,ADMINISTRATIVE,5663.05,6000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-365,3,ENERGY,17305.65,25000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,Grid electricity consumption (1922.8 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-366,3,MAINTENANCE,8528.96,10000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-367,3,SECURITY,7701.4,8000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-368,3,ADMINISTRATIVE,6436.17,6000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-369,3,ENERGY,18405.0,25000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,Grid electricity consumption (2045.0 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-370,3,MAINTENANCE,10385.17,10000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-371,3,SECURITY,8278.45,8000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-372,3,ADMINISTRATIVE,6118.83,6000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-373,4,ENERGY,65900.52,85000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,Grid electricity consumption (7322.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-374,4,MAINTENANCE,20294.35,22000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-375,4,SECURITY,16272.39,16000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-376,4,ADMINISTRATIVE,12141.88,12000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-377,4,ENERGY,72215.64,85000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,Grid electricity consumption (8024.0 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-378,4,MAINTENANCE,21710.48,22000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-379,4,SECURITY,16067.62,16000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-380,4,ADMINISTRATIVE,12083.25,12000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-381,4,ENERGY,69117.57,85000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,Grid electricity consumption (7679.7 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-382,4,MAINTENANCE,23568.49,22000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-383,4,SECURITY,15578.39,16000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-384,4,ADMINISTRATIVE,11764.12,12000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-385,4,ENERGY,72646.83,85000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,Grid electricity consumption (8071.9 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-386,4,MAINTENANCE,30122.31,22000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-387,4,SECURITY,16138.48,16000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-388,4,ADMINISTRATIVE,12873.03,12000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-389,4,ENERGY,68744.07,85000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,Grid electricity consumption (7638.2 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-390,4,MAINTENANCE,23546.09,22000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-391,4,SECURITY,16006.95,16000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-392,4,ADMINISTRATIVE,11671.98,12000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-393,4,ENERGY,65705.4,85000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,Grid electricity consumption (7300.6 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-394,4,MAINTENANCE,18903.38,22000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-395,4,SECURITY,15896.77,16000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-396,4,ADMINISTRATIVE,11775.6,12000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-397,4,ENERGY,68413.59,85000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,Grid electricity consumption (7601.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-398,4,MAINTENANCE,20070.66,22000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-399,4,SECURITY,16240.85,16000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-400,4,ADMINISTRATIVE,12843.83,12000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-401,4,ENERGY,68856.21,85000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,Grid electricity consumption (7650.7 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-402,4,MAINTENANCE,21226.3,22000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-403,4,SECURITY,16044.27,16000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-404,4,ADMINISTRATIVE,12311.62,12000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-405,4,ENERGY,80968.86,85000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,Grid electricity consumption (8996.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-406,4,MAINTENANCE,23220.38,22000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-407,4,SECURITY,16349.05,16000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-408,4,ADMINISTRATIVE,12332.84,12000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-409,4,ENERGY,76078.53,85000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,Grid electricity consumption (8453.2 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-410,4,MAINTENANCE,22147.42,22000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-411,4,SECURITY,15895.27,16000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-412,4,ADMINISTRATIVE,11392.86,12000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-413,4,ENERGY,66326.67,85000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,Grid electricity consumption (7369.6 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-414,4,MAINTENANCE,28381.1,22000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-415,4,SECURITY,15844.13,16000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-416,4,ADMINISTRATIVE,12015.37,12000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-417,4,ENERGY,70850.52,85000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,Grid electricity consumption (7872.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-418,4,MAINTENANCE,20176.97,22000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-419,4,SECURITY,16620.3,16000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-420,4,ADMINISTRATIVE,11347.6,12000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-421,4,ENERGY,68028.93,85000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,Grid electricity consumption (7558.8 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-422,4,MAINTENANCE,20000.36,22000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-423,4,SECURITY,16673.43,16000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-424,4,ADMINISTRATIVE,11477.05,12000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-425,4,ENERGY,71638.38,85000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,Grid electricity consumption (7959.8 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-426,4,MAINTENANCE,24093.94,22000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-427,4,SECURITY,16679.33,16000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-428,4,ADMINISTRATIVE,12908.73,12000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-429,4,ENERGY,70259.67,85000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,Grid electricity consumption (7806.6 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-430,4,MAINTENANCE,20374.91,22000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-431,4,SECURITY,15698.61,16000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-432,4,ADMINISTRATIVE,11171.35,12000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-433,4,ENERGY,74821.14,85000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,Grid electricity consumption (8313.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-434,4,MAINTENANCE,21232.74,22000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-435,4,SECURITY,16367.63,16000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-436,4,ADMINISTRATIVE,12879.73,12000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-437,4,ENERGY,70944.75,85000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,Grid electricity consumption (7882.8 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-438,4,MAINTENANCE,20360.4,22000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-439,4,SECURITY,16363.16,16000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-440,4,ADMINISTRATIVE,12812.17,12000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-441,4,ENERGY,69187.77,85000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,Grid electricity consumption (7687.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-442,4,MAINTENANCE,28648.25,22000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-443,4,SECURITY,15307.72,16000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-444,4,ADMINISTRATIVE,12886.04,12000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-445,4,ENERGY,66971.79,85000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,Grid electricity consumption (7441.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-446,4,MAINTENANCE,19157.96,22000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-447,4,SECURITY,16447.65,16000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-448,4,ADMINISTRATIVE,11605.53,12000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-449,4,ENERGY,69058.53,85000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,Grid electricity consumption (7673.2 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-450,4,MAINTENANCE,23910.56,22000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-451,4,SECURITY,16229.81,16000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-452,4,ADMINISTRATIVE,11634.11,12000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-453,4,ENERGY,73920.42,85000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,Grid electricity consumption (8213.4 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-454,4,MAINTENANCE,22189.57,22000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-455,4,SECURITY,15781.45,16000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-456,4,ADMINISTRATIVE,11409.41,12000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-457,4,ENERGY,68113.17,85000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,Grid electricity consumption (7568.1 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-458,4,MAINTENANCE,24188.42,22000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-459,4,SECURITY,15612.28,16000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-460,4,ADMINISTRATIVE,12681.42,12000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-461,4,ENERGY,66043.17,85000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,Grid electricity consumption (7338.1 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-462,4,MAINTENANCE,22480.68,22000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-463,4,SECURITY,16226.66,16000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-464,4,ADMINISTRATIVE,12793.94,12000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-465,4,ENERGY,67277.34,85000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,Grid electricity consumption (7475.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-466,4,MAINTENANCE,21679.34,22000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-467,4,SECURITY,16403.2,16000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-468,4,ADMINISTRATIVE,11182.25,12000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-469,4,ENERGY,75847.41,85000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,Grid electricity consumption (8427.5 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-470,4,MAINTENANCE,31395.91,22000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-471,4,SECURITY,15441.8,16000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-472,4,ADMINISTRATIVE,12648.93,12000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-473,4,ENERGY,69067.8,85000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,Grid electricity consumption (7674.2 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-474,4,MAINTENANCE,21596.64,22000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-475,4,SECURITY,16319.51,16000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-476,4,ADMINISTRATIVE,12581.44,12000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-477,4,ENERGY,80956.62,85000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,Grid electricity consumption (8995.2 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-478,4,MAINTENANCE,23143.87,22000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-479,4,SECURITY,15682.76,16000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-480,4,ADMINISTRATIVE,12159.79,12000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-481,4,ENERGY,67988.79,85000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,Grid electricity consumption (7554.3 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-482,4,MAINTENANCE,23730.24,22000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-483,4,SECURITY,15829.08,16000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-484,4,ADMINISTRATIVE,11248.19,12000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-485,4,ENERGY,69001.02,85000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,Grid electricity consumption (7666.8 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-486,4,MAINTENANCE,24141.29,22000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-487,4,SECURITY,16678.95,16000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-488,4,ADMINISTRATIVE,11285.59,12000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-489,4,ENERGY,67869.63,85000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,Grid electricity consumption (7541.1 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-490,4,MAINTENANCE,19040.47,22000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-491,4,SECURITY,16703.9,16000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-492,4,ADMINISTRATIVE,12024.0,12000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
-493,4,ENERGY,68860.35,85000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,Grid electricity consumption (7651.1 kWh @ ₹9.00/kWh),2026-10-06 13:20:32
-494,4,MAINTENANCE,23521.85,22000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 13:20:32
-495,4,SECURITY,15313.28,16000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 13:20:32
-496,4,ADMINISTRATIVE,12724.46,12000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 13:20:32
+1,1,ENERGY,10137.06,48000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,Grid electricity consumption (1126.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+2,1,MAINTENANCE,16133.36,18000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+3,1,SECURITY,12338.46,12000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+4,1,ADMINISTRATIVE,8832.02,9000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+5,1,ENERGY,29604.33,48000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,Grid electricity consumption (3289.4 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+6,1,MAINTENANCE,18888.37,18000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+7,1,SECURITY,11915.25,12000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+8,1,ADMINISTRATIVE,8651.2,9000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+9,1,ENERGY,29599.2,48000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,Grid electricity consumption (3288.8 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+10,1,MAINTENANCE,17916.66,18000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+11,1,SECURITY,12111.58,12000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+12,1,ADMINISTRATIVE,9536.27,9000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+13,1,ENERGY,30596.58,48000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,Grid electricity consumption (3399.6 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+14,1,MAINTENANCE,23234.94,18000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+15,1,SECURITY,12469.15,12000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+16,1,ADMINISTRATIVE,8822.09,9000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+17,1,ENERGY,28172.61,48000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,Grid electricity consumption (3130.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+18,1,MAINTENANCE,16303.34,18000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+19,1,SECURITY,11420.61,12000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+20,1,ADMINISTRATIVE,9498.41,9000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+21,1,ENERGY,31170.69,48000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,Grid electricity consumption (3463.4 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+22,1,MAINTENANCE,16547.51,18000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+23,1,SECURITY,12194.35,12000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+24,1,ADMINISTRATIVE,8889.31,9000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+25,1,ENERGY,10172.43,48000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,Grid electricity consumption (1130.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+26,1,MAINTENANCE,16248.87,18000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+27,1,SECURITY,12512.02,12000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+28,1,ADMINISTRATIVE,9178.75,9000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+29,1,ENERGY,10108.17,48000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,Grid electricity consumption (1123.1 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+30,1,MAINTENANCE,16084.79,18000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+31,1,SECURITY,12033.29,12000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+32,1,ADMINISTRATIVE,9717.78,9000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+33,1,ENERGY,29781.45,48000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,Grid electricity consumption (3309.0 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+34,1,MAINTENANCE,15341.83,18000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+35,1,SECURITY,12388.99,12000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+36,1,ADMINISTRATIVE,9205.16,9000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+37,1,ENERGY,28048.68,48000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,Grid electricity consumption (3116.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+38,1,MAINTENANCE,15548.08,18000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+39,1,SECURITY,12329.96,12000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+40,1,ADMINISTRATIVE,9364.08,9000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+41,1,ENERGY,26382.42,48000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,Grid electricity consumption (2931.4 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+42,1,MAINTENANCE,25087.42,18000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+43,1,SECURITY,11892.1,12000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+44,1,ADMINISTRATIVE,9178.75,9000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+45,1,ENERGY,31404.24,48000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,Grid electricity consumption (3489.4 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+46,1,MAINTENANCE,19700.74,18000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+47,1,SECURITY,12463.24,12000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+48,1,ADMINISTRATIVE,9266.97,9000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+49,1,ENERGY,27567.99,48000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,Grid electricity consumption (3063.1 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+50,1,MAINTENANCE,15620.97,18000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+51,1,SECURITY,11479.63,12000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+52,1,ADMINISTRATIVE,9243.79,9000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+53,1,ENERGY,10630.98,48000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,Grid electricity consumption (1181.2 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+54,1,MAINTENANCE,18406.64,18000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+55,1,SECURITY,11698.7,12000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+56,1,ADMINISTRATIVE,8442.08,9000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+57,1,ENERGY,10092.33,48000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,Grid electricity consumption (1121.4 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+58,1,MAINTENANCE,16354.03,18000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+59,1,SECURITY,11661.07,12000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+60,1,ADMINISTRATIVE,9068.28,9000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+61,1,ENERGY,27790.11,48000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,Grid electricity consumption (3087.8 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+62,1,MAINTENANCE,17765.93,18000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+63,1,SECURITY,11708.31,12000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+64,1,ADMINISTRATIVE,9716.49,9000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+65,1,ENERGY,28011.6,48000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,Grid electricity consumption (3112.4 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+66,1,MAINTENANCE,16558.58,18000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+67,1,SECURITY,12184.48,12000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+68,1,ADMINISTRATIVE,9119.67,9000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+69,1,ENERGY,27866.07,48000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,Grid electricity consumption (3096.2 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+70,1,MAINTENANCE,23338.45,18000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+71,1,SECURITY,12383.83,12000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+72,1,ADMINISTRATIVE,9271.14,9000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+73,1,ENERGY,28143.72,48000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,Grid electricity consumption (3127.1 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+74,1,MAINTENANCE,18367.24,18000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+75,1,SECURITY,11803.91,12000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+76,1,ADMINISTRATIVE,8627.34,9000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+77,1,ENERGY,27148.23,48000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,Grid electricity consumption (3016.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+78,1,MAINTENANCE,17685.13,18000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+79,1,SECURITY,11809.6,12000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+80,1,ADMINISTRATIVE,9107.91,9000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+81,1,ENERGY,9932.22,48000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,Grid electricity consumption (1103.6 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+82,1,MAINTENANCE,15979.37,18000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+83,1,SECURITY,11425.27,12000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+84,1,ADMINISTRATIVE,9419.73,9000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+85,1,ENERGY,10320.12,48000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,Grid electricity consumption (1146.7 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+86,1,MAINTENANCE,19306.64,18000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+87,1,SECURITY,11948.41,12000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+88,1,ADMINISTRATIVE,8389.11,9000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+89,1,ENERGY,27347.04,48000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,Grid electricity consumption (3038.6 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+90,1,MAINTENANCE,15937.71,18000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+91,1,SECURITY,12440.46,12000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+92,1,ADMINISTRATIVE,9374.04,9000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+93,1,ENERGY,27255.15,48000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,Grid electricity consumption (3028.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+94,1,MAINTENANCE,17327.05,18000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+95,1,SECURITY,12512.14,12000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+96,1,ADMINISTRATIVE,9349.91,9000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+97,1,ENERGY,29390.13,48000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,Grid electricity consumption (3265.6 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+98,1,MAINTENANCE,20752.83,18000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+99,1,SECURITY,11419.38,12000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+100,1,ADMINISTRATIVE,8623.03,9000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+101,1,ENERGY,27395.46,48000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,Grid electricity consumption (3043.9 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+102,1,MAINTENANCE,16379.2,18000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+103,1,SECURITY,12514.72,12000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+104,1,ADMINISTRATIVE,8729.72,9000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+105,1,ENERGY,26890.47,48000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,Grid electricity consumption (2987.8 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+106,1,MAINTENANCE,19414.83,18000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+107,1,SECURITY,12124.35,12000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+108,1,ADMINISTRATIVE,9291.6,9000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+109,1,ENERGY,10336.68,48000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,Grid electricity consumption (1148.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+110,1,MAINTENANCE,16780.63,18000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+111,1,SECURITY,12420.45,12000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+112,1,ADMINISTRATIVE,8599.05,9000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+113,1,ENERGY,10140.57,48000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,Grid electricity consumption (1126.7 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+114,1,MAINTENANCE,19318.35,18000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+115,1,SECURITY,12072.61,12000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+116,1,ADMINISTRATIVE,9488.64,9000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+117,1,ENERGY,26572.59,48000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,Grid electricity consumption (2952.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+118,1,MAINTENANCE,19507.95,18000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+119,1,SECURITY,12230.63,12000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+120,1,ADMINISTRATIVE,9450.99,9000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+121,1,ENERGY,27679.41,48000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,Grid electricity consumption (3075.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+122,1,MAINTENANCE,17206.17,18000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+123,1,SECURITY,11446.96,12000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+124,1,ADMINISTRATIVE,9163.21,9000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+125,2,ENERGY,10570.32,40000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,Grid electricity consumption (1174.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+126,2,MAINTENANCE,13192.93,15000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+127,2,SECURITY,11549.62,11000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+128,2,ADMINISTRATIVE,7450.34,8000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+129,2,ENERGY,28518.57,40000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,Grid electricity consumption (3168.7 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+130,2,MAINTENANCE,13906.26,15000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+131,2,SECURITY,11314.92,11000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+132,2,ADMINISTRATIVE,8144.04,8000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+133,2,ENERGY,28561.5,40000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,Grid electricity consumption (3173.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+134,2,MAINTENANCE,15136.67,15000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+135,2,SECURITY,10779.62,11000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+136,2,ADMINISTRATIVE,8128.96,8000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+137,2,ENERGY,27843.21,40000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,Grid electricity consumption (3093.7 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+138,2,MAINTENANCE,21302.45,15000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+139,2,SECURITY,10721.56,11000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+140,2,ADMINISTRATIVE,8450.23,8000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+141,2,ENERGY,26550.99,40000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,Grid electricity consumption (2950.1 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+142,2,MAINTENANCE,12945.73,15000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+143,2,SECURITY,10512.96,11000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+144,2,ADMINISTRATIVE,7956.16,8000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+145,2,ENERGY,26856.0,40000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,Grid electricity consumption (2984.0 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+146,2,MAINTENANCE,16174.8,15000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+147,2,SECURITY,11309.47,11000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+148,2,ADMINISTRATIVE,8118.5,8000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+149,2,ENERGY,10086.57,40000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,Grid electricity consumption (1120.7 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+150,2,MAINTENANCE,15196.89,15000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+151,2,SECURITY,11417.17,11000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+152,2,ADMINISTRATIVE,7723.54,8000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+153,2,ENERGY,10151.1,40000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,Grid electricity consumption (1127.9 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+154,2,MAINTENANCE,14846.03,15000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+155,2,SECURITY,10493.4,11000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+156,2,ADMINISTRATIVE,8163.71,8000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+157,2,ENERGY,27669.15,40000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,Grid electricity consumption (3074.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+158,2,MAINTENANCE,12853.26,15000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+159,2,SECURITY,10831.46,11000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+160,2,ADMINISTRATIVE,7442.66,8000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+161,2,ENERGY,27722.97,40000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,Grid electricity consumption (3080.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+162,2,MAINTENANCE,13170.8,15000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+163,2,SECURITY,11451.63,11000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+164,2,ADMINISTRATIVE,8437.21,8000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+165,2,ENERGY,27300.15,40000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,Grid electricity consumption (3033.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+166,2,MAINTENANCE,19601.7,15000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+167,2,SECURITY,11547.72,11000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+168,2,ADMINISTRATIVE,7980.81,8000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+169,2,ENERGY,29932.47,40000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,Grid electricity consumption (3325.8 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+170,2,MAINTENANCE,13544.27,15000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+171,2,SECURITY,11383.96,11000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+172,2,ADMINISTRATIVE,8616.34,8000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+173,2,ENERGY,28658.25,40000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,Grid electricity consumption (3184.2 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+174,2,MAINTENANCE,14772.89,15000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+175,2,SECURITY,11460.43,11000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+176,2,ADMINISTRATIVE,7922.93,8000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+177,2,ENERGY,10859.31,40000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,Grid electricity consumption (1206.6 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+178,2,MAINTENANCE,13309.25,15000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+179,2,SECURITY,11302.34,11000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+180,2,ADMINISTRATIVE,7793.21,8000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+181,2,ENERGY,10109.52,40000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,Grid electricity consumption (1123.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+182,2,MAINTENANCE,16455.06,15000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+183,2,SECURITY,10668.3,11000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+184,2,ADMINISTRATIVE,7894.63,8000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+185,2,ENERGY,27990.36,40000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,Grid electricity consumption (3110.0 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+186,2,MAINTENANCE,14810.21,15000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+187,2,SECURITY,11208.63,11000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+188,2,ADMINISTRATIVE,8265.62,8000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+189,2,ENERGY,27994.95,40000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,Grid electricity consumption (3110.6 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+190,2,MAINTENANCE,16449.37,15000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+191,2,SECURITY,10678.97,11000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+192,2,ADMINISTRATIVE,8292.69,8000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+193,2,ENERGY,28919.97,40000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,Grid electricity consumption (3213.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+194,2,MAINTENANCE,20486.75,15000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+195,2,SECURITY,10587.65,11000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+196,2,ADMINISTRATIVE,8047.89,8000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+197,2,ENERGY,30190.95,40000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,Grid electricity consumption (3354.6 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+198,2,MAINTENANCE,16481.75,15000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+199,2,SECURITY,11250.0,11000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+200,2,ADMINISTRATIVE,8013.3,8000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+201,2,ENERGY,28745.01,40000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,Grid electricity consumption (3193.9 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+202,2,MAINTENANCE,15298.36,15000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+203,2,SECURITY,10674.67,11000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+204,2,ADMINISTRATIVE,7868.68,8000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+205,2,ENERGY,10643.22,40000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,Grid electricity consumption (1182.6 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+206,2,MAINTENANCE,16202.15,15000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+207,2,SECURITY,11005.59,11000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+208,2,ADMINISTRATIVE,8491.32,8000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+209,2,ENERGY,11613.24,40000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,Grid electricity consumption (1290.4 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+210,2,MAINTENANCE,15956.26,15000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+211,2,SECURITY,10669.39,11000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+212,2,ADMINISTRATIVE,7997.95,8000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+213,2,ENERGY,27258.48,40000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,Grid electricity consumption (3028.7 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+214,2,MAINTENANCE,16298.42,15000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+215,2,SECURITY,11101.62,11000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+216,2,ADMINISTRATIVE,7835.79,8000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+217,2,ENERGY,33392.07,40000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,Grid electricity consumption (3710.2 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+218,2,MAINTENANCE,16383.46,15000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+219,2,SECURITY,10781.56,11000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+220,2,ADMINISTRATIVE,8230.24,8000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+221,2,ENERGY,27599.85,40000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,Grid electricity consumption (3066.7 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+222,2,MAINTENANCE,21878.8,15000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+223,2,SECURITY,10812.41,11000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+224,2,ADMINISTRATIVE,7879.9,8000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+225,2,ENERGY,27010.89,40000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,Grid electricity consumption (3001.2 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+226,2,MAINTENANCE,12836.18,15000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+227,2,SECURITY,10952.07,11000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+228,2,ADMINISTRATIVE,8528.2,8000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+229,2,ENERGY,28405.98,40000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,Grid electricity consumption (3156.2 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+230,2,MAINTENANCE,15794.48,15000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+231,2,SECURITY,10639.04,11000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+232,2,ADMINISTRATIVE,7936.58,8000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+233,2,ENERGY,10151.1,40000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,Grid electricity consumption (1127.9 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+234,2,MAINTENANCE,16354.51,15000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+235,2,SECURITY,10837.8,11000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+236,2,ADMINISTRATIVE,7585.87,8000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+237,2,ENERGY,10128.96,40000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,Grid electricity consumption (1125.4 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+238,2,MAINTENANCE,16129.64,15000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+239,2,SECURITY,11383.95,11000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+240,2,ADMINISTRATIVE,8227.63,8000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+241,2,ENERGY,27285.84,40000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,Grid electricity consumption (3031.8 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+242,2,MAINTENANCE,14771.64,15000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+243,2,SECURITY,10458.26,11000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+244,2,ADMINISTRATIVE,7670.84,8000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+245,2,ENERGY,27814.68,40000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,Grid electricity consumption (3090.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+246,2,MAINTENANCE,16414.62,15000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+247,2,SECURITY,10492.18,11000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+248,2,ADMINISTRATIVE,7609.01,8000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+249,3,ENERGY,6763.77,25000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,Grid electricity consumption (751.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+250,3,MAINTENANCE,8796.15,10000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+251,3,SECURITY,8250.61,8000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+252,3,ADMINISTRATIVE,6376.56,6000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+253,3,ENERGY,17600.4,25000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,Grid electricity consumption (1955.6 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+254,3,MAINTENANCE,10067.27,10000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+255,3,SECURITY,8351.37,8000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+256,3,ADMINISTRATIVE,6414.5,6000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+257,3,ENERGY,18796.86,25000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,Grid electricity consumption (2088.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+258,3,MAINTENANCE,10564.55,10000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+259,3,SECURITY,7865.84,8000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+260,3,ADMINISTRATIVE,5522.08,6000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+261,3,ENERGY,19827.9,25000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,Grid electricity consumption (2203.1 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+262,3,MAINTENANCE,11552.58,10000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+263,3,SECURITY,8319.08,8000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+264,3,ADMINISTRATIVE,6209.78,6000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+265,3,ENERGY,17612.46,25000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,Grid electricity consumption (1956.9 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+266,3,MAINTENANCE,9353.9,10000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+267,3,SECURITY,7637.18,8000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+268,3,ADMINISTRATIVE,6291.77,6000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+269,3,ENERGY,17437.77,25000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,Grid electricity consumption (1937.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+270,3,MAINTENANCE,9894.15,10000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+271,3,SECURITY,7975.48,8000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+272,3,ADMINISTRATIVE,5899.46,6000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+273,3,ENERGY,6496.38,25000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,Grid electricity consumption (721.8 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+274,3,MAINTENANCE,10679.86,10000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+275,3,SECURITY,7714.71,8000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+276,3,ADMINISTRATIVE,5617.72,6000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+277,3,ENERGY,7144.83,25000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,Grid electricity consumption (793.9 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+278,3,MAINTENANCE,10757.47,10000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+279,3,SECURITY,7880.81,8000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+280,3,ADMINISTRATIVE,5644.71,6000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+281,3,ENERGY,17650.08,25000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,Grid electricity consumption (1961.1 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+282,3,MAINTENANCE,8523.66,10000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+283,3,SECURITY,8058.88,8000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+284,3,ADMINISTRATIVE,6405.43,6000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+285,3,ENERGY,16971.93,25000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,Grid electricity consumption (1885.8 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+286,3,MAINTENANCE,10996.02,10000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+287,3,SECURITY,8270.33,8000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+288,3,ADMINISTRATIVE,5840.01,6000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+289,3,ENERGY,17976.87,25000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,Grid electricity consumption (1997.4 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+290,3,MAINTENANCE,12361.95,10000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+291,3,SECURITY,7895.38,8000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+292,3,ADMINISTRATIVE,5997.45,6000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+293,3,ENERGY,17150.76,25000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,Grid electricity consumption (1905.6 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+294,3,MAINTENANCE,8893.74,10000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+295,3,SECURITY,8063.3,8000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+296,3,ADMINISTRATIVE,5769.51,6000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+297,3,ENERGY,17381.97,25000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,Grid electricity consumption (1931.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+298,3,MAINTENANCE,9129.44,10000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+299,3,SECURITY,7970.68,8000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+300,3,ADMINISTRATIVE,5791.75,6000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+301,3,ENERGY,6862.68,25000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,Grid electricity consumption (762.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+302,3,MAINTENANCE,10125.17,10000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+303,3,SECURITY,8032.66,8000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+304,3,ADMINISTRATIVE,5612.08,6000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+305,3,ENERGY,7491.15,25000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,Grid electricity consumption (832.4 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+306,3,MAINTENANCE,10644.16,10000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+307,3,SECURITY,8166.36,8000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+308,3,ADMINISTRATIVE,6109.96,6000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+309,3,ENERGY,17460.09,25000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,Grid electricity consumption (1940.0 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+310,3,MAINTENANCE,10704.68,10000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+311,3,SECURITY,8203.32,8000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+312,3,ADMINISTRATIVE,5931.44,6000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+313,3,ENERGY,17815.86,25000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,Grid electricity consumption (1979.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+314,3,MAINTENANCE,9314.98,10000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+315,3,SECURITY,8059.47,8000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+316,3,ADMINISTRATIVE,5804.58,6000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+317,3,ENERGY,16952.49,25000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,Grid electricity consumption (1883.6 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+318,3,MAINTENANCE,13774.28,10000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+319,3,SECURITY,7899.46,8000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+320,3,ADMINISTRATIVE,5722.8,6000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+321,3,ENERGY,17286.66,25000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,Grid electricity consumption (1920.7 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+322,3,MAINTENANCE,10360.15,10000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+323,3,SECURITY,8229.24,8000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+324,3,ADMINISTRATIVE,5548.41,6000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+325,3,ENERGY,17469.0,25000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,Grid electricity consumption (1941.0 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+326,3,MAINTENANCE,9009.28,10000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+327,3,SECURITY,8114.36,8000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+328,3,ADMINISTRATIVE,6155.18,6000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+329,3,ENERGY,6771.87,25000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,Grid electricity consumption (752.4 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+330,3,MAINTENANCE,9778.6,10000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+331,3,SECURITY,8320.86,8000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+332,3,ADMINISTRATIVE,6164.18,6000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+333,3,ENERGY,6652.08,25000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,Grid electricity consumption (739.1 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+334,3,MAINTENANCE,10897.75,10000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+335,3,SECURITY,7986.79,8000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+336,3,ADMINISTRATIVE,6315.07,6000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+337,3,ENERGY,17888.94,25000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,Grid electricity consumption (1987.7 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+338,3,MAINTENANCE,10029.19,10000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+339,3,SECURITY,7684.09,8000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+340,3,ADMINISTRATIVE,6358.25,6000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+341,3,ENERGY,18965.52,25000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,Grid electricity consumption (2107.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+342,3,MAINTENANCE,9734.61,10000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+343,3,SECURITY,7944.44,8000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+344,3,ADMINISTRATIVE,5737.49,6000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+345,3,ENERGY,17624.07,25000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,Grid electricity consumption (1958.2 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+346,3,MAINTENANCE,13856.18,10000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+347,3,SECURITY,7706.85,8000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+348,3,ADMINISTRATIVE,6048.76,6000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+349,3,ENERGY,16911.63,25000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,Grid electricity consumption (1879.1 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+350,3,MAINTENANCE,10690.8,10000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+351,3,SECURITY,8001.72,8000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+352,3,ADMINISTRATIVE,6171.88,6000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+353,3,ENERGY,17348.13,25000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,Grid electricity consumption (1927.6 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+354,3,MAINTENANCE,9823.26,10000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+355,3,SECURITY,8288.32,8000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+356,3,ADMINISTRATIVE,5613.51,6000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+357,3,ENERGY,6794.46,25000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,Grid electricity consumption (754.9 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+358,3,MAINTENANCE,8981.46,10000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+359,3,SECURITY,8129.73,8000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+360,3,ADMINISTRATIVE,6206.7,6000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+361,3,ENERGY,6308.01,25000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,Grid electricity consumption (700.9 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+362,3,MAINTENANCE,10157.31,10000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+363,3,SECURITY,7721.67,8000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+364,3,ADMINISTRATIVE,5663.05,6000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+365,3,ENERGY,17305.65,25000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,Grid electricity consumption (1922.8 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+366,3,MAINTENANCE,8528.96,10000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+367,3,SECURITY,7701.4,8000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+368,3,ADMINISTRATIVE,6436.17,6000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+369,3,ENERGY,18405.0,25000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,Grid electricity consumption (2045.0 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+370,3,MAINTENANCE,10385.17,10000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+371,3,SECURITY,8278.45,8000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+372,3,ADMINISTRATIVE,6118.83,6000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+373,4,ENERGY,65900.52,85000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,Grid electricity consumption (7322.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+374,4,MAINTENANCE,20294.35,22000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+375,4,SECURITY,16272.39,16000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+376,4,ADMINISTRATIVE,12141.88,12000.0,INR,2026-09-06T00:00:00,2026-09-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+377,4,ENERGY,72215.64,85000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,Grid electricity consumption (8024.0 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+378,4,MAINTENANCE,21710.48,22000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+379,4,SECURITY,16067.62,16000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+380,4,ADMINISTRATIVE,12083.25,12000.0,INR,2026-09-07T00:00:00,2026-09-07T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+381,4,ENERGY,69117.57,85000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,Grid electricity consumption (7679.7 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+382,4,MAINTENANCE,23568.49,22000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+383,4,SECURITY,15578.39,16000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+384,4,ADMINISTRATIVE,11764.12,12000.0,INR,2026-09-08T00:00:00,2026-09-08T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+385,4,ENERGY,72646.83,85000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,Grid electricity consumption (8071.9 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+386,4,MAINTENANCE,30122.31,22000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+387,4,SECURITY,16138.48,16000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+388,4,ADMINISTRATIVE,12873.03,12000.0,INR,2026-09-09T00:00:00,2026-09-09T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+389,4,ENERGY,68744.07,85000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,Grid electricity consumption (7638.2 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+390,4,MAINTENANCE,23546.09,22000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+391,4,SECURITY,16006.95,16000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+392,4,ADMINISTRATIVE,11671.98,12000.0,INR,2026-09-10T00:00:00,2026-09-10T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+393,4,ENERGY,65705.4,85000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,Grid electricity consumption (7300.6 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+394,4,MAINTENANCE,18903.38,22000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+395,4,SECURITY,15896.77,16000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+396,4,ADMINISTRATIVE,11775.6,12000.0,INR,2026-09-11T00:00:00,2026-09-11T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+397,4,ENERGY,68413.59,85000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,Grid electricity consumption (7601.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+398,4,MAINTENANCE,20070.66,22000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+399,4,SECURITY,16240.85,16000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+400,4,ADMINISTRATIVE,12843.83,12000.0,INR,2026-09-12T00:00:00,2026-09-12T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+401,4,ENERGY,68856.21,85000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,Grid electricity consumption (7650.7 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+402,4,MAINTENANCE,21226.3,22000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+403,4,SECURITY,16044.27,16000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+404,4,ADMINISTRATIVE,12311.62,12000.0,INR,2026-09-13T00:00:00,2026-09-13T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+405,4,ENERGY,80968.86,85000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,Grid electricity consumption (8996.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+406,4,MAINTENANCE,23220.38,22000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+407,4,SECURITY,16349.05,16000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+408,4,ADMINISTRATIVE,12332.84,12000.0,INR,2026-09-14T00:00:00,2026-09-14T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+409,4,ENERGY,76078.53,85000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,Grid electricity consumption (8453.2 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+410,4,MAINTENANCE,22147.42,22000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+411,4,SECURITY,15895.27,16000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+412,4,ADMINISTRATIVE,11392.86,12000.0,INR,2026-09-15T00:00:00,2026-09-15T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+413,4,ENERGY,66326.67,85000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,Grid electricity consumption (7369.6 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+414,4,MAINTENANCE,28381.1,22000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+415,4,SECURITY,15844.13,16000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+416,4,ADMINISTRATIVE,12015.37,12000.0,INR,2026-09-16T00:00:00,2026-09-16T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+417,4,ENERGY,70850.52,85000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,Grid electricity consumption (7872.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+418,4,MAINTENANCE,20176.97,22000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+419,4,SECURITY,16620.3,16000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+420,4,ADMINISTRATIVE,11347.6,12000.0,INR,2026-09-17T00:00:00,2026-09-17T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+421,4,ENERGY,68028.93,85000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,Grid electricity consumption (7558.8 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+422,4,MAINTENANCE,20000.36,22000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+423,4,SECURITY,16673.43,16000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+424,4,ADMINISTRATIVE,11477.05,12000.0,INR,2026-09-18T00:00:00,2026-09-18T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+425,4,ENERGY,71638.38,85000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,Grid electricity consumption (7959.8 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+426,4,MAINTENANCE,24093.94,22000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+427,4,SECURITY,16679.33,16000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+428,4,ADMINISTRATIVE,12908.73,12000.0,INR,2026-09-19T00:00:00,2026-09-19T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+429,4,ENERGY,70259.67,85000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,Grid electricity consumption (7806.6 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+430,4,MAINTENANCE,20374.91,22000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+431,4,SECURITY,15698.61,16000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+432,4,ADMINISTRATIVE,11171.35,12000.0,INR,2026-09-20T00:00:00,2026-09-20T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+433,4,ENERGY,74821.14,85000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,Grid electricity consumption (8313.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+434,4,MAINTENANCE,21232.74,22000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+435,4,SECURITY,16367.63,16000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+436,4,ADMINISTRATIVE,12879.73,12000.0,INR,2026-09-21T00:00:00,2026-09-21T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+437,4,ENERGY,70944.75,85000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,Grid electricity consumption (7882.8 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+438,4,MAINTENANCE,20360.4,22000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+439,4,SECURITY,16363.16,16000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+440,4,ADMINISTRATIVE,12812.17,12000.0,INR,2026-09-22T00:00:00,2026-09-22T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+441,4,ENERGY,69187.77,85000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,Grid electricity consumption (7687.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+442,4,MAINTENANCE,28648.25,22000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+443,4,SECURITY,15307.72,16000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+444,4,ADMINISTRATIVE,12886.04,12000.0,INR,2026-09-23T00:00:00,2026-09-23T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+445,4,ENERGY,66971.79,85000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,Grid electricity consumption (7441.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+446,4,MAINTENANCE,19157.96,22000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+447,4,SECURITY,16447.65,16000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+448,4,ADMINISTRATIVE,11605.53,12000.0,INR,2026-09-24T00:00:00,2026-09-24T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+449,4,ENERGY,69058.53,85000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,Grid electricity consumption (7673.2 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+450,4,MAINTENANCE,23910.56,22000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+451,4,SECURITY,16229.81,16000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+452,4,ADMINISTRATIVE,11634.11,12000.0,INR,2026-09-25T00:00:00,2026-09-25T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+453,4,ENERGY,73920.42,85000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,Grid electricity consumption (8213.4 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+454,4,MAINTENANCE,22189.57,22000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+455,4,SECURITY,15781.45,16000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+456,4,ADMINISTRATIVE,11409.41,12000.0,INR,2026-09-26T00:00:00,2026-09-26T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+457,4,ENERGY,68113.17,85000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,Grid electricity consumption (7568.1 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+458,4,MAINTENANCE,24188.42,22000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+459,4,SECURITY,15612.28,16000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+460,4,ADMINISTRATIVE,12681.42,12000.0,INR,2026-09-27T00:00:00,2026-09-27T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+461,4,ENERGY,66043.17,85000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,Grid electricity consumption (7338.1 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+462,4,MAINTENANCE,22480.68,22000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+463,4,SECURITY,16226.66,16000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+464,4,ADMINISTRATIVE,12793.94,12000.0,INR,2026-09-28T00:00:00,2026-09-28T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+465,4,ENERGY,67277.34,85000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,Grid electricity consumption (7475.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+466,4,MAINTENANCE,21679.34,22000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+467,4,SECURITY,16403.2,16000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+468,4,ADMINISTRATIVE,11182.25,12000.0,INR,2026-09-29T00:00:00,2026-09-29T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+469,4,ENERGY,75847.41,85000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,Grid electricity consumption (8427.5 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+470,4,MAINTENANCE,31395.91,22000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+471,4,SECURITY,15441.8,16000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+472,4,ADMINISTRATIVE,12648.93,12000.0,INR,2026-09-30T00:00:00,2026-09-30T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+473,4,ENERGY,69067.8,85000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,Grid electricity consumption (7674.2 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+474,4,MAINTENANCE,21596.64,22000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+475,4,SECURITY,16319.51,16000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+476,4,ADMINISTRATIVE,12581.44,12000.0,INR,2026-10-01T00:00:00,2026-10-01T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+477,4,ENERGY,80956.62,85000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,Grid electricity consumption (8995.2 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+478,4,MAINTENANCE,23143.87,22000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+479,4,SECURITY,15682.76,16000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+480,4,ADMINISTRATIVE,12159.79,12000.0,INR,2026-10-02T00:00:00,2026-10-02T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+481,4,ENERGY,67988.79,85000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,Grid electricity consumption (7554.3 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+482,4,MAINTENANCE,23730.24,22000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+483,4,SECURITY,15829.08,16000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+484,4,ADMINISTRATIVE,11248.19,12000.0,INR,2026-10-03T00:00:00,2026-10-03T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+485,4,ENERGY,69001.02,85000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,Grid electricity consumption (7666.8 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+486,4,MAINTENANCE,24141.29,22000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+487,4,SECURITY,16678.95,16000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+488,4,ADMINISTRATIVE,11285.59,12000.0,INR,2026-10-04T00:00:00,2026-10-04T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+489,4,ENERGY,67869.63,85000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,Grid electricity consumption (7541.1 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+490,4,MAINTENANCE,19040.47,22000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+491,4,SECURITY,16703.9,16000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+492,4,ADMINISTRATIVE,12024.0,12000.0,INR,2026-10-05T00:00:00,2026-10-05T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
+493,4,ENERGY,68860.35,85000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,Grid electricity consumption (7651.1 kWh @ ₹9.00/kWh),2026-10-06 15:00:42
+494,4,MAINTENANCE,23521.85,22000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"HVAC & electrical predictive PM, technician hours & consumables",2026-10-06 15:00:42
+495,4,SECURITY,15313.28,16000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Access control monitoring, physical patrol & CCTV infrastructure",2026-10-06 15:00:42
+496,4,ADMINISTRATIVE,12724.46,12000.0,INR,2026-10-06T00:00:00,2026-10-06T23:59:59,"Facility operations administration, janitorial & BMS licensing",2026-10-06 15:00:42
