@@ -1,11 +1,9 @@
 
-
 import os
 import pickle
 import json
 import math
 import random
-import sqlite3
 from datetime import datetime, timedelta
 from typing import List, Dict, Tuple
 
@@ -247,8 +245,7 @@ class EnergyForecaster:
         now    = datetime.now().replace(minute=0, second=0, microsecond=0)
         result = []
 
-        # Historical last 18 hours
-        hist_rows = [dict(r) for r in conn.execute("SELECT 1").fetchall()] if False else []
+        # Historical last 24 hours
         conn = get_connection()
         hist_rows = [dict(r) for r in conn.execute("""
             SELECT timestamp, electricity_usage, hvac_usage, outdoor_temp_c, occupancy_pct

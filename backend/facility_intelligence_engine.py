@@ -8,9 +8,8 @@ Target Architecture:
   Unified Facility Health Score -> Executive Recommendations -> Dashboard / Alerts / Reports
 """
 
-import os
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 from typing import List, Dict, Optional, Tuple, Any
 
 from database import get_connection

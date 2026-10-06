@@ -6,10 +6,9 @@ Provides modular cost accounting, category-level trend tracking, budget complian
 traceable savings calculation, and standard agent payload export.
 """
 
-import os
 import json
-from datetime import datetime, timedelta
-from typing import List, Dict, Optional, Tuple
+from datetime import datetime
+from typing import List, Dict, Optional
 
 from database import get_connection
 

@@ -30,7 +30,7 @@ import os
 import sys
 import json
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Optional, List, Dict
 
 from fastapi import FastAPI, HTTPException, Query, Response
@@ -48,7 +48,6 @@ from ai_engine import (
     get_anomaly_detector,
     get_forecaster,
     generate_recommendations,
-    train_all,
 )
 from maintenance_agent import get_maintenance_agent
 from occupancy_agent import get_occupancy_agent
@@ -416,7 +415,6 @@ async def energy_heatmap(facility_id: int = Query(1)):
     """, (facility_id,)).fetchall()]
     conn.close()
 
-    from datetime import timedelta
     day_names = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
     grid = {}
     for r in rows:
@@ -446,7 +444,6 @@ async def list_facilities():
 @app.get("/api/export/csv")
 async def export_csv(facility_id: int = Query(1)):
     import csv, io
-    from fastapi.responses import Response
 
     conn = get_connection()
     fac = conn.execute("SELECT facility_name FROM FACILITIES WHERE facility_id=?", (facility_id,)).fetchone()
@@ -494,7 +491,6 @@ async def export_csv(facility_id: int = Query(1)):
 # ── GET /api/export/report ────────────────────────────────────────────────────
 @app.get("/api/export/report")
 async def export_audit_report(facility_id: int = Query(1)):
-    from fastapi.responses import Response
 
     conn = get_connection()
     fac = dict(conn.execute("SELECT * FROM FACILITIES WHERE facility_id=?", (facility_id,)).fetchone() or {})
